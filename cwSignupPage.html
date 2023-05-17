@@ -198,6 +198,15 @@
             });
             $("body").removeClass('notScroll');
         }
+
+         //전체동의 눌렀을때 모든체크박스 true하는 코드
+        $('.allAgreeWrap input').change(function(){
+            if($(this).is(':checked')){
+                $('input[type=checkbox]').prop( "checked", true );
+            }else{
+                $('input[type=checkbox]').prop( "checked", false );
+            }
+        });
     </script>
 </body>
 </html>

@@ -253,6 +253,8 @@ li.tabActive{
         color:#2CB7A4;
     }
 }
+
+
 @include mix.tab{
     .searchBtnWrap{
         display: block;
@@ -413,10 +415,10 @@ li.tabActive{
         }
         li:nth-child(2n+1){
             margin-left:0;
-        }
-        
-        
-        
+        }   
+    }
+    .pageNav{
+        width:calc(100% / 8 * 3.5);
     }
 }
 @media (min-width:0px) and (max-width:550px){
@@ -574,6 +576,10 @@ li.tabActive{
             }
         }
         
+    }
+    .pageNav{
+        margin-top:35px;
+        width:calc(100% / 6 * 4);
     }
 }
 

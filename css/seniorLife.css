@@ -402,6 +402,9 @@ li.tabActive {
   .postWrap li:nth-child(2n+1) {
     margin-left: 0;
   }
+  .pageNav {
+    width: 43.75%;
+  }
 }
 @media (min-width: 0px) and (max-width: 550px) {
   .searchBtnWrap {
@@ -546,5 +549,9 @@ li.tabActive {
     left: 0;
     bottom: 0;
     border-bottom: 7px solid #F1F1F1;
+  }
+  .pageNav {
+    margin-top: 35px;
+    width: 66.6666666667%;
   }
 }
