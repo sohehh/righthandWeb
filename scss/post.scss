@@ -1,0 +1,189 @@
+@use './mixins.scss' as mix;
+
+.postDetailWrap{
+    margin:0 auto;
+    @include mix.mzn(pc,top,1.625);
+    width: calc(100% / 12 * 8.7);
+    
+    height:100%;
+}
+
+//포스트 섹션 탑 style
+.postSectionTop{
+    border:1px solid #A7A7A7;
+    @include mix.pdn(pc,left,1);
+    @include mix.pdn(pc,right,1);
+    @include mix.pdn(pc,top,1.1428);
+    @include mix.pdn(pc,bottom,1.2);
+    border-radius: 15px;
+}
+.postHeader{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.postPofile{
+    width: calc(100% / 8 * 0.46);
+}
+.nameDateWrap{
+    @include mix.fontz(pc,1.4);
+    @include mix.mzn(pc,top,0.15);
+    @include mix.mzn(pc,left,0.2);
+    .name{
+        font-weight: 500;
+        @include mix.mzn(pc,bottom,0.075);
+        margin-bottom: 3px;
+        @include mix.lhz(pc,.5);
+    }
+    .date{
+        color:#6F6F6F;
+    }
+}
+
+.postContent{
+    @include mix.mzn(pc,top,0.725);
+    .postTitle{
+        @include mix.fontz(pc,2.6);
+        font-weight: 500;
+    }
+    .postCon{
+        @include mix.mzn(pc,top,0.725);
+        @include mix.fontz(pc,1.6);
+        @include mix.lhz(pc,0.75);
+    }
+    .postImg{
+        @include mix.mzn(pc,top,0.85);
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+.goodWrap{
+    @include mix.mzn(pc,top,0.95);
+    text-align: center;
+    .hrt{
+        display: inline-block;
+        width: 45px;
+        height:40px;
+        background: url('../img/hrt.svg')no-repeat center center / 35px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .hrtActive{
+        background: url('../img/hrtAt.svg')no-repeat center center / 35px;
+    }
+    .hrtTxt{
+        height: 100%;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+}
+
+//포스트 섹션 바텀 style
+.postSectionbottom{
+    @include mix.mzn(pc,top,0.375);
+    border-radius: 15px;
+    background:#F9F9F9;
+    @include mix.pdn(pc,bottom,0.6);
+}
+.replyTop{
+    @include mix.pdn(pc,left,0.625);
+    @include mix.pdn(pc,right,0.625);
+    @include mix.pdn(pc,top,0.625);
+    @include mix.pdn(pc,bottom,0.625);
+    display: flex;
+}
+.replyCntWrap{
+    display: flex;
+    font-weight: 500;
+    @include mix.fontz(pc,2);
+    .replyCnt{
+        @include mix.pdn(pc,left,0.15);
+    }
+    
+}
+
+.replyList{
+    @include mix.pdn(pc,left,0.625);
+    @include mix.pdn(pc,right,0.625);
+    @include mix.pdn(pc,bottom,0.625);
+    li{
+        align-items: flex-start;
+        display: flex;
+        position: relative;
+        @include mix.mzn(pc,top,0.55);
+        @include mix.pdn(pc,bottom,0.55);
+        border-bottom: 1px solid #E7E7E7;
+    }
+}
+
+.nameTextWrap{
+    width: calc(100% / 8 * 7.2);
+    @include mix.fontz(pc,1.4);
+    @include mix.mzn(pc,left,0.2);
+    @include mix.mzn(pc,top,0.15);
+    .txt{
+        padding-top: 8px;
+        @include mix.lhz(pc,.58);
+    }
+}
+.replyBtns{
+    position:absolute;
+    top:4px;
+    right:0;
+    display: flex;
+    font-size: 12px;
+    color:#767676;
+    cursor: pointer;
+    .replyGoodBtn{
+        .replyHrt{
+            display: inline-block;
+            width: 15px;
+            height:13px;
+            background: url('../img/hrt.svg')no-repeat center center / 15px;
+            vertical-align: middle;
+        }
+        .replyHrtActive{
+            background: url('../img/hrtAt.svg')no-repeat center center / 15px;
+        }
+    }
+    .replyReportBtn{
+        @include mix.mzn(pc,left,0.45);
+
+    }
+}
+.writerWrap{
+    background: white;
+    @include mix.mzn(pc,left,0.625);
+    @include mix.mzn(pc,right,0.625);
+    @include mix.mzn(pc,bottom,0.625);
+    border-radius: 10px;
+    box-sizing: border-box;
+    @include mix.pdn(pc,top,0.625);
+    @include mix.pdn(pc,left,0.625);
+    @include mix.pdn(pc,right,0.625);
+    @include mix.pdn(pc,bottom,0.625);
+    .userName{
+        font-size: 13px;
+    }
+    .writerBox{
+        @include mix.mzn(pc,top,0.625);
+        width: 100%;
+        font-size: 13px;
+        @include mix.heights(pc,1.5);
+        border:none;
+        font-family: 'NanumSquareRound';
+        resize: none;
+        @include mix.lhz(pc,0.45);
+    }
+    .writerBtnWrap{
+        text-align: right;
+        .wBtn{
+            border: none;
+            background: none;
+            color:#838383;
+        }
+    }
+}
+@include mix.mob{
+    
+}

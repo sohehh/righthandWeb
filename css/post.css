@@ -1,0 +1,193 @@
+html {
+  font-size: 2.6666666667vw;
+}
+
+body {
+  font-size: 0.6666666667vw;
+}
+
+.postDetailWrap {
+  margin: 0 auto;
+  margin-top: calc(min(1rem, 40px) * 1.625);
+  width: 72.5%;
+  height: 100%;
+}
+
+.postSectionTop {
+  border: 1px solid #A7A7A7;
+  padding-left: calc(min(1rem, 40px) * 1);
+  padding-right: calc(min(1rem, 40px) * 1);
+  padding-top: calc(min(1rem, 40px) * 1.1428);
+  padding-bottom: calc(min(1rem, 40px) * 1.2);
+  border-radius: 15px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.postPofile {
+  width: 5.75%;
+}
+
+.nameDateWrap {
+  font-size: calc(min(1em, 10px) * 1.4);
+  margin-top: calc(min(1rem, 40px) * 0.15);
+  margin-left: calc(min(1rem, 40px) * 0.2);
+}
+.nameDateWrap .name {
+  font-weight: 500;
+  margin-bottom: calc(min(1rem, 40px) * 0.075);
+  margin-bottom: 3px;
+  line-height: calc(min(1rem, 40px) * 0.5);
+}
+.nameDateWrap .date {
+  color: #6F6F6F;
+}
+
+.postContent {
+  margin-top: calc(min(1rem, 40px) * 0.725);
+}
+.postContent .postTitle {
+  font-size: calc(min(1em, 10px) * 2.6);
+  font-weight: 500;
+}
+.postContent .postCon {
+  margin-top: calc(min(1rem, 40px) * 0.725);
+  font-size: calc(min(1em, 10px) * 1.6);
+  line-height: calc(min(1rem, 40px) * 0.75);
+}
+.postContent .postImg {
+  margin-top: calc(min(1rem, 40px) * 0.85);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.goodWrap {
+  margin-top: calc(min(1rem, 40px) * 0.95);
+  text-align: center;
+}
+.goodWrap .hrt {
+  display: inline-block;
+  width: 45px;
+  height: 40px;
+  background: url("../img/hrt.svg") no-repeat center center/35px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.goodWrap .hrtActive {
+  background: url("../img/hrtAt.svg") no-repeat center center/35px;
+}
+.goodWrap .hrtTxt {
+  height: 100%;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.postSectionbottom {
+  margin-top: calc(min(1rem, 40px) * 0.375);
+  border-radius: 15px;
+  background: #F9F9F9;
+  padding-bottom: calc(min(1rem, 40px) * 0.6);
+}
+
+.replyTop {
+  padding-left: calc(min(1rem, 40px) * 0.625);
+  padding-right: calc(min(1rem, 40px) * 0.625);
+  padding-top: calc(min(1rem, 40px) * 0.625);
+  padding-bottom: calc(min(1rem, 40px) * 0.625);
+  display: flex;
+}
+
+.replyCntWrap {
+  display: flex;
+  font-weight: 500;
+  font-size: calc(min(1em, 10px) * 2);
+}
+.replyCntWrap .replyCnt {
+  padding-left: calc(min(1rem, 40px) * 0.15);
+}
+
+.replyList {
+  padding-left: calc(min(1rem, 40px) * 0.625);
+  padding-right: calc(min(1rem, 40px) * 0.625);
+  padding-bottom: calc(min(1rem, 40px) * 0.625);
+}
+.replyList li {
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+  margin-top: calc(min(1rem, 40px) * 0.55);
+  padding-bottom: calc(min(1rem, 40px) * 0.55);
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.nameTextWrap {
+  width: 90%;
+  font-size: calc(min(1em, 10px) * 1.4);
+  margin-left: calc(min(1rem, 40px) * 0.2);
+  margin-top: calc(min(1rem, 40px) * 0.15);
+}
+.nameTextWrap .txt {
+  padding-top: 8px;
+  line-height: calc(min(1rem, 40px) * 0.58);
+}
+
+.replyBtns {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: flex;
+  font-size: 12px;
+  color: #767676;
+  cursor: pointer;
+}
+.replyBtns .replyGoodBtn .replyHrt {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url("../img/hrt.svg") no-repeat center center/15px;
+  vertical-align: middle;
+}
+.replyBtns .replyGoodBtn .replyHrtActive {
+  background: url("../img/hrtAt.svg") no-repeat center center/15px;
+}
+.replyBtns .replyReportBtn {
+  margin-left: calc(min(1rem, 40px) * 0.45);
+}
+
+.writerWrap {
+  background: white;
+  margin-left: calc(min(1rem, 40px) * 0.625);
+  margin-right: calc(min(1rem, 40px) * 0.625);
+  margin-bottom: calc(min(1rem, 40px) * 0.625);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding-top: calc(min(1rem, 40px) * 0.625);
+  padding-left: calc(min(1rem, 40px) * 0.625);
+  padding-right: calc(min(1rem, 40px) * 0.625);
+  padding-bottom: calc(min(1rem, 40px) * 0.625);
+}
+.writerWrap .userName {
+  font-size: 13px;
+}
+.writerWrap .writerBox {
+  margin-top: calc(min(1rem, 40px) * 0.625);
+  width: 100%;
+  font-size: 13px;
+  height: calc(min(1rem, 40px) * 1.5);
+  border: none;
+  font-family: "NanumSquareRound";
+  resize: none;
+  line-height: calc(min(1rem, 40px) * 0.45);
+}
+.writerWrap .writerBtnWrap {
+  text-align: right;
+}
+.writerWrap .writerBtnWrap .wBtn {
+  border: none;
+  background: none;
+  color: #838383;
+}
