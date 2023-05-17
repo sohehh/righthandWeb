@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요양센터 회원 가입</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <nav class="pcNav">
+                    <h4>요양보호사 목록</h4>
+                    <h4>센터 홍보하기</h4>
+                    <h4>구직 게시판</h4>
+                    <h4>시니어 라이프</h4>
+                    <h4 onclick="pcSubmenuBlock()">센터 회원 홈
+                        <ul class="pcSubmenu">
+                            <li>매칭요청</li>
+                            <li>매칭 완료</li>
+                            <li>센터 정보 수정</li>
+                            <li>구매 내역</li>
+                        </ul>
+                    </h4>
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                </nav>
+                <nav class="mobNav">
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4>센터 회원 홈</h4>
+                            <ul class="subMenu">
+                                <li>- 매칭 요청</li>
+                                <li>- 매칭 완료</li>
+                                <li>- 센터 정보 수정</li>
+                                <li>- 구매 내역</li>
+                            </ul>
+                            <h4>구직 게시판</h4>
+                            <h4>시니어 라이프</h4>
+                            <h4>센터 홍보하기</h4>
+                            <h4>요양보호사 목록</h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">회원가입</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">요양센터 회원가입</h2>
+            <div class="section">
+                <h3>기본정보를 입력해 주세요</h3>
+                <ul class="inputList">
+                    <li>
+                        <label>
+                            <span>아이디</span>
+                            <input type="text" placeholder="이름을 입력해 주세요" value="1-12345-67891" readonly>
+                        </label>
+                        <span class="subText">요양기관등록번호</span>
+                    </li>
+                    <li>
+                        <label>
+                            <span>비밀번호</span>
+                            <input type="password" placeholder="비밀번호를 입력해 주세요">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span>센터 이름</span>
+                            <input type="text" placeholder="센터이름을 입력해 주세요">
+                        </label>
+                    </li>
+                    <li class="callList">
+                        <label>
+                            <span>전화번호</span>
+                            <span class="callWrap">
+                                <input type="text" placeholder="010">
+                                <span class="callText">-</span>
+                                <input type="text" placeholder="1234">
+                                <span class="callText">-</span>
+                                <input type="text" placeholder="5678">
+                            </span>
+                            
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span>개업일</span>
+                            <input type="text" placeholder="개업일을 입력해 주세요">
+                        </label>
+                    </li>
+                    <li class="fileList">
+                        <label>
+                            <span>센터사진</span>
+                            <span class="fileWrap">
+                                <label for="file1">파일선택</label> 
+                                <input type="file" id="file1">
+                                <input class="upload-name1" value="선택된 파일 없음" placeholder="첨부파일" readonly>
+                            </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span>등급</span>
+                            <input type="text" placeholder="등급을 입력해 주세요">
+                        </label>
+                    </li>
+                    <li class="fileList">
+                        <label>
+                            <span>증명서류</span>
+                            <span class="fileWrap">
+                                <label for="file2">파일선택</label> 
+                                <input type="file" id="file2">
+                                <input class="upload-name2" value="선택된 파일 없음" placeholder="첨부파일" readonly>
+                            </span>
+                        </label>
+                        <span class="subText">센터 관계자임을 증명하는 서류를 업로드 해주세요</span>
+                    </li>
+                    <li class="addressList">
+                        <label>
+                            <span>센터주소</span>
+                            <span class="addressWrap">
+                                <input type="text" id="address1" placeholder="센터 주소를 검색해 주세요" readonly>
+                                <input type="button" id="addressBtn">
+                                <label for="addressBtn" class="adBtn">주소 검색</label>
+                                <input type="text" id="address2" name="adr2" placeholder="상세 주소를 입력해 주세요">
+                            </span>
+                            
+    
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>서비스 이용과 정보보호를 위해 약관동의가 필요합니다</h3>
+                <ul class="agreeList">
+                    <li>
+                        <label>
+                            <input type="checkbox">[필수] 서비스 이용약관
+                        </label>
+                        <div class="textBox">
+                            오른손 이용약관
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">[필수] 개인정보 처리 방침
+                        </label>
+                        <div class="textBox">
+                            오른손 이용약관
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">[선택] 마케팅 정보 수신 동의
+                        </label>
+                        <div class="textBox">
+                            오른손 이용약관
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                            제 1장 총칙
+                            본 약관은 주식회사 플렉시즈(이하 회사라 한다.)가 제공하는 오른손 (이하 서비스라 한다)를 이용하기 위하여 회사와 이용계약을 체결한 고객이 토닥씨 모바일 어플리케이션(이하함에 있어 필요한 회사와 승객의 권리와 의무, 기타 제반 사항을 정 앱 또는
+                        </div>
+                    </li>
+                    <li>
+                        <label class="allAgreeWrap">
+                            <input type="checkbox">전체동의
+                        </label>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="signUpBtn">
+                <a href="./"></a>
+                회원가입
+            </div>
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    <!-- 카카오 지도 api 연동 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+            window.onload = function(){
+                document.getElementsByClassName("adBtn")[0].addEventListener("click", function(){ //주소입력칸을 클릭하면
+                    //카카오 지도 발생
+                    new daum.Postcode({
+                        oncomplete: function(data) { //선택시 입력값 세팅
+                            document.getElementById("address1").value = data.address; // 주소 넣기
+                            document.querySelector("input[name=adr2]").focus(); //상세입력 포커싱
+                        }
+                    }).open();
+                });
+            }
+
+            
+
+    </script>
+
+    <script>
+        $('.loginTabList li').each(function(idx){
+            $(this).click(function(){
+                $('.loginTabList li').removeClass('tabActive');
+                $('.loginWrap>div').removeClass('tabContentActive');
+                $('.loginWrap>div:nth-of-type('+(idx+1)+')').addClass('tabContentActive');
+                $(this).addClass('tabActive');
+                if(idx==0){
+                    $('.title').text('일반 사용자 로그인');
+                }else if(idx==1){
+                    $('.title').text('요양센터 사용자 로그인');
+                }else{
+                    $('.title').text('요양보호사 사용자 로그인');
+                }
+            });
+            
+        });
+
+        //사이드메뉴 나오는 코드
+        $('.list').click(function(){
+            $('.sideMenuBox').fadeIn(200);
+            $('.sideMenuContent').animate({
+                right:0+"%"
+            });
+            $("body").addClass('notScroll');
+        });
+        
+        //사이드메뉴 사라지는 코드
+        $('.close').click(function(){
+            popclose();
+        });
+
+        //사이드메뉴 바깥영역 클릭시 사이드메뉴사라지는 코드
+        $(document).click(function (e){
+            if($('.sideMenuBox').is(e.target)){
+                popclose();
+            }
+        });
+
+        /*사이드메뉴 사라지는 코드 | 함수 선언*/
+        function popclose(){
+            $('.sideMenuContent').animate({
+                right:-100 + '%'
+            },300,function(){
+                $('.sideMenuBox').fadeOut(200);
+            });
+            $("body").removeClass('notScroll');
+        }
+
+        //파일 첨부했을때 코드
+        $('#file1').change(function(){
+            var fileValue = $(this).val();
+            console.log(fileValue);
+            $(this).prev().text('파일 재 선택');
+            $('.upload-name1').val("파일 첨부 완료");
+        });
+        $('#file2').change(function(){
+            var fileValue = $(this).val();
+            console.log(fileValue);
+            $(this).prev().text('파일 재 선택');
+            $('.upload-name2').val("파일 첨부 완료");
+        });
+
+        //$('.allAgreeWrap input')
+        /*pc서브메뉴 보였다가 안보였다가를 반복하는 메서드*/
+        function pcSubmenuBlock(){
+            $('.pcSubmenu').toggle();
+        }
+
+
+        // $('.content').click(function(){
+        //     if($('.pcSubmenu').is(':visible')){
+        //         console.log('ddd');
+        //         $('.pcSubmenu').css('color','black');
+        //     }else{
+        //         console.log('XXX');
+                
+        //         return false;
+        //     }
+        // });
+        
+    </script>
+</body>
+</html>

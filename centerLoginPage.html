@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/webLoginPage.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(window).resize(function(){ 
+            if (window.innerWidth < 421) {  // 다바이스 크기가 421이하일때 
+
+                $('.loginTabList li').each(function(e){
+
+                    if(e==0){
+                        $('.loginTabList li:nth-child(1)').html('일반<br>이용자');
+                    }else if(e==1){
+                        $('.loginTabList li:nth-child(2)').html('요양센터<br>이용자');
+                    }else{
+                        $('.loginTabList li:nth-child(3)').html('요양보호사<br>이용자');
+                    }
+                });
+
+            }else{
+                $('.loginTabList li').each(function(e){
+
+                    if(e==0){
+                        $('.loginTabList li:nth-child(1)').html('일반 이용자');
+                    }else if(e==1){
+                        $('.loginTabList li:nth-child(2)').html('요양센터 이용자');
+                    }else{
+                        $('.loginTabList li:nth-child(3)').html('요양보호사 이용자');
+                    }
+                    }); 
+            }
+
+        }).resize(); 
+
+        
+    </script>
+    
+</head> 
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <nav class="pcNav">
+                    <h4>요양보호사 목록</h4>
+                    <h4>센터 홍보하기</h4>
+                    <h4>구직 게시판</h4>
+                    <h4>시니어 라이프</h4>
+                    <h4 onclick="pcSubmenuBlock()">센터 회원 홈
+                        <ul class="pcSubmenu">
+                            <li>매칭요청</li>
+                            <li>매칭 완료</li>
+                            <li>센터 정보 수정</li>
+                            <li>구매 내역</li>
+                        </ul>
+                    </h4>
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                </nav>
+                <nav class="mobNav">
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4>센터 회원 홈</h4>
+                            <ul class="subMenu">
+                                <li>- 매칭 요청</li>
+                                <li>- 매칭 완료</li>
+                                <li>- 센터 정보 수정</li>
+                                <li>- 구매 내역</li>
+                            </ul>
+                            <h4>구직 게시판</h4>
+                            <h4>시니어 라이프</h4>
+                            <h4>센터 홍보하기</h4>
+                            <h4>요양보호사 목록</h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">로그인</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">일반 이용자 로그인</h2>
+            <p class="title-sub">오른손의 회원으로 로그인하시면 오른손만의 특별한 서비스를 이용 하실 수 있습니다 :)</p>
+            <div class="loginWrap">
+                <ul class="loginTabList">
+                    <li class="tabActive">일반 이용자</li>
+                    <li>요양센터 이용자</li>
+                    <li>요양보호사 이용자</li>
+                </ul>
+                <div class="firstTab tabContent tabContentActive">
+                    <p>SNS 간편 로그인</p>
+                    <ul class="snsList">
+                        <li><span class="i1"></span>네이버</li>
+                        <li><span class="i2"></span>카카오</li>
+                        <li><span class="i3"></span>구글</li>
+                        <li><span class="i4"></span>애플</li>
+                    </ul>
+                </div>
+                <div class="secondTab tabContent">
+                    <div class="loginFormWrap">
+                        <div class="loginForm">
+                            <input type="text" placeholder="아이디">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="mobLoginFormSub1">
+                            <label>
+                                <input type="checkbox" name="idSave" value="idSave">아이디저장
+                            </label>
+                        </div>
+                        <div class="loginBtn">
+                            로그인
+                        </div>
+                        <ul class="mobLoginFormSub2">
+                            <li>아이디 찾기</li>
+                            <li>비밀번호 찾기</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                    <div class="pcLoginFormSub">
+                        <label>
+                            <input type="checkbox" name="idSave" value="idSave">아이디저장
+                        </label>
+                        <ul>
+                            <li>아이디 찾기</li>
+                            <li>비밀번호 찾기</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="thirdTab tabContent">
+                    <div class="loginFormWrap">
+                        <div class="loginForm">
+                            <input type="text" placeholder="아이디">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="mobLoginFormSub1">
+                            <label>
+                                <input type="checkbox" name="idSave" value="idSave">아이디저장
+                            </label>
+                        </div>
+                        <div class="loginBtn">
+                            로그인
+                        </div>
+                        <ul class="mobLoginFormSub2">
+                            <li>아이디 찾기</li>
+                            <li>비밀번호 찾기</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                    <div class="pcLoginFormSub">
+                        <label>
+                            <input type="checkbox" name="idSave" value="idSave">아이디저장
+                        </label>
+                        <ul>
+                            <li>아이디 찾기</li>
+                            <li>비밀번호 찾기</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    <script>
+        $('.loginTabList li').removeClass('tabActive');
+        $('.loginTabList li:nth-child(2)').addClass('tabActive');
+        $('.title').text('요양센터 이용자 로그인');
+
+        $('.loginTabList li').each(function(idx){
+            $(this).click(function(){
+                $('.loginTabList li').removeClass('tabActive');
+                $('.loginWrap>div').removeClass('tabContentActive');
+                $('.loginWrap>div:nth-of-type('+(idx+1)+')').addClass('tabContentActive');
+                $(this).addClass('tabActive');
+                if(idx==0){
+                    $('.title').text('일반 이용자 로그인');
+                }else if(idx==1){
+                    $('.title').text('요양센터 이용자 로그인');
+                }else{
+                    $('.title').text('요양보호사 이용자 로그인');
+                }
+            });
+            
+        });
+
+        //사이드메뉴 나오는 코드
+        $('.list').click(function(){
+            $('.sideMenuBox').fadeIn(200);
+            $('.sideMenuContent').animate({
+                right:0+"%"
+            });
+            $("body").addClass('notScroll');
+        });
+        
+        //사이드메뉴 사라지는 코드
+        $('.close').click(function(){
+            popclose();
+        });
+
+        //사이드메뉴 바깥영역 클릭시 사이드메뉴사라지는 코드
+        $(document).click(function (e){
+            if($('.sideMenuBox').is(e.target)){
+                popclose();
+            }
+        });
+
+        /*팝업창 사라지는 코드 | 함수 선언*/
+        function popclose(){
+            $('.sideMenuContent').animate({
+                right:-100 + '%'
+            },300,function(){
+                $('.sideMenuBox').fadeOut(200);
+            });
+            $("body").removeClass('notScroll');
+        }
+
+        /*pc서브메뉴 보였다가 안보였다가를 반복하는 메서드*/
+        function pcSubmenuBlock(){
+            $('.pcSubmenu').toggle();
+        }
+    </script>
+</body>
+</html>

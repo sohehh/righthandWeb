@@ -1,0 +1,495 @@
+@use './mixins.scss' as mix;
+
+.content{
+    width: calc(100% / 12 * 6);
+    .title{
+        text-align: left;
+
+    }
+}
+.section{
+    @include mix.mzn(pc,top,0.75);
+    @include mix.mzn(pc,bottom,1.7);
+    h3{
+        @include mix.fontz(pc,1.6);
+        color:#000;
+        @include mix.pdn(pc,bottom,0.35);
+        border-bottom: 1px solid #8D8D8D;
+        font-weight: 500;
+    }
+    h3::before{
+        content:"";
+        display: inline-block;
+        width: 6.5px;
+        height:6.5px;
+        margin:0 4px;
+        vertical-align: middle;
+        border-radius: 50%;
+        background-color: #2CB7A4;
+        color:#2CB7A4;
+    }
+}
+.inputList{
+    @include mix.pdn(pc,left,.5);
+    @include mix.pdn(pc,right,.5);
+    li{
+        @include mix.mzn(pc,top,0.6);
+        label{
+            display: flex;
+            position:relative;
+            flex-wrap: wrap;
+            span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+                width: calc(100% / 6 * 1);
+                @include mix.fontz(pc,1.4);
+                @include mix.pdn(pc,top,0.275);
+                @include mix.pdn(pc,bottom,0.275);
+                color:#000;
+            }
+            input{
+                width: calc(100% / 6 * 5);
+                vertical-align: middle;
+                -webkit-appearance: none;
+                @include mix.pdn(pc,top,0.275);
+                @include mix.pdn(pc,bottom,0.275);
+                text-indent: 10px;
+                border:1px solid #D0D0D0;
+                border-radius: 10px;
+                font-weight: 400;
+            }
+            input::placeholder{
+                color:#8F8F91;
+            }
+            
+        }
+    }
+    
+}
+li.callList{
+    label{
+        .callWrap{
+            display: flex;
+            width: calc(100% / 6 * 5);
+            .callText{
+                display: inline-block;
+                display: flex;
+                align-items: center;
+                @include mix.pdn(pc,top,0.275);
+                @include mix.pdn(pc,bottom,0.275);
+            }
+            input{
+                width: calc(100% / 5 * 1);
+                @include mix.mzn(pc,right,0.2);
+            }
+            input:nth-of-type(2),
+            input:nth-of-type(3){
+                @include mix.mzn(pc,right,0.2);
+                @include mix.mzn(pc,left,0.2);
+            }
+        }
+        
+    }
+}
+li.fileList{
+    label{
+            .fileWrap{
+            display: flex;
+            width: calc(100% / 6 * 5);
+            label{
+                display: block;
+                width: 25%;
+                @include mix.pdn(pc,top,0.275);
+                @include mix.pdn(pc,bottom,0.275);
+                vertical-align: middle;
+                @include mix.fontz(pc,1.4);
+                text-align: center;
+                border: 1px solid #2CB7A4;
+                color:#2CB7A4;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            label:hover{
+                background-color: #2CB7A4;
+                color:white;
+                transition: all 0.3s;
+            }
+            input{
+                padding: 0;
+                border:none;
+                color:#8F8F91;
+            }
+            #file1{
+                display: none;
+            }
+            #file2{
+                display: none;
+            }
+        }
+    }
+        
+}
+li.addressList{
+    label{
+        .addressWrap{
+            display: flex;
+            width: calc(100% / 6 * 5);
+            justify-content: space-between;
+            flex-wrap: wrap;
+            #address1{
+                width: calc(100% / 5 * 4 - 10px);
+            }
+            #address2{
+                width: 100%;
+                @include mix.mzn(pc,top,0.25);
+
+            }
+            .adBtn{
+                width: calc(100% / 5 * 1);
+                display: block;
+                border:1px solid #2CB7A4;
+                border-radius: 10px;
+                @include mix.pdn(pc,top,0.275);
+                @include mix.pdn(pc,bottom,0.275);
+                text-align: center;
+                color:#2CB7A4;
+                @include mix.fontz(pc,1.4);
+                cursor: pointer;
+            }
+            .adBtn:hover{
+                background-color: #2CB7A4;
+                color:white;
+                transition: all 0.3s;
+            }
+            #addressBtn{
+                display: none;
+            }
+        }
+    }
+}
+.subText{
+    font-size: 13px;
+    color:#E37878;
+    @include mix.mzn(pc,top,0.25);
+    display:block;
+}
+.subText::before{
+    content:"";
+    display: inline-block;
+    width: calc(100% / 6 * 1);
+    
+}
+.agreeList{
+    @include mix.pdn(pc,left,.5);
+    @include mix.pdn(pc,right,.5);
+    li{
+        @include mix.pdn(pc,top,0.6);
+        @include mix.pdn(pc,bottom,0.6);
+        border-bottom: 1px solid #E3E3E3;
+        label{
+            font-size:13px;
+            cursor: pointer;
+            input{
+                width: 19px;
+                height:19px;
+                border-radius: 8px;
+                border:1px solid #D0D0D0;
+                -webkit-appearance: none;
+                vertical-align: middle;
+                margin-top: 0;
+                margin-right: 6px;
+                background: url('../img/check.svg')no-repeat center center;
+            }
+            input:checked{
+                background:#2CB7A4 url('../img/check-white.svg')no-repeat center center;
+                border:none;
+                transition: all 0.2s;
+            }
+        }
+        .textBox{
+            @include mix.mzn(pc,top,0.4);
+            @include mix.pdn(pc,left,0.375);
+            @include mix.pdn(pc,right,1);
+            @include mix.pdn(pc,bottom,0.375);
+            @include mix.pdn(pc,top,0.375);
+            background: #F5F5F5;
+            border-radius: 8px;
+            @include mix.fontz(pc,1.5);
+            color:#969696;
+            @include mix.lhz(pc,.62);
+            @include mix.heights(pc,2.825);
+            overflow-y: auto;
+        }
+    }
+    li:nth-child(4){
+        border-bottom: none;
+    }
+}
+.allAgreeWrap{
+    font-size:14px;
+    cursor: pointer;
+    input{
+        width: 19px;
+        height:19px;
+        border-radius: 8px;
+        border:1px solid #D0D0D0;
+        -webkit-appearance: none;
+        vertical-align: middle;
+        margin-top: 0;
+        margin-right: 6px;
+        background: url('../img/check.svg')no-repeat center center;
+    }
+    input:checked{
+        background:#2CB7A4 url('../img/check-white.svg')no-repeat center center;
+        border:none;
+        transition: all 0.2s;
+    }
+}
+.signUpBtn{
+    margin:0 auto;
+    width: calc(100% / 6 * 2.5);
+    @include mix.heights(pc,1.5);
+    @include mix.lhz(pc,1.5);
+    background-color: #2CB7A4;
+    border-radius: 30px;
+    text-align: center;
+    color:white;
+    @include mix.fontz(pc,2);
+    font-weight: 500;
+}
+@include mix.tab{
+    
+    .content{
+        @include mix.grid(mob);
+        @include mix.mzn(mob,top,1.75);
+        padding-bottom: 50px;
+        .title{
+            text-align: left;
+        }
+    }
+    .section{
+        @include mix.mzn(mob,top,0.75);
+        h3{
+            @include mix.fontz(mob,1.4);
+            @include mix.pdn(mob,bottom,0.35);
+            
+        }
+    }
+    .inputList{
+        padding:0;
+        li{
+            @include mix.mzn(mob,top,.5);
+            label{
+                display: block;
+                span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+                    display: block;
+                    width: 100%;
+                    font-size: 13px;
+                    padding-bottom: 10px;
+                }
+                input{
+                    width: 100%;
+                    padding:11px 0 11px 0;
+                    text-indent: 10px;
+                }
+            }
+        }
+        
+    }
+    li.callList{
+        label{
+            .callWrap{
+                width: 100%;
+                input{
+                    width: calc(100% / 6 * 2 - 5px);
+                    @include mix.mzn(mob,right,0.125);
+                }
+                input:nth-of-type(2),
+                input:nth-of-type(3){
+                    @include mix.mzn(mob,right,0.125);
+                    @include mix.mzn(mob,left,0.125);
+                    text-align: left;
+                }
+            }
+        }
+        
+    }
+    li.fileList{
+        label{
+            .fileWrap{
+                label{
+                    width: 45%;
+                    height:39px;
+                    line-height: 39px;
+                    padding:0;
+                    font-size:13px;
+                }
+            }
+        }
+
+    }
+    li.addressList{
+        label{
+            .addressWrap{
+                width: 100%;
+                .adBtn{
+                    width: 25%;
+                    height:39px;
+                    line-height: 39px;
+                    padding-top:0;
+                    font-size: 13px;
+                }
+                #address1{
+                    width: calc(75% - 10px);
+                }
+                #address2{
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .subText{
+        margin-top: 8px;
+    }
+    .subText::before{
+        width: 0;
+    }
+    .agreeList{
+        padding:0;
+        li{
+            padding: 20px 0;
+            .textBox{
+                margin-top: 15px;
+                padding:15px 34px 15px 15px;
+                line-height: 140%;
+                font-size: 12px;
+                height:113px;
+            }
+        
+        }
+    }
+    .signUpBtn{
+        width: 100%;
+        height:50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+}
+@include mix.mob{
+    
+    .content{
+        @include mix.grid(mob);
+        @include mix.mzn(mob,top,1.75);
+        padding-bottom: 50px;
+        .title{
+            text-align: left;
+        }
+    }
+    .section{
+        @include mix.mzn(mob,top,0.95);
+        h3{
+            @include mix.fontz(mob,1.3);
+            @include mix.pdn(mob,bottom,0.35);
+            
+        }
+    }
+    .inputList{
+        padding:0;
+        li{
+            @include mix.mzn(mob,top,.5);
+            label{
+                display: block;
+                span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+                    display: block;
+                    width: 100%;
+                    font-size: 13px;
+                    padding-bottom: 10px;
+                }
+                input{
+                    width: 100%;
+                    padding:11px 0 11px 0;
+                    text-indent: 10px;
+                    font-weight: 400;
+                }
+            }
+        }
+        
+    }
+    li.callList{
+        label{
+            .callWrap{
+                width: 100%;
+                input{
+                    width: calc(100% / 6 * 2 - 5px);
+                    @include mix.mzn(mob,right,0.125);
+                }
+                input:nth-of-type(2),
+                input:nth-of-type(3){
+                    @include mix.mzn(mob,right,0.125);
+                    @include mix.mzn(mob,left,0.125);
+                    text-align: left;
+                }
+            }
+        }
+        
+    }
+    li.fileList{
+        label{
+            .fileWrap{
+                label{
+                    width: 45%;
+                    height:39px;
+                    line-height: 39px;
+                    padding:0;
+                    font-size:13px;
+                }
+            }
+        }
+
+    }
+    li.addressList{
+        label{
+            .addressWrap{
+                width: 100%;
+                .adBtn{
+                    width: 25%;
+                    height:39px;
+                    line-height: 39px;
+                    padding-top:0;
+                    font-size: 13px;
+                }
+                #address1{
+                    width: calc(75% - 10px);
+                }
+                #address2{
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .subText{
+        margin-top: 8px;
+    }
+    .subText::before{
+        width: 0;
+    }
+    .agreeList{
+        padding:0;
+        li{
+            padding: 20px 0;
+            .textBox{
+                margin-top: 15px;
+                padding:15px 34px 15px 15px;
+                line-height: 140%;
+                font-size: 12px;
+                height:113px;
+            }
+        
+        }
+    }
+    .signUpBtn{
+        width: 100%;
+        height:50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+}

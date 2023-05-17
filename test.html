@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    
+</head>
+<body>
+    <label for="file1"></label>
+    <input id="file1" type="file">
+    <p></p>
+    <script>
+        
+        
+        $("#file1").change(function(){
+            
+            var fileValue = $(this).val();
+            console.log(fileValue);
+            $('p').text(fileValue);
+            
+        });
+        //var fileName = fileValue[fileValue.length-1]; // 파일명
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시니어 라이프</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/seniorLife.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <!-- 피씨 버전 헤더 네비 -->
+                <nav class="pcNav">
+                    <h4>요양보호사 목록</h4>
+                    <h4>센터 홍보하기</h4>
+                    <h4>구직 게시판</h4>
+                    <h4>시니어 라이프</h4>
+                    <h4 onclick="pcSubmenuBlock()">센터 회원 홈
+                        <ul class="pcSubmenu">
+                            <li>매칭요청</li>
+                            <li>매칭 완료</li>
+                            <li>센터 정보 수정</li>
+                            <li>구매 내역</li>
+                        </ul>
+                    </h4>
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                </nav>
+                <!-- 모바일 버전 헤더 네비 -->
+                <nav class="mobNav">
+                    <h4>로그인</h4>
+                    <h4>회원가입</h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <!-- 모바일버전 사이드메뉴 -->
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4>센터 회원 홈</h4>
+                            <ul class="subMenu">
+                                <li>- 매칭 요청</li>
+                                <li>- 매칭 완료</li>
+                                <li>- 센터 정보 수정</li>
+                                <li>- 구매 내역</li>
+                            </ul>
+                            <h4>구직 게시판</h4>
+                            <h4>시니어 라이프</h4>
+                            <h4>센터 홍보하기</h4>
+                            <h4>요양보호사 목록</h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">시니어라이프</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">시니어 라이프</h2>
+            <!-- 타이틀 밑에 있는 검색, 정렬, 글쓰기 wrap -->
+            <div class="searchBtnWrap">
+                <div class="searchBox">
+                    <input type="text" placeholder="Search...">
+                    <span class="searchBtn"></span>
+                </div>
+                
+                <div class="subBtnWrap">
+                    <div class="filterBtn">
+                        <span class="filterText">정렬 순</span>
+                        <span class="filterImage"></span>
+                        <ul class="optionList">
+                            <li class="optionItem">좋아요 순</li>
+                            <li class="optionItem">최신 순</li>
+                        </ul>
+                    </div>
+                    <div class="writingBtn">
+                        글쓰기
+                    </div>
+                </div>
+            </div>
+            <div class="tabPostWrap">
+                <div class="tabListS">
+                    <ul class="tabList">
+                        <li class="tabActive">전체</li>
+                        <li>자유게시판</li>
+                        <li>시니어 푸드</li>
+                        <li>시니어 용품</li>
+                        <li>시니어 건강</li>
+                        <li>시니어 재무</li>
+                        <li>시니어 허브</li>
+                        <li>요양 / 간병</li>
+                    </ul>
+                </div>
+                <!-- 전체 -->
+                <ul class="postWrap postActive">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 자유 게시판 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">자유 게시판</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 시니어 푸드 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 푸드</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 시니어 용품 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 용품</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 시니어 건강 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 건강</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 시니어 재무 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 재무</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 시니어 허브 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">시니어 허브</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 요양 / 간병 -->
+                <ul class="postWrap">
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="postHeader">
+                            <div class="postHeaderLeft">
+                                <img src="./img/profile.svg" alt="프로필이미지" class="postProfile">
+                                <div class="postNameDate">
+                                    <p class="name">홍길동님</p>
+                                    <p class="date">2023-03-03</p>
+                                </div>
+                            </div>
+                            
+                            <div class="postCategory">요양 / 간병</div>
+                        </div>
+                        <div class="postContents">
+                            <a href="#"><img class="postImage" src="./img/postImage1.png" alt="포스트이미지"></a>
+                            <div class="postTextWrap">
+                                <h3><a href="#">건강하게 먹는 방법</a></h3>
+                                <p><a href="#">실천 방법 - 맞춤형 실천 방법 1) 비만 활동량이 줄어들 경우에는 먹는 양에 변화가 없어도 체중이 증가할 수 있습니다. 탄수화물의 열량은 지방의 열량보다 적지만 탄수화물 섭취량이 증가하면 그만큼 체중이 증가할 수 있습니다. 과일, 감자, 고구마 등을 추가로 먹는 경우에는 그 열량에 해당되는 양 만큼 밥을 줄이는 것이 좋습니다. 예를 들면 사과 1개(200g), 바나나 1개(껍질 제외 110g), 감자(130g) 1개 또는 고구마 1개(120g)의 열량은 약 100 kcal입니다. 밥 1공기(200g)는 약 300kcal이므로 앞의 음식들을 추가로 먹는다면 밥 1/3 공기(67g, 100 kcal)를 줄여야 합니다. 다른 탄수화물을 줄이기 힘들 때는 지방 섭취량을 줄이거나 활동량을 늘리면 체중 유지에 도움이 됩니다.</a>
+                                </p>
+                            </div>
+                            <div class="postIcon">
+                                <div class="good">10</div>
+                                <div class="comment">10</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 페이지 넘버 네비 -->
+            <nav class="pageNav">
+                <h4 class="prev"><a href="#"></a></h4>
+                <h4 class="pgActive pgN"><a href="#">1</a></h4>
+                <h4 class="pgN"><a href="#">2</a></h4>
+                <h4 class="pgN"><a href="#">3</a></h4>
+                <h4 class="pgN"><a href="#">4</a></h4>
+                <h4 class="pgN"><a href="#">5</a></h4>
+                <h4 class="next"><a href="#"></a></h4>
+            </nav>
+            
+            
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    <script>
+        /*pc서브메뉴 보였다가 안보였다가를 반복하는 메서드*/
+        function pcSubmenuBlock(){
+            $('.pcSubmenu').slideToggle();
+        }
+
+        //탭 코드
+        $('.tabList li').each(function(idx){
+            $(this).click(function(){
+                $('.tabList li').removeClass('tabActive');
+                $(this).addClass('tabActive');
+
+                $('.postWrap').removeClass('postActive');
+                $('.postWrap:nth-of-type('+(idx+1)+')').addClass('postActive');
+            });
+        });
+
+        //사이드메뉴 나오는 코드
+        $('.list').click(function(){
+            $('.sideMenuBox').fadeIn(200);
+            $('.sideMenuContent').animate({
+                right:0+"%"
+            });
+            $("body").addClass('notScroll');
+        });
+        
+        //사이드메뉴 사라지는 코드
+        $('.close').click(function(){
+            popclose();
+        });
+        /*사이드메뉴 사라지는 코드 | 함수 선언*/
+        function popclose(){
+            $('.sideMenuContent').animate({
+                right:-100 + '%'
+            },300,function(){
+                $('.sideMenuBox').fadeOut(200);
+            });
+            $("body").removeClass('notScroll');
+        }
+
+        //사이드메뉴 바깥영역 클릭시 사이드메뉴사라지는 코드
+        $(document).click(function (e){
+            if($('.sideMenuBox').is(e.target)){
+                popclose();
+            }
+        });
+
+        //정렬순 버튼 클릭시 옵션 ul이 나오는코드
+        $('.filterBtn').click(function(){
+            if($('.optionList').is(':visible')){
+                $('.optionList').slideUp();
+                
+            }else{
+                $('.filterImage').css('transform','rotate(180deg)');
+                $('.optionList').slideDown();
+            }
+            //$('.optionList').slideToggle();
+        });
+        
+        //옵션 클릭시 클릭한 옵션을 넘기는 코드
+        $('.optionList li').each(function(idx){
+            $(this).click(function(){
+                $('.filterImage').css('transform','rotate(-360deg)');
+                $('.filterText').text($(this).text());
+                $('.optionList').slideUp();
+            });
+        });
+
+        //페이지 버튼 클릭 코드
+        $('.pageNav .pgN').click(function(){
+            $('.pageNav .pgN').removeClass('pgActive');
+            $(this).addClass('pgActive');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+@charset "UTF-8";
+html {
+  font-size: 2.6666666667vw;
+}
+
+body {
+  font-size: 0.6666666667vw;
+}
+
+.content .loginWrap {
+  margin: 0 auto;
+  margin-top: calc(min(1rem, 40px) * 1.25);
+  width: 50%;
+}
+
+.loginTabList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.loginTabList li {
+  font-size: calc(min(1em, 10px) * 1.8);
+  height: calc(min(1rem, 40px) * 1.575);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(33.3333333333% - 5px);
+  text-align: center;
+  border: 2px solid #E3E3E3;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: rgb(126, 126, 126);
+}
+
+.tabContent {
+  display: none;
+  padding-top: calc(min(1rem, 40px) * 1);
+}
+.tabContent p {
+  font-size: calc(min(1em, 10px) * 1.8);
+  text-align: center;
+  font-weight: 500;
+  color: #8D8D8D;
+}
+
+.snsList {
+  width: 66.6666666667%;
+  margin: 0 auto;
+  margin-top: calc(min(1rem, 40px) * 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.snsList li {
+  width: 16.6666666667%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: calc(min(1em, 10px) * 1.6);
+  cursor: pointer;
+  color: #6D6D6D;
+  font-weight: 400;
+}
+.snsList li span {
+  margin: 0 auto;
+  width: 88%;
+  height: calc(min(1rem, 40px) * 1.45);
+  border: 1px solid #D0D0D0;
+  border-radius: 50%;
+  background: url("../img/sns1.svg") no-repeat center center;
+  margin-bottom: 10px;
+}
+.snsList li span.i1 {
+  background: url("../img/sns1.svg") no-repeat center center/44% auto;
+}
+.snsList li span.i3 {
+  background-size: 45% auto;
+}
+.snsList li span.i2 {
+  background: url("../img/sns2.svg") no-repeat center center/44% auto;
+}
+.snsList li span.i3 {
+  background-size: 45% auto;
+}
+.snsList li span.i3 {
+  background: url("../img/sns3.svg") no-repeat center center/44% auto;
+}
+.snsList li span.i3 {
+  background-size: 45% auto;
+}
+.snsList li span.i4 {
+  background: url("../img/sns4.svg") no-repeat center center/44% auto;
+}
+.snsList li span.i3 {
+  background-size: 45% auto;
+}
+.snsList li span.i1 {
+  background-color: #04CF5C;
+  border: none;
+}
+.snsList li span.i2 {
+  background-color: #FFEB34;
+  border: none;
+}
+
+.loginFormWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: calc(min(1rem, 40px) * 0.7);
+}
+.loginFormWrap .loginForm {
+  width: 67%;
+}
+.loginFormWrap .loginForm input {
+  width: 100%;
+  padding-top: calc(min(1rem, 40px) * 0.5);
+  padding-bottom: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  font-size: calc(min(1em, 10px) * 1.4);
+  color: #8F8F91;
+  border-radius: 20px;
+  border: 1px solid #D0D0D0;
+  -webkit-appearance: none;
+}
+.loginFormWrap .loginForm input + input {
+  margin-top: calc(min(1rem, 40px) * 0.25);
+}
+.loginFormWrap .loginBtn {
+  width: calc(33% - 10px);
+  height: calc(min(1rem, 40px) * 3.25);
+  line-height: calc(min(1rem, 40px) * 3.25);
+  background-color: #2CB7A4;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 20px;
+  color: white;
+  font-size: calc(min(1em, 10px) * 2.5);
+  cursor: pointer;
+}
+
+.pcLoginFormSub {
+  margin-top: calc(min(1rem, 40px) * 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #8D8D8D;
+}
+.pcLoginFormSub label {
+  font-size: 14px;
+  cursor: pointer;
+}
+.pcLoginFormSub label input {
+  width: 19px;
+  height: 19px;
+  border-radius: 8px;
+  border: 1px solid #D0D0D0;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-right: 6px;
+  background: url("../img/check.svg") no-repeat center center;
+}
+.pcLoginFormSub label input:checked {
+  background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.pcLoginFormSub ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: #8D8D8D;
+}
+.pcLoginFormSub ul li {
+  cursor: pointer;
+}
+.pcLoginFormSub ul li::before {
+  content: "|";
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.pcLoginFormSub ul li:nth-child(1):before {
+  content: none;
+  cursor: none;
+}
+
+.mobLoginFormSub1 {
+  display: none;
+}
+
+.mobLoginFormSub2 {
+  display: none;
+}
+
+li.tabActive {
+  border: 2px solid #2CB7A4;
+  border-radius: 20px;
+  color: #2CB7A4;
+}
+
+.tabContentActive {
+  display: block;
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  /*여기안에 모바일 반응형 내용입력*/
+  .content .loginWrap {
+    margin-top: calc(max(1rem, 40px) * 1);
+    width: 80%;
+  }
+  .loginTabList {
+    width: 100%;
+  }
+  .loginTabList li {
+    width: calc(33.3333333333% - 5px);
+    height: calc(max(1rem, 40px) * 1.45);
+    font-size: calc(max(1em, 10px) * 1.4);
+    padding: 0 10px;
+  }
+  .tabContent {
+    padding-top: calc(max(1rem, 40px) * 0.8);
+  }
+  .tabContent p {
+    font-size: calc(max(1em, 10px) * 1.4);
+  }
+  .snsList {
+    width: 56.25%;
+    margin-top: calc(max(1rem, 40px) * 0.7);
+  }
+  .snsList li {
+    font-size: calc(max(1em, 10px) * 1.4);
+    width: 45px;
+  }
+  .snsList li span {
+    width: 100%;
+    height: 42px;
+  }
+  .snsList li span.i1 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i2 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i4 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .loginFormWrap {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+  }
+  .loginFormWrap .loginForm {
+    width: 100%;
+  }
+  .loginFormWrap .loginForm input {
+    padding: 18px;
+    font-size: 14px;
+  }
+  .loginFormWrap .loginForm input + input {
+    margin-top: 8px;
+  }
+  .loginFormWrap .loginBtn {
+    width: 100%;
+    margin-top: 25px;
+    line-height: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .pcLoginFormSub {
+    display: none;
+  }
+  .mobLoginFormSub1 {
+    display: block;
+    margin-top: 10px;
+    color: #8D8D8D;
+  }
+  .mobLoginFormSub1 label {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .mobLoginFormSub1 label input {
+    width: 19px;
+    height: 19px;
+    border-radius: 8px;
+    border: 1px solid #D0D0D0;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-right: 6px;
+    background: url("../img/check.svg") no-repeat center center;
+  }
+  .mobLoginFormSub1 label input:checked {
+    background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
+    border: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .mobLoginFormSub2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 13px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #8D8D8D;
+    margin-top: 17px;
+  }
+  .mobLoginFormSub2 li {
+    cursor: pointer;
+  }
+  .mobLoginFormSub2 li::before {
+    content: "|";
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .mobLoginFormSub2 li:nth-child(1):before {
+    content: none;
+    cursor: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 420px) {
+  /*여기안에 모바일 반응형 내용입력*/
+  .content .loginWrap {
+    margin-top: calc(max(1rem, 40px) * 1);
+    width: 100%;
+  }
+  .loginTabList {
+    width: 100%;
+  }
+  .loginTabList li {
+    width: calc(33.3333333333% - 5px);
+    height: calc(max(1rem, 40px) * 1.45);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .tabContent {
+    padding-top: calc(max(1rem, 40px) * 0.65);
+  }
+  .tabContent p {
+    font-size: calc(max(1em, 10px) * 1.4);
+  }
+  .snsList {
+    width: 66.6666666667%;
+    margin-top: calc(max(1rem, 40px) * 0.5);
+  }
+  .snsList li {
+    font-size: calc(max(1em, 10px) * 1.4);
+    width: 40px;
+  }
+  .snsList li span {
+    width: 100%;
+    height: 38px;
+  }
+  .snsList li span.i1 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i2 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .snsList li span.i4 {
+    background-size: 41% auto;
+  }
+  .snsList li span.i3 {
+    background-size: 44% auto;
+  }
+  .loginFormWrap {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+  }
+  .loginFormWrap .loginForm {
+    width: 100%;
+  }
+  .loginFormWrap .loginForm input {
+    padding: 18px;
+    font-size: 14px;
+  }
+  .loginFormWrap .loginForm input + input {
+    margin-top: 8px;
+  }
+  .loginFormWrap .loginBtn {
+    width: 100%;
+    margin-top: 25px;
+    line-height: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .pcLoginFormSub {
+    display: none;
+  }
+  .mobLoginFormSub1 {
+    display: block;
+    margin-top: 10px;
+    color: #8D8D8D;
+  }
+  .mobLoginFormSub1 label {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .mobLoginFormSub1 label input {
+    width: 19px;
+    height: 19px;
+    border-radius: 8px;
+    border: 1px solid #D0D0D0;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-right: 6px;
+    background: url("../img/check.svg") no-repeat center center;
+  }
+  .mobLoginFormSub1 label input:checked {
+    background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
+    border: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .mobLoginFormSub2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 13px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #8D8D8D;
+    margin-top: 17px;
+  }
+  .mobLoginFormSub2 li {
+    cursor: pointer;
+  }
+  .mobLoginFormSub2 li::before {
+    content: "|";
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .mobLoginFormSub2 li:nth-child(1):before {
+    content: none;
+    cursor: none;
+  }
+}

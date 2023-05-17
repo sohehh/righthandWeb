@@ -1,0 +1,104 @@
+// pc 1920 & 1080 grid 기준 비율설정
+html{font-size:2.66666666667vw;}
+body{font-size:0.66666666667vw;}
+$hgMb:max(1rem,40px);
+$hgPc:min(1rem,40px);
+$fzMb:max(1em,10px);
+$fzPc:min(1em,10px);
+$wdPc:calc(100% / 12);
+$wdTab:calc(100% / 8);
+$wdMob:calc(100% / 4);
+
+// 미디어쿼리
+
+@mixin tab{
+  @media (min-width:0px) and (max-width:1200px) {
+    @content;
+  }
+}
+@mixin mob{
+  @media (min-width:0px) and (max-width:420px) {
+    @content;
+    }
+}
+
+// 높이설정
+@mixin heights($dev,$kan){
+  @if($dev == 'mob'){
+    height: calc($hgMb*$kan);
+  }@else if($dev == 'pc'){
+    height: calc($hgPc*$kan);
+  }
+}
+
+// 폰트사이즈
+@mixin fontz($dev,$kan){
+  @if($dev == 'mob'){
+    font-size: calc($fzMb*$kan);
+  }@else if($dev == 'pc'){
+    font-size: calc($fzPc*$kan);
+  }
+}
+
+// 행높이
+@mixin lhz($dev,$kan){
+  @if($dev == 'mob'){
+    line-height: calc($hgMb*$kan);
+  }@else if($dev == 'pc'){
+    line-height: calc($hgPc*$kan);
+  }
+}
+// 반응형 마진
+@mixin mzn($dev,$dir,$kan){
+  @if($dev == 'mob'){
+    margin-#{$dir}: calc($hgMb*$kan);
+  }@else if($dev == 'pc'){
+    margin-#{$dir}: calc($hgPc*$kan);
+  }
+}
+// 반응형 패딩
+@mixin pdn($dev,$dir,$kan){
+  @if($dev == 'mob'){
+    padding-#{$dir}: calc($hgMb*$kan);
+  }@else if($dev == 'pc'){
+    padding-#{$dir}: calc($hgPc*$kan);
+  }
+}
+
+// 그리드기준
+@mixin grid($dev){
+  margin: 0 auto;
+  @if($dev == 'tab'){
+    width: 90%;
+    max-width: 700px;
+  }@else if($dev == 'pc'){
+    width: 80%;
+    max-width: 1200px;
+  }@else if($dev == "mob"){
+    width: 90%;
+    max-width: 380px;
+  }
+}
+
+// 이미지 자동적재 (모든 이미지는 i# 기준으로 클래스명 필요
+@mixin bgi($path,$str,$end) {
+  @for $i from $str through $end{
+    &.i#{$i}{
+        background-image: url('#{$path}#{$i+1}.jpg');
+    }
+  }
+}
+
+// 이미지 기본
+@mixin imgBc{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// 이미지 심화
+@mixin imgNw($pos,$sz){
+  background-repeat: no-repeat;
+  background-position: $pos;
+  background-size: $sz;
+}
