@@ -14,25 +14,15 @@ body {
 }
 
 .loginTabList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .loginTabList li {
   font-size: calc(min(1em, 10px) * 1.8);
   height: calc(min(1rem, 40px) * 1.575);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: calc(33.3333333333% - 5px);
   text-align: center;
   border: 2px solid #E3E3E3;
@@ -57,22 +47,13 @@ body {
   width: 66.6666666667%;
   margin: 0 auto;
   margin-top: calc(min(1rem, 40px) * 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .snsList li {
   width: 16.6666666667%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   font-size: calc(min(1em, 10px) * 1.6);
   cursor: pointer;
@@ -122,12 +103,8 @@ body {
 }
 
 .loginFormWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: calc(min(1rem, 40px) * 0.7);
 }
 .loginFormWrap .loginForm {
@@ -158,16 +135,13 @@ body {
   color: white;
   font-size: calc(min(1em, 10px) * 2.5);
   cursor: pointer;
+  border: none;
 }
 
 .pcLoginFormSub {
   margin-top: calc(min(1rem, 40px) * 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: #8D8D8D;
 }
 .pcLoginFormSub label {
@@ -188,12 +162,9 @@ body {
 .pcLoginFormSub label input:checked {
   background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
   border: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .pcLoginFormSub ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 14px;
   color: #8D8D8D;
@@ -334,17 +305,12 @@ li.tabActive {
   .mobLoginFormSub1 label input:checked {
     background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
     border: none;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
   .mobLoginFormSub2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     font-size: 13px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     color: #8D8D8D;
     margin-top: 17px;
   }
@@ -373,15 +339,9 @@ li.tabActive {
   .loginTabList li {
     width: calc(33.3333333333% - 5px);
     height: calc(max(1rem, 40px) * 1.45);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .tabContent {
     padding-top: calc(max(1rem, 40px) * 0.65);
@@ -473,17 +433,12 @@ li.tabActive {
   .mobLoginFormSub1 label input:checked {
     background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
     border: none;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
   .mobLoginFormSub2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     font-size: 13px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     color: #8D8D8D;
     margin-top: 17px;
   }

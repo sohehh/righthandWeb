@@ -44,12 +44,9 @@ body {
   margin-top: calc(min(1rem, 40px) * 0.6);
 }
 .inputList li label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .inputList li label span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap) {
   width: 16.6666666667%;
@@ -69,16 +66,7 @@ body {
   border-radius: 10px;
   font-weight: 400;
 }
-.inputList li label input::-webkit-input-placeholder {
-  color: #8F8F91;
-}
 .inputList li label input::-moz-placeholder {
-  color: #8F8F91;
-}
-.inputList li label input:-ms-input-placeholder {
-  color: #8F8F91;
-}
-.inputList li label input::-ms-input-placeholder {
   color: #8F8F91;
 }
 .inputList li label input::placeholder {
@@ -86,19 +74,13 @@ body {
 }
 
 li.callList label .callWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 83.3333333333%;
 }
 li.callList label .callWrap .callText {
   display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-top: calc(min(1rem, 40px) * 0.275);
   padding-bottom: calc(min(1rem, 40px) * 0.275);
 }
@@ -113,8 +95,6 @@ li.callList label .callWrap input:nth-of-type(3) {
 }
 
 li.fileList label .fileWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 83.3333333333%;
 }
@@ -134,7 +114,6 @@ li.fileList label .fileWrap label {
 li.fileList label .fileWrap label:hover {
   background-color: #2CB7A4;
   color: white;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 li.fileList label .fileWrap input {
@@ -150,15 +129,10 @@ li.fileList label .fileWrap #file2 {
 }
 
 li.addressList label .addressWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 83.3333333333%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 li.addressList label .addressWrap #address1 {
   width: calc(80% - 10px);
@@ -182,7 +156,6 @@ li.addressList label .addressWrap .adBtn {
 li.addressList label .addressWrap .adBtn:hover {
   background-color: #2CB7A4;
   color: white;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 li.addressList label .addressWrap #addressBtn {
@@ -229,7 +202,6 @@ li.addressList label .addressWrap #addressBtn {
 .agreeList li label input:checked {
   background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
   border: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .agreeList li .textBox {
@@ -268,7 +240,6 @@ li.addressList label .addressWrap #addressBtn {
 .allAgreeWrap input:checked {
   background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
   border: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -291,7 +262,6 @@ li.addressList label .addressWrap #addressBtn {
     width: 90%;
     max-width: 380px;
     margin-top: calc(max(1rem, 40px) * 1.75);
-    padding-bottom: 50px;
   }
   .content .title {
     text-align: left;
@@ -391,7 +361,6 @@ li.addressList label .addressWrap #addressBtn {
     width: 90%;
     max-width: 380px;
     margin-top: calc(max(1rem, 40px) * 1.75);
-    padding-bottom: 50px;
   }
   .content .title {
     text-align: left;

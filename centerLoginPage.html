@@ -132,9 +132,9 @@
                                 <input type="checkbox" name="idSave" value="idSave">아이디저장
                             </label>
                         </div>
-                        <div class="loginBtn">
+                        <button class="loginBtn">
                             로그인
-                        </div>
+                        </button>
                         <ul class="mobLoginFormSub2">
                             <li>아이디 찾기</li>
                             <li>비밀번호 찾기</li>
@@ -163,9 +163,9 @@
                                 <input type="checkbox" name="idSave" value="idSave">아이디저장
                             </label>
                         </div>
-                        <div class="loginBtn">
+                        <button class="loginBtn">
                             로그인
-                        </div>
+                        </button>
                         <ul class="mobLoginFormSub2">
                             <li>아이디 찾기</li>
                             <li>비밀번호 찾기</li>
@@ -194,6 +194,8 @@
     <script>
         $('.loginTabList li').removeClass('tabActive');
         $('.loginTabList li:nth-child(2)').addClass('tabActive');
+        $('.loginWrap>div').removeClass('tabContentActive');
+        $('.loginWrap>div:nth-of-type(2)').addClass('tabContentActive');
         $('.title').text('요양센터 이용자 로그인');
 
         $('.loginTabList li').each(function(idx){

@@ -260,7 +260,6 @@ li.addressList{
     .content{
         @include mix.grid(mob);
         @include mix.mzn(mob,top,1.75);
-        padding-bottom: 50px;
         .title{
             text-align: left;
         }
@@ -378,7 +377,6 @@ li.addressList{
     .content{
         @include mix.grid(mob);
         @include mix.mzn(mob,top,1.75);
-        padding-bottom: 50px;
         .title{
             text-align: left;
         }

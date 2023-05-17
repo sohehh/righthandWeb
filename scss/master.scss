@@ -135,7 +135,7 @@ header{
 .content{
     @include mix.grid(pc);
     @include mix.mzn(pc,top,2.5);
-    @include mix.pdn(pc,bottom,2.5);
+    @include mix.pdn(pc,bottom,4.5);
     .title{
         font-weight: 500;
         text-align: center;
@@ -298,6 +298,7 @@ header{
     .content{
         @include mix.grid(tab);
         @include mix.mzn(mob,top,1.75);
+        padding-bottom: 80px;
         .title{
             @include mix.fontz(mob,1.8);
         }
