@@ -239,7 +239,7 @@ body {
   }
   .postContent .postCon {
     margin-top: 18px;
-    line-height: 150%;
+    line-height: 160%;
     font-size: 13px;
   }
   .postContent .postImg {
@@ -290,5 +290,17 @@ body {
   }
   .replyBtns .replyReportBtn {
     margin-left: 9px;
+  }
+  .writerWrap {
+    margin: 0 20px 20px 20px;
+    padding: 12px 14px 14px 14px;
+  }
+  .writerWrap .writerBox {
+    margin-top: 10px;
+    height: 80px;
+    line-height: 145%;
+  }
+  .writerWrap .writerBtnWrap .wBtn {
+    font-weight: 500;
   }
 }
