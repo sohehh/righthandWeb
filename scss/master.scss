@@ -64,10 +64,8 @@ header{
         @include mix.fontz(pc,1.7);
         h4 + h4{
             @include mix.mzn(pc,left,1.125);
-            
         }
         h4{
-            cursor: pointer;
             position: relative;
             .pcSubmenu{ 
                 display: none;
@@ -84,7 +82,7 @@ header{
                 @include mix.pdn(pc,bottom,0.25);
                 border:1px solid #EAEAEA;
                 border-radius: 15px;
-                @include mix.fontz(pc,1.5);
+                @include mix.fontz(pc,1.4);
                 font-weight: 700;
             }
             .pcSubmenu::before {

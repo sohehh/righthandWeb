@@ -50,15 +50,15 @@
                     <img src="./img/webLogo.svg" alt="오른손 로고">
                 </h1>
                 <nav class="pcNav">
-                    <h4>구직 게시판</h4>
-                    <h4>시니어 라이프</h4>
-                    <h4>내 이력정보</h4>
-                    <h4>로그인</h4>
-                    <h4>회원가입</h4>
+                    <h4><a href="#">구직 게시판</a></h4>
+                    <h4><a href="#">시니어 라이프</a></h4>
+                    <h4><a href="#">내 이력정보</a></h4>
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
                 </nav>
                 <nav class="mobNav">
-                    <h4>로그인</h4>
-                    <h4>회원가입</h4>
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
                     <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
                 </nav>
                 <div class="sideMenuBox">
@@ -69,9 +69,9 @@
                             <span>회원정보가 없습니다</span>
                         </div>
                         <nav>
-                            <h4>구직 게시판</h4>
-                            <h4>시니어 라이프</h4>
-                            <h4>내 이력정보</h4>
+                            <h4><a href="#">구직 게시판</a></h4>
+                            <h4><a href="#">시니어 라이프</a></h4>
+                            <h4><a href="#">내 이력정보</a></h4>
                         </nav>
                         <div class="signUpWrap">
                             <p><a href="#">회원가입</a></p>
@@ -173,6 +173,7 @@
             <p><img src="./img/footerLoto.svg"></p>
         </footer>
     </div>
+    <script src="./js/master.js"></script>
     <script>
         $('.loginTabList li').removeClass('tabActive');
         $('.loginTabList li:nth-child(3)').addClass('tabActive');
@@ -196,37 +197,6 @@
             });
             
         });
-
-        //사이드메뉴 나오는 코드
-        $('.list').click(function(){
-            $('.sideMenuBox').fadeIn(200);
-            $('.sideMenuContent').animate({
-                right:0+"%"
-            });
-            $("body").addClass('notScroll');
-        });
-        
-        //사이드메뉴 사라지는 코드
-        $('.close').click(function(){
-            popclose();
-        });
-
-        //사이드메뉴 바깥영역 클릭시 사이드메뉴사라지는 코드
-        $(document).click(function (e){
-            if($('.sideMenuBox').is(e.target)){
-                popclose();
-            }
-        });
-
-        /*팝업창 사라지는 코드 | 함수 선언*/
-        function popclose(){
-            $('.sideMenuContent').animate({
-                right:-100 + '%'
-            },300,function(){
-                $('.sideMenuBox').fadeOut(200);
-            });
-            $("body").removeClass('notScroll');
-        }
 
     </script>
 </body>

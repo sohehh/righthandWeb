@@ -72,7 +72,6 @@ header .pcNav h4 + h4 {
   margin-left: calc(min(1rem, 40px) * 1.125);
 }
 header .pcNav h4 {
-  cursor: pointer;
   position: relative;
 }
 header .pcNav h4 .pcSubmenu {
@@ -90,7 +89,7 @@ header .pcNav h4 .pcSubmenu {
   padding-bottom: calc(min(1rem, 40px) * 0.25);
   border: 1px solid #EAEAEA;
   border-radius: 15px;
-  font-size: calc(min(1em, 10px) * 1.5);
+  font-size: calc(min(1em, 10px) * 1.4);
   font-weight: 700;
 }
 header .pcNav h4 .pcSubmenu::before {

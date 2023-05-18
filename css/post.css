@@ -202,6 +202,177 @@ body {
   color: #838383;
 }
 
+/*/////////////////////////////////////////////////////////*/
+.writerTextWrap {
+  margin: 0 auto;
+  margin-top: calc(min(1rem, 40px) * 1.325);
+  width: 64.475%;
+  border-top: 3px solid #2CB7A4;
+}
+
+.wtList {
+  margin-top: calc(min(1rem, 40px) * 1.325);
+  width: 100%;
+}
+.wtList li {
+  display: flex;
+  font-size: calc(min(1em, 10px) * 1.5);
+}
+.wtList li span {
+  margin-top: calc(min(1rem, 40px) * 0.15);
+  width: 10%;
+  display: inline-block;
+  font-weight: 500;
+}
+.wtList li p {
+  display: inline-block;
+  height: calc(min(1rem, 40px) * 1);
+  line-height: calc(min(1rem, 40px) * 1);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+.wtList li + li {
+  margin-top: calc(min(1rem, 40px) * 0.6);
+}
+.wtList li:nth-child(3) {
+  display: flex;
+  align-items: flex-start;
+}
+.wtList li:nth-child(3) span {
+  margin-top: calc(min(1rem, 40px) * 0.25);
+}
+
+.wtTitle, .wtContent {
+  vertical-align: middle;
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  padding-top: calc(min(1rem, 40px) * 0.25);
+  padding-bottom: calc(min(1rem, 40px) * 0.25);
+  background: #F5F5F5;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  line-height: calc(min(1rem, 40px) * 0.5);
+  width: 90%;
+  font-family: "NanumSquareRound";
+  font-weight: 400;
+}
+
+.wtTitle {
+  height: calc(min(1rem, 40px) * 1);
+}
+
+.wtContent {
+  height: calc(min(1rem, 40px) * 8.325);
+}
+
+.fileContainer {
+  width: 100%;
+}
+
+.fileBtnWrap label {
+  display: inline-block;
+  padding-left: calc(min(1rem, 40px) * 0.45);
+  padding-right: calc(min(1rem, 40px) * 0.45);
+  height: calc(min(1rem, 40px) * 0.7);
+  line-height: calc(min(1rem, 40px) * 0.7);
+  border: 1px solid #2CB7A4;
+  border-radius: 20px;
+  color: #2CB7A4;
+  cursor: pointer;
+}
+.fileBtnWrap label:hover {
+  background: #2CB7A4;
+  color: white;
+}
+.fileBtnWrap .fileSubText {
+  display: inline;
+  margin-left: calc(min(1rem, 40px) * 0.225);
+  color: #9F9F9F;
+}
+.fileBtnWrap #file {
+  display: none;
+}
+
+.fileContentWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: calc(min(1rem, 40px) * 0.3);
+  padding-top: calc(min(1rem, 40px) * 0.5);
+  padding-bottom: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  height: calc(min(1rem, 40px) * 4);
+  font-size: calc(min(1em, 10px) * 1.3);
+  width: 100%;
+  height: auto;
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+.fileContentWrap input {
+  height: calc(min(1rem, 40px) * 0.7);
+  background: transparent;
+  border: none;
+  font-family: "NanumSquareRound";
+  font-weight: 500;
+}
+.fileContentWrap .prvImgWrap {
+  width: 15%;
+  display: none;
+  position: relative;
+  height: calc(min(1rem, 40px) * 2);
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .imgCover {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3607843137);
+  z-index: 50;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(min(1rem, 40px) * 2);
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .prvImg {
+  width: 100%;
+  height: calc(min(1rem, 40px) * 2);
+  position: relative;
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .deleteBtn {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  width: 25px;
+  top: 0;
+  right: 0;
+  background-color: white;
+  padding: 16px 18px;
+  border-radius: 0 10px 0 8px;
+  background: url("../img/delete.svg") no-repeat center center/16px;
+  cursor: pointer;
+}
+
+.submitBtnWrap {
+  text-align: right;
+}
+.submitBtnWrap .submitBtn {
+  margin-top: calc(min(1rem, 40px) * 0.8);
+  border: none;
+  height: calc(min(1rem, 40px) * 1.25);
+  line-height: calc(min(1rem, 40px) * 1.25);
+  padding-left: calc(min(1rem, 40px) * 0.75);
+  padding-right: calc(min(1rem, 40px) * 0.75);
+  border-radius: 30px;
+  background: #2CB7A4;
+  color: white;
+  font-size: calc(min(1em, 10px) * 1.7);
+}
+
 @media (min-width: 0px) and (max-width: 1200px) {
   .postDetailWrap {
     margin-top: 39px;
