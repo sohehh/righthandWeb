@@ -155,7 +155,7 @@ header{
     width: 100%;
     background-color: #F2F2F2;
     position: relative;
-    transform: translateY(-100%);
+    //transform: translateY(-100%);
     footer{
         @include mix.grid(pc);
         p{
@@ -173,7 +173,6 @@ header{
 .wrap{
     position: relative;
     min-height: 100%;
-    padding-bottom: 80px;
 }
 
 

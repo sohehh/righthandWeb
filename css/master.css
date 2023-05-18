@@ -163,7 +163,6 @@ header .sideMenuBox {
   width: 100%;
   background-color: #F2F2F2;
   position: relative;
-  transform: translateY(-100%);
 }
 .footerWrap footer {
   margin: 0 auto;
@@ -183,7 +182,6 @@ header .sideMenuBox {
 .wrap {
   position: relative;
   min-height: 100%;
-  padding-bottom: 80px;
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {
