@@ -184,11 +184,120 @@
         @include mix.lhz(pc,0.45);
     }
     .writerBtnWrap{
+        margin-top: 3px;
         text-align: right;
         .wBtn{
+            cursor: pointer;
             border: none;
             background: none;
             color:#838383;
+        }
+    }
+}
+@include mix.tab{
+    .postDetailWrap{
+        margin-top: 39px;
+        width: 100%;
+    }
+    .postSectionTop{
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+    .postHeader{
+        margin-top: 10px;
+    }
+    
+    .postPofile{
+        width: 45px;
+    }
+    .nameDateWrap{
+        font-size: 13px;
+        margin-top: 3px;
+        margin-left: 10px;
+
+        .name{
+            line-height: 145%;
+        }
+    }
+    .postHrtWrap{
+        top:3px;
+        font-size: 12px;
+    }
+
+    .postContent{
+        margin-top:28px;
+        .postTitle{
+            font-size: 14px;
+        }
+        .postCon{
+            margin-top:18px;
+            line-height: 160%;
+            font-size: 13px;
+        }
+        .postImg{
+            margin-top:27px;
+            
+        }
+    }
+    .goodWrap{
+        margin-top:48px;
+        .hrt{
+            width: 31px;
+            height: 27px;
+            background-size: 30px;
+        }
+        .hrtTxt{
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    }
+    .postSectionbottom{
+        width: 100%;
+        margin-top:60px;
+    }
+    .replyTop{
+        padding: 20px 20px 6px 20px;
+    }
+    .replyCntWrap{
+        font-size: 15px;
+        .replyCnt{
+            padding-left: 5px;
+        }
+    }
+    .replyList{
+        padding: 0 20px 20px 20px;
+        li{
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .nameTextWrap{
+        margin-left: 10px;
+        font-size: 13px;
+        .txt{
+            font-size: 12px;
+            line-height: 150%;
+        }
+    }
+    .replyBtns{
+        font-size: 11px;
+        .replyReportBtn{
+            margin-left: 9px;
+        }
+    }
+    .writerWrap{
+        margin:0 20px 20px 20px;
+        padding: 12px 14px 14px 14px;
+        .writerBox{
+            margin-top: 10px;
+            height: 80px;
+            line-height: 145%;
+        }
+        .writerBtnWrap{
+            .wBtn{
+                font-weight: 500;
+            }
         }
     }
 }
@@ -244,18 +353,19 @@
     .goodWrap{
         margin-top:48px;
         .hrt{
-            width: 23px;
-            height: 20px;
-            background-size: 22px;
+            width: 27px;
+            height: 24px;
+            background-size: 25px;
         }
         .hrtTxt{
             font-size: 13px;
+            margin-left: 2px;
         }
     }
     .postSectionbottom{
         width: 100vw;
         margin-left: calc(-50vw + 50%);
-        margin-top:60px;
+        margin-top:50px;
     }
     .replyTop{
         padding: 20px 20px 6px 20px;
