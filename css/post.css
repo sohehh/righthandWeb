@@ -371,6 +371,7 @@ body {
   background: #2CB7A4;
   color: white;
   font-size: calc(min(1em, 10px) * 1.7);
+  font-weight: 500;
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {
@@ -577,5 +578,81 @@ body {
   }
   .writerWrap .writerBtnWrap .wBtn {
     font-weight: 500;
+  }
+  /*/////////////////////////////////////////////////////////*/
+  .writerTextWrap {
+    width: 100%;
+    margin-top: 37px;
+  }
+  .wtList {
+    margin-top: 30px;
+  }
+  .wtList li {
+    display: block;
+    font-size: 14px;
+  }
+  .wtList li span {
+    width: auto;
+  }
+  .wtList li p {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    padding: 0 18px;
+  }
+  .wtList li:nth-child(3) {
+    display: block;
+  }
+  .wtList li + li {
+    margin-top: 20px;
+  }
+  .wtTitle, .wtContent {
+    width: 100%;
+    padding: 11px 18px;
+    margin-top: 10px;
+    line-height: 145%;
+  }
+  .wtTitle {
+    height: 40px;
+  }
+  .fileContainer {
+    margin-top: 10px;
+  }
+  .fileBtnWrap {
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .fileBtnWrap label {
+    line-height: 26px;
+    height: 26px;
+    padding: 0 15px;
+  }
+  .fileContentWrap {
+    padding: 15px;
+    min-height: auto;
+  }
+  .fileContentWrap .prvImgWrap {
+    width: 25%;
+    min-height: 70px;
+  }
+  .fileContentWrap .prvImgWrap .imgCover {
+    min-height: 70px;
+  }
+  .fileContentWrap .prvImgWrap .prvImg {
+    min-height: 70px;
+  }
+  .fileContentWrap input {
+    height: 20px;
+  }
+  .submitBtnWrap {
+    text-align: center;
+  }
+  .submitBtnWrap .submitBtn {
+    width: 100%;
+    margin-top: 50px;
+    line-height: 52px;
+    height: 52px;
+    font-size: 16px;
   }
 }

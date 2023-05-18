@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/post.css">
     <script src="./js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(window).resize(function(){ 
+            if (window.innerWidth < 421) {  // 다바이스 크기가 421이하일때 
+                let $box1 = $('.picture');
+                $('.fileBtnWrap').insertAfter($box1);
+                
+            }else{
+                let $box2 = $('.fileContentWrap');
+                $('.fileBtnWrap').insertBefore($box2);
+            }
+
+        }).resize(); 
+
+        
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -92,7 +107,7 @@
 
                     </li>
                     <li>
-                        <span>사진첨부</span>
+                        <span class="picture">사진첨부</span>
                         <div class="fileContainer">
                             <div class="fileBtnWrap">
                                 <label for="file">내 PC</label>
