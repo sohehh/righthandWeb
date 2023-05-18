@@ -305,7 +305,6 @@
     @include mix.heights(pc,4);
     @include mix.fontz(pc,1.3);
     width: 100%;
-    height: auto;
     background: #F5F5F5;
     border-radius: 10px;
     input{
@@ -321,7 +320,7 @@
         width: 15%;
         display: none;
         position:relative;
-        @include mix.heights(pc,2);
+        @include mix.heights(pc,2.3);
         border-radius: 10px;
         .imgCover{
             position: relative;
@@ -331,13 +330,13 @@
             position: absolute;
             top:0;
             right:0;
-            height: calc(min(1rem, 40px) * 2);
+            height: calc(min(1rem, 40px) * 2.3);
             border-radius: 10px;
             
         }
         .prvImg{
             width: 100%;
-            @include mix.heights(pc,2);
+            @include mix.heights(pc,2.3);
             position:relative;
             border-radius: 10px;
         }
@@ -487,7 +486,91 @@
             }
         }
     }
+
+/*/////////////////////////////////////////////////////////*/
+//postWriter style
+.writerTextWrap{
+    width: 100%;
+    margin-top: 37px;
 }
+.wtList{
+    margin-top: 30px;
+    li{
+        display: block;
+        font-size: 14px;
+        span{
+            width: auto;
+
+        }p{
+            display: block;
+            height:40px;
+            line-height: 40px;
+            margin-top: 10px;
+            padding:0 18px;
+        }
+        &:nth-child(3){
+            display: block;
+        }
+    }
+    li + li{
+        margin-top: 20px;
+    }
+    
+}
+.wtTitle, .wtContent{
+    width: 100%;
+    padding:11px 18px;
+    margin-top: 10px;
+    line-height: 145%;
+}
+.wtTitle{
+    height: 40px;
+}
+.wtContent{
+    min-height: 253px;
+}
+.fileContainer{
+    margin-top: 10px;
+}
+.fileBtnWrap{
+    display: inline-block;
+    margin-left: 12px;
+}
+.fileBtnWrap label{
+    line-height: 26px;
+    height:26px;
+    padding:0 15px;
+}
+.fileContentWrap{
+    padding:15px;
+    height: 130px;
+    .prvImgWrap{
+        width: 90px;
+        min-height: 82px;
+        .imgCover{
+            min-height: 82px;
+        }
+        .prvImg{
+            min-height: 82px;
+
+        }
+    }
+    input{
+        height:20px
+    }
+}
+.submitBtnWrap{
+    text-align: center;
+    .submitBtn{
+        width: 100% ;
+        margin-top: 50px;
+        line-height: 52px;
+        height: 52px;
+        font-size: 16px;
+    }
+}
+}
+
 @include mix.mob{
     .postDetailWrap{
         margin-top: 39px;
@@ -599,7 +682,7 @@
         }
     }
 
-    /*/////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////*/
 //postWriter style
 .writerTextWrap{
     width: 100%;
@@ -637,7 +720,9 @@
 }
 .wtTitle{
     height: 40px;
-    
+}
+.wtContent{
+    min-height: 253px;
 }
 .fileContainer{
     margin-top: 10px;
@@ -653,15 +738,15 @@
 }
 .fileContentWrap{
     padding:15px;
-    min-height: auto;
+    min-height: 90px;
     .prvImgWrap{
         width: 25%;
-        min-height: 70px;
+        min-height: 77px;
         .imgCover{
-            min-height: 70px;
+            min-height: 77px;
         }
         .prvImg{
-            min-height: 70px;
+            min-height: 77px;
 
         }
     }

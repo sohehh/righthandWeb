@@ -308,7 +308,6 @@ body {
   height: calc(min(1rem, 40px) * 4);
   font-size: calc(min(1em, 10px) * 1.3);
   width: 100%;
-  height: auto;
   background: #F5F5F5;
   border-radius: 10px;
 }
@@ -323,7 +322,7 @@ body {
   width: 15%;
   display: none;
   position: relative;
-  height: calc(min(1rem, 40px) * 2);
+  height: calc(min(1rem, 40px) * 2.3);
   border-radius: 10px;
 }
 .fileContentWrap .prvImgWrap .imgCover {
@@ -334,12 +333,12 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  height: calc(min(1rem, 40px) * 2);
+  height: calc(min(1rem, 40px) * 2.3);
   border-radius: 10px;
 }
 .fileContentWrap .prvImgWrap .prvImg {
   width: 100%;
-  height: calc(min(1rem, 40px) * 2);
+  height: calc(min(1rem, 40px) * 2.3);
   position: relative;
   border-radius: 10px;
 }
@@ -473,6 +472,85 @@ body {
   }
   .writerWrap .writerBtnWrap .wBtn {
     font-weight: 500;
+  }
+  /*/////////////////////////////////////////////////////////*/
+  .writerTextWrap {
+    width: 100%;
+    margin-top: 37px;
+  }
+  .wtList {
+    margin-top: 30px;
+  }
+  .wtList li {
+    display: block;
+    font-size: 14px;
+  }
+  .wtList li span {
+    width: auto;
+  }
+  .wtList li p {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    padding: 0 18px;
+  }
+  .wtList li:nth-child(3) {
+    display: block;
+  }
+  .wtList li + li {
+    margin-top: 20px;
+  }
+  .wtTitle, .wtContent {
+    width: 100%;
+    padding: 11px 18px;
+    margin-top: 10px;
+    line-height: 145%;
+  }
+  .wtTitle {
+    height: 40px;
+  }
+  .wtContent {
+    min-height: 253px;
+  }
+  .fileContainer {
+    margin-top: 10px;
+  }
+  .fileBtnWrap {
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .fileBtnWrap label {
+    line-height: 26px;
+    height: 26px;
+    padding: 0 15px;
+  }
+  .fileContentWrap {
+    padding: 15px;
+    height: 130px;
+  }
+  .fileContentWrap .prvImgWrap {
+    width: 90px;
+    min-height: 82px;
+  }
+  .fileContentWrap .prvImgWrap .imgCover {
+    min-height: 82px;
+  }
+  .fileContentWrap .prvImgWrap .prvImg {
+    min-height: 82px;
+  }
+  .fileContentWrap input {
+    height: 20px;
+  }
+  .submitBtnWrap {
+    text-align: center;
+  }
+  .submitBtnWrap .submitBtn {
+    width: 100%;
+    margin-top: 50px;
+    line-height: 52px;
+    height: 52px;
+    font-size: 16px;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {
@@ -616,6 +694,9 @@ body {
   .wtTitle {
     height: 40px;
   }
+  .wtContent {
+    min-height: 253px;
+  }
   .fileContainer {
     margin-top: 10px;
   }
@@ -630,17 +711,17 @@ body {
   }
   .fileContentWrap {
     padding: 15px;
-    min-height: auto;
+    min-height: 90px;
   }
   .fileContentWrap .prvImgWrap {
     width: 25%;
-    min-height: 70px;
+    min-height: 77px;
   }
   .fileContentWrap .prvImgWrap .imgCover {
-    min-height: 70px;
+    min-height: 77px;
   }
   .fileContentWrap .prvImgWrap .prvImg {
-    min-height: 70px;
+    min-height: 77px;
   }
   .fileContentWrap input {
     height: 20px;
