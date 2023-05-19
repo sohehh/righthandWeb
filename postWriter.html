@@ -99,7 +99,7 @@
                     </li>
                     <li>
                         <span>제목</span>
-                        <textarea class="wtTitle" placeholder="제목을 입력해 주세요"></textarea>
+                        <textarea class="wtTitle" placeholder="제목을 입력해 주세요" rows=1></textarea>
                     </li>
                     <li>
                         <span>내용</span>
@@ -110,7 +110,7 @@
                         <span class="picture">사진첨부</span>
                         <div class="fileContainer">
                             <div class="fileBtnWrap">
-                                <label for="file">내 PC</label>
+                                <label for="file">내 기기</label>
                                 <span class="fileSubText">사진 (최대 1개까지 업로드 가능)</span>
                                 <input id="file" type="file">
                             </div>
@@ -126,12 +126,13 @@
                     </li>
                 </ul>
                 <div class="submitBtnWrap">
-                    <button class="submitBtn">등록하기</button>
+                    <button class="submitBtn" onclick='showProptDialog()'>등록하기</button>
                 </div>
             </div>
             
             
         </div>
+        
     </div>
     <div class="footerWrap">
         <footer>
@@ -155,6 +156,14 @@
             $(".prvImg").attr('src',null);
             $('.prvImgWrap').css('display','none');
         });
+
+        function showProptDialog(){
+            if(confirm("게시글 등록을 하시겠습니까?")){
+                alert("등록이 완료되었습니다");
+            }else{
+                
+            }
+        }
     </script>
     <script type="text/javascript">
         //사진 미리보기 코드
