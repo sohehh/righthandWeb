@@ -371,6 +371,7 @@ body {
   color: white;
   font-size: calc(min(1em, 10px) * 1.7);
   font-weight: 500;
+  cursor: pointer;
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {

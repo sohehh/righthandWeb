@@ -223,7 +223,7 @@ header{
     }
     .sideMenuContent{
         position: absolute;
-        width:70%;
+        width:50%;
         background-color: white;
         height: 100vh;
         top:0;
@@ -317,6 +317,11 @@ header{
     }
 
 }
+@media (min-width:0px) and (max-width:600px){
+    .sideMenuContent{
+        width: 70%;
+    }
+}
 @include mix.mob{
     .headerWrap{
         header{
@@ -339,6 +344,9 @@ header{
             }
             
         }
+    }
+    .sideMenuContent{
+        width: 70%;
     }
     .subMenu{
         padding-left: 20px;

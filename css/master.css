@@ -230,7 +230,7 @@ header .sideMenuBox {
   }
   .sideMenuContent {
     position: absolute;
-    width: 70%;
+    width: 50%;
     background-color: white;
     height: 100vh;
     top: 0;
@@ -320,6 +320,11 @@ header .sideMenuBox {
     min-width: 60px;
   }
 }
+@media (min-width: 0px) and (max-width: 600px) {
+  .sideMenuContent {
+    width: 70%;
+  }
+}
 @media (min-width: 0px) and (max-width: 420px) {
   .headerWrap header {
     margin: 0 auto;
@@ -339,6 +344,9 @@ header .sideMenuBox {
   }
   header .mobNav h4 + h4 {
     margin-left: calc(max(1rem, 40px) * 0.5);
+  }
+  .sideMenuContent {
+    width: 70%;
   }
   .subMenu {
     padding-left: 20px;
