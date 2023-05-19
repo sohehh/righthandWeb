@@ -214,4 +214,8 @@ body {
     border-radius: 15px;
     margin-left: 10px;
   }
+  .pageNav {
+    margin-top: 35px;
+    width: 66.6666666667%;
+  }
 }
