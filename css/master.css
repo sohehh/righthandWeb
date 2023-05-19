@@ -66,7 +66,7 @@ header h1 img {
 header .pcNav {
   display: flex;
   color: white;
-  font-size: calc(min(1em, 10px) * 1.7);
+  font-size: calc(min(1em, 10px) * 1.85);
 }
 header .pcNav h4 + h4 {
   margin-left: calc(min(1rem, 40px) * 1.125);

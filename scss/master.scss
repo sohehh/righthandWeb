@@ -61,7 +61,7 @@ header{
     .pcNav{
         display: flex;
         color:white;
-        @include mix.fontz(pc,1.7);
+        @include mix.fontz(pc,1.85);
         h4 + h4{
             @include mix.mzn(pc,left,1.125);
         }

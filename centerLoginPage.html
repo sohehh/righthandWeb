@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/master.css">
-    <link rel="stylesheet" href="./css/webLoginPage.css">
+    <link rel="stylesheet" href="./css/webLogin.css">
     <script src="./js/jquery-1.11.1.min.js"></script>
     <script>
         $(window).resize(function(){ 
@@ -111,11 +111,12 @@
             <p class="title-sub">오른손의 회원으로 로그인하시면 오른손만의 특별한 서비스를 이용 하실 수 있습니다 :)</p>
             <div class="loginWrap">
                 <ul class="loginTabList">
-                    <li class="tabActive">일반 이용자</li>
-                    <li>요양센터 이용자</li>
+                    <li>일반 이용자</li>
+                    <li  class="tabActive">요양센터 이용자</li>
                     <li>요양보호사 이용자</li>
                 </ul>
-                <div class="firstTab tabContent tabContentActive">
+                <!--일반 이용자 탭 박스-->
+                <div class="firstTab tabContent">
                     <p>SNS 간편 로그인</p>
                     <ul class="snsList">
                         <li><span class="i1"></span>네이버</li>
@@ -124,7 +125,8 @@
                         <li><span class="i4"></span>애플</li>
                     </ul>
                 </div>
-                <div class="secondTab tabContent">
+                <!--요양센터 이용자 탭 박스-->
+                <div class="secondTab tabContent tabContentActive">
                     <div class="loginFormWrap">
                         <div class="loginForm">
                             <input type="text" placeholder="아이디">
@@ -135,7 +137,7 @@
                                 <input type="checkbox" name="idSave" value="idSave">아이디저장
                             </label>
                         </div>
-                        <button class="loginBtn">
+                        <button class="loginBtn" onclick="showAlert()">
                             로그인
                         </button>
                         <ul class="mobLoginFormSub2">
@@ -155,6 +157,7 @@
                         </ul>
                     </div>
                 </div>
+                <!--요양보호사 이용자 탭 박스-->
                 <div class="thirdTab tabContent">
                     <div class="loginFormWrap">
                         <div class="loginForm">
@@ -196,12 +199,6 @@
     </div>
     <script src="./js/master.js"></script>
     <script>
-        $('.loginTabList li').removeClass('tabActive');
-        $('.loginTabList li:nth-child(2)').addClass('tabActive');
-        $('.loginWrap>div').removeClass('tabContentActive');
-        $('.loginWrap>div:nth-of-type(2)').addClass('tabContentActive');
-        $('.title').text('요양센터 이용자 로그인');
-
         $('.loginTabList li').each(function(idx){
             $(this).click(function(){
                 $('.loginTabList li').removeClass('tabActive');
@@ -218,6 +215,14 @@
             });
             
         });
+
+        function showAlert(){
+            if((($('.secondTab input[type=text]').val().length > 0) && ($('.secondTab input[type=password]').val().length > 0)) ){ // 값이 있는 경우
+                alert("로그인");
+            }else{ //값이 없는 경우
+                alert('아이디와 비밀번호를 입력해주세요');
+            }
+        }
 
 
     </script>

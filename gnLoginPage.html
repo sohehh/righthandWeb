@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/master.css">
-    <link rel="stylesheet" href="./css/webLoginPage.css">
+    <link rel="stylesheet" href="./css/webLogin.css">
     <script src="./js/jquery-1.11.1.min.js"></script>
     <script>
         $(window).resize(function(){ 
@@ -91,6 +91,7 @@
                     <li>요양센터 이용자</li>
                     <li>요양보호사 이용자</li>
                 </ul>
+                <!--일반 이용자 탭 박스-->
                 <div class="firstTab tabContent tabContentActive">
                     <p>SNS 간편 로그인</p>
                     <ul class="snsList">
@@ -100,6 +101,7 @@
                         <li><span class="i4"></span>애플</li>
                     </ul>
                 </div>
+                <!--요양센터 이용자 탭 박스-->
                 <div class="secondTab tabContent">
                     <div class="loginFormWrap">
                         <div class="loginForm">
@@ -131,6 +133,7 @@
                         </ul>
                     </div>
                 </div>
+                <!--요양보호사 이용자 탭 박스-->
                 <div class="thirdTab tabContent">
                     <div class="loginFormWrap">
                         <div class="loginForm">
@@ -172,7 +175,6 @@
     </div>
     <script src="./js/master.js"></script>
     <script>
-        $('.loginTabList li:nth-child(1)').addClass('tabActive');
 
         $('.loginTabList li').each(function(idx){
             $(this).click(function(){
@@ -190,7 +192,6 @@
             });
             
         });
-
 
     </script>
 </body>
