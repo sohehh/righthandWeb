@@ -408,6 +408,7 @@ li.haveCr {
     display: block;
     width: 100%;
     line-height: 130%;
+    text-indent: 0;
   }
   .inputList li input[type=text] {
     margin-top: 10px;

@@ -294,6 +294,7 @@ li.haveCr{
             @include mix.fontz(pc,1.4);
             margin-left: 4px;
             .centerRed{
+                //@include mix.fontz(pc,1.4);
                 color:#E40000;
             }
         }
@@ -404,6 +405,7 @@ form{
             display: block;
             width: 100%;
             line-height: 130%;
+            text-indent: 0;
         }
         input[type=text]{
             margin-top:10px;
