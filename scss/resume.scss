@@ -1,0 +1,593 @@
+@use './mixins.scss' as mix;
+
+
+.myResumeWrap{
+    $borderR : calc(min(1rem,40px)*0.625);
+    width:calc(100% / 12 * 7.5) ;
+    border:1px solid #BCBCBC;
+    margin:0 auto;
+    border-radius: $borderR;
+    position:relative;
+    @include mix.mzn(pc,top,1.625);
+    @include mix.pdn(pc,top,0.625);
+    @include mix.pdn(pc,left,0.625);
+    @include mix.pdn(pc,right,0.625);
+    @include mix.pdn(pc,bottom,1);
+    p{
+        @include mix.fontz(pc,1.5);
+        color:#2CB7A4;
+        @include mix.mzn(pc,top,0.35);
+    }
+    .btn{
+        $borderR : calc(min(1rem,40px)*0.75);
+        $abs : calc(min(1rem,40px)*0.625);
+        @include mix.heights(pc,1);
+        border:none;
+        @include mix.pdn(pc,left,.5);
+        @include mix.pdn(pc,right,.5);
+        background: #2CB7A4;
+        color:white;
+        border-radius: $borderR;
+        position:absolute;
+        right:$abs;
+        top:$abs;
+        font-weight: 500;
+
+    }
+}
+.profileWrap{
+    display: flex;
+    figure{
+        display: inline-block;
+        width: calc(100% / 7.5 * 0.55);
+        img{
+            width: 100%;
+        }
+    }
+    span{
+        display: flex;
+        align-items: center;
+        @include mix.mzn(pc,left,0.3);
+        @include mix.fontz(pc,1.5);
+        font-weight: 500;
+    }
+}
+
+/*////////////////////////////////////////////////*/
+/*resumeWrite.html style*/
+form{
+    width: calc(100% / 12 * 8.5);
+    margin:auto auto;
+    @include mix.mzn(pc,top,1.625);
+}
+.inputSection{
+    position:relative;
+    @include mix.mzn(pc,top,1.375);
+    h3{
+            $borderR : calc(min(1rem, 40px)* 0.25);
+            @include mix.heights(pc,1.25);
+            @include mix.lhz(pc,1.25);
+            @include mix.pdn(pc,left,0.5);
+            @include mix.pdn(pc,right,0.5);
+            @include mix.fontz(pc,1.8);
+            color:white;
+            background: #2CB7A4;
+            display: inline-block;
+            border-radius:  $borderR $borderR 0 $borderR;
+            
+            &::after{
+                $abs : calc(min(1rem,40px)*1.14);
+                position: absolute;
+                display: block;
+                content: "";
+                width: calc(100% - 15px);
+                @include mix.heights(pc,0.1);
+                background: #2CB7A4;
+                top:$abs;
+                left:15px;
+            }
+    }
+    p{
+        margin:0 auto;
+        @include mix.pdn(pc,left,0.25);
+        @include mix.pdn(pc,right,0.25);
+        @include mix.mzn(pc,top,0.6);
+    }
+    input[type=text],textarea{
+        $txtI : calc(min(1rem, 40px)* 0.25);
+        appearance: none;
+        border:none;
+        @include mix.heights(pc,1);
+        @include mix.lhz(pc,1);
+        @include mix.pdn(pc,left,0.25);
+        background: #F5F5F5;
+        color:#000;
+        width: 100%;
+        border-radius: $txtI;
+        font-weight: 500;
+    }
+    textarea::placeholder{
+        color:#A3A8A8;
+    }
+    input[type=text]::placeholder{
+        color:#A3A8A8;
+    }
+    textarea{
+        font-family: 'NanumSquareRound';
+        @include mix.heights(pc,3.9);
+        line-height: 145%;
+        @include mix.pdn(pc,top,0.25);
+        @include mix.pdn(pc,left,0.5);
+        @include mix.pdn(pc,right,0.5);
+        @include mix.pdn(pc,bottom,0.25);
+        resize: none;
+    }
+    &:nth-child(1){
+        margin-top: 0;
+    }
+}
+.inputList{
+    li{
+        @include mix.mzn(pc,top,0.7);
+        @include mix.fontz(pc,1.4);
+        display: flex;
+        flex-wrap: wrap;
+        >label{
+            $txtI : calc(min(1rem,40px)*0.25);
+            text-indent:$txtI;
+            display: inline-block;
+            font-weight: 500;
+            width: 18%;
+            @include mix.lhz(pc,1);
+        }
+        >label::after{
+            content:" (필수)";
+            color:#F68282;
+            @include mix.fontz(pc,1.3);
+        }
+        >label.option::after{
+            content:" (선택)";
+            color:#A5A5A5;
+            @include mix.fontz(pc,1.3);
+        }
+        input[type=text]{
+            width: calc(82% - 10px);
+            @include mix.fontz(pc,1.4);
+        }
+    }
+}
+.radioWrap{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    label{
+        @include mix.mzn(pc,right,0.5);
+
+        display: inline-block;
+        input[type=radio]{
+            @include mix.fontz(pc,1.4);
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position:relative;
+            margin:0;
+            
+            &:checked{
+                border:1px solid #2CB7A4;
+            }
+            &:checked::after{
+                content:"";
+                width: 10px;
+                height:10px;
+                background: #2CB7A4;
+                border-radius: 50%;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        span{
+            vertical-align: middle;
+            @include mix.pdn(pc,left,0.1);
+        }
+    }
+}
+.checkBoxWrap{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    label{
+        @include mix.mzn(pc,right,0.5);
+        display: inline-block;
+        input[type=checkbox]{
+            @include mix.fontz(pc,1.4);
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 8px;
+            margin:0;
+            background: url('../img/check.svg')no-repeat center center;
+            &:checked{
+                background: #2CB7A4 url('../img/check-white.svg')no-repeat center center;
+                border: none;
+                transition: all 0.2s;
+            }
+        }
+        span{
+            vertical-align: middle;
+            @include mix.pdn(pc,left,0.1);
+        }
+    }
+}
+
+.radioTabWrap{
+    $borderR : calc(min(1rem, 40px)* 0.25);
+    label{
+        margin-right: 0;
+        border:1px solid #E3E3E3;
+        @include mix.heights(pc,1);
+        @include mix.lhz(pc,1);
+        @include mix.pdn(pc,left,0.9);
+        @include mix.pdn(pc,right,0.9);
+        cursor: pointer;
+    }
+    label:nth-of-type(1){
+        border-radius: $borderR 0 0 $borderR;
+    }
+    label:nth-of-type(2){
+        border-radius: 0 $borderR  $borderR 0;
+    }
+    input:checked + label{
+        border:1px solid #2CB7A4;
+        color:#2CB7A4;
+    }
+    input{
+        display: none;
+    }
+}
+#etcInput{
+    width: 82%;
+    margin-left: 18%;
+    @include mix.mzn(pc,top,0.375);
+    display: none;
+}
+li.haveCr{
+    display: none;
+}
+.centerCheckWrap{
+    @include mix.mzn(pc,top,1.75);
+    width: 100%;
+    background:#FAF1F1;
+    border:1px solid #F8B1B1;
+    @include mix.pdn(pc,top,.5);
+    @include mix.pdn(pc,bottom,.5);
+    @include mix.pdn(pc,left,.5);
+    @include mix.pdn(pc,right,.5);
+
+    label{
+        color:#6C6C6C;
+        input[type=checkbox]{
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 8px;
+            margin:0;
+            background: #fff url('../img/check.svg')no-repeat center center;
+            
+            &:checked{
+                background: #fff url('../img/check-red.svg')no-repeat center center;
+                transition: all 0.2s;
+            }
+        }
+        span{
+            @include mix.fontz(pc,1.4);
+            margin-left: 4px;
+            .centerRed{
+                color:#E40000;
+            }
+        }
+        p{
+            @include mix.fontz(pc,1.4);
+            @include mix.pdn(pc,top,0.25);
+            @include mix.mzn(pc,left,0.6);
+        }
+    }
+    
+}
+
+
+@include mix.tab{
+    .myResumeWrap{
+        margin-top: 30px;
+        width: 85%;
+        border-radius: 20px;
+        padding:20px 15px;
+        p{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .btn{
+            height: 35px;
+            border-radius: 30px;
+            padding:0 18px;
+            top:20px;
+            right:15px;
+        }
+    }
+    .profileWrap{
+        figure{
+            width: 42px;
+        }
+        span{
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    }
+
+/*////////////////////////////////////////////////*/
+/*resumeWrite.html style*/
+form{
+    margin-top: 30px;
+    width: 85%;
+}
+.inputSection{
+    margin-top: 40px;
+    h3{
+        height: 40px;
+        line-height: 40px;
+        padding:0 11.5px;
+        font-size: 15px;
+        border-radius: 10px 10px 0 10px;
+        &::after{
+            top:37px;
+            height:3px;
+            
+        }
+    }
+    p{
+        padding:0;
+        margin-top: 20px;
+    }
+    input[type=text]{
+        height:40px;
+        line-height: 40px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    textarea{
+        padding: 11px 18px;
+        height:190px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+}
+.inputSection:nth-child(2) ul li:nth-child(4),
+.inputSection:nth-child(3) ul li:nth-child(2),
+.inputSection:nth-child(3) ul li:nth-child(4),
+.inputSection:nth-child(4) ul li:nth-child(3),{
+    margin-top: 30px;
+}
+.inputList{
+    li{
+        display: block;
+        margin-top: 25px;
+        font-size: 13px;
+        >label{
+            display: block;
+            width: 100%;
+            line-height: 130%;
+        }
+        input[type=text]{
+            margin-top:10px;
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+    li.haveCr{
+        display: none;
+    }
+}
+.radioWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin-top: 14px;
+        margin-right: 15px;
+    }
+}
+.checkBoxWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin:14px 15px 0 0;
+    }
+}
+.radioTabWrap{
+    margin-top: 10px;
+    label{
+        width: 50%;
+        margin:0;
+        text-align: center;
+        height:40px;
+        line-height: 40px;
+        &:nth-of-type(1){
+            border-radius:10px 0 0 10px;
+        }
+        &:nth-of-type(2){
+            border-radius:0 10px 10px 0;
+
+        }
+    }
+}
+#etcInput{
+    width: 100%;
+    margin:16px 0 0 0;
+}
+.centerCheckWrap{
+    margin-top:43px;
+    padding:17px 15px;
+    label{
+        span{
+            font-size: 12px;
+        }
+        p{
+            font-size: 12px;
+            margin: 7px 0 0 20px;
+            line-height: 140%;
+        }
+    }
+}    
+
+
+
+}
+@include mix.mob{
+    .myResumeWrap{
+        margin-top: 30px;
+        width: 100%;
+        border-radius: 20px;
+        padding:20px 15px;
+        p{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .btn{
+            height: 35px;
+            border-radius: 30px;
+            padding:0 18px;
+            top:20px;
+            right:15px;
+        }
+    }
+    .profileWrap{
+        figure{
+            width: 42px;
+        }
+        span{
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    }
+
+/*////////////////////////////////////////////////*/
+/*resumeWrite.html style*/
+form{
+    margin-top: 30px;
+    width: 100%;
+}
+.inputSection{
+    margin-top: 40px;
+    h3{
+        height: 40px;
+        line-height: 40px;
+        padding:0 11.5px;
+        font-size: 15px;
+        border-radius: 10px 10px 0 10px;
+        &::after{
+            top:37px;
+            height:3px;
+            
+        }
+    }
+    p{
+        padding:0;
+        margin-top: 20px;
+    }
+    input[type=text]{
+        height:40px;
+        line-height: 40px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    textarea{
+        padding: 11px 18px;
+        height:190px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+}
+.inputSection:nth-child(2) ul li:nth-child(4),
+.inputSection:nth-child(3) ul li:nth-child(2),
+.inputSection:nth-child(3) ul li:nth-child(4),
+.inputSection:nth-child(4) ul li:nth-child(3),{
+    margin-top: 30px;
+}
+.inputList{
+    li{
+        display: block;
+        margin-top: 25px;
+        font-size: 13px;
+        >label{
+            display: block;
+            width: 100%;
+            line-height: 130%;
+        }
+        input[type=text]{
+            margin-top:10px;
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+    li.haveCr{
+        display: none;
+    }
+}
+.radioWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin-top: 14px;
+        margin-right: 15px;
+    }
+}
+.checkBoxWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin:14px 15px 0 0;
+    }
+}
+.radioTabWrap{
+    margin-top: 10px;
+    label{
+        width: 50%;
+        margin:0;
+        text-align: center;
+        height:40px;
+        line-height: 40px;
+        &:nth-of-type(1){
+            border-radius:10px 0 0 10px;
+        }
+        &:nth-of-type(2){
+            border-radius:0 10px 10px 0;
+
+        }
+    }
+}
+#etcInput{
+    width: 100%;
+    margin:16px 0 0 0;
+}
+.centerCheckWrap{
+    margin-top:43px;
+    padding:17px 15px;
+    label{
+        span{
+            font-size: 12px;
+        }
+        p{
+            font-size: 12px;
+            margin: 7px 0 0 20px;
+            line-height: 140%;
+        }
+    }
+}
+}

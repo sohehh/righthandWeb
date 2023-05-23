@@ -95,6 +95,7 @@ body{
     }
 }
 .tabPostWrap{
+    margin:auto auto;
     width: calc(100% / 12 * 11);
     @include mix.mzn(pc,top ,1.5);
 }

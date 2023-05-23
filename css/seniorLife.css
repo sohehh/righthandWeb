@@ -97,6 +97,7 @@ body {
 }
 
 .tabPostWrap {
+  margin: auto auto;
   width: 91.6666666667%;
   margin-top: calc(min(1rem, 40px) * 1.5);
 }

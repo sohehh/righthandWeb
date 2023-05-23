@@ -55,8 +55,13 @@
     > li:nth-child(2n+1){
         margin-left: 0;
     }
+    > li:hover{
+        box-shadow: 1px 1px 20px #d7d7d7;
+        border:none;
+    }
 }
 .jobInfo{
+    width: 100%;
     display: flex;
     img{
         $borderR : calc(min(1rem, 40px) * 0.375);
@@ -65,17 +70,24 @@
         border-radius: $borderR;
     }
     .jobInfoRight{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
         @include mix.mzn(pc,left,0.325);
         @include mix.mzn(pc,top,0.225);
         h3{
             @include mix.fontz(pc,1.5);
             @include mix.lhz(pc,.7);
-            font-weight: 500
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         h4,.dateWrap{
             @include mix.fontz(pc,1.4);
             @include mix.lhz(pc,.5);
             font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .dateWrap{
             @include mix.mzn(pc,top,0.225);
@@ -138,12 +150,119 @@
     }
 }
 
-@include mix.mob{
+/*///////////////////////////////////////////////*/
+/*jobPage.html style*/
+.jobContentWrap{
+    $borderR : calc(min(1rem,40px)*0.5);
+    width: 100%;
+    border:1px solid #BCBCBC;
+    @include mix.mzn(pc,top,1.625);
+    border-radius:$borderR;
+    display: flex;
+    flex-wrap: wrap;
+    .jc{
+        flex-shrink: 0;
+        &1{
+            width: 60%;
+        }
+        &2{
+            width: 40%;
+        }
+        &3{
+            width: 100%;
+        }
+    }
+}
+.jc1{
+    @include mix.pdn(pc,top,1.2);
+    @include mix.pdn(pc,left,1.2);
+    @include mix.pdn(pc,right,1.2);
+    @include mix.pdn(pc,bottom,1.2);
+    figure{
+        border-radius: calc(min(1rem,40px)*.5);
+        img{
+            border-radius: calc(min(1rem,40px)*.5);
+            width: 100%;
+        }
+    }
+    h3{
+        @include mix.mzn(pc,top,0.625);
+        @include mix.fontz(pc,2.5);
+    }
+    ul{
+        @include mix.mzn(pc,top,0.25);
+        display: flex;
+        li{
+            @include mix.fontz(pc,1.5);
+            &::after{
+                content:"|";
+                @include mix.pdn(pc,left ,0.325);
+                @include mix.pdn(pc,right ,0.325);
+            }
+            &:nth-child(3)::after{
+                content:none;
 
+            }
+        }
+        
+    }
+}
+.jc2{
+    @include mix.pdn(pc,top,1.2);
+    @include mix.pdn(pc,left,0.65);
+    @include mix.pdn(pc,right,0.65);
+    @include mix.pdn(pc,bottom,0.75);
+    border-left:1px solid #BCBCBC;
+    h5{
+        @include mix.fontz(pc,1.6);
+        color:#2CB7A4;
+    }
+}
+.jc2Top,.jc2Bottom{
+    @include mix.pdn(pc,bottom,.5);
+    dl{
+        @include mix.fontz(pc,1.5);
+        @include mix.pdn(pc,top,0.425);
+        display: flex;       
+        dt{
+            @include mix.pdn(pc,right,.5);
+            white-space: nowrap;
+            color:#666666;
+        }
+    }
+}
+.jc2Bottom{
+    border-top:1px solid #D5D5D5;
+    @include mix.pdn(pc,top,.5);
+    dt{
+        width:calc(100% / 4 * 1);
+    }
+
+}
+.jc3{
+    @include mix.pdn(pc,top,0.75);
+    @include mix.pdn(pc,left,0.65);
+    @include mix.pdn(pc,right,0.65);
+    @include mix.pdn(pc,bottom,0.75);
+    border-top:1px solid #BCBCBC;
+    h5{
+        @include mix.fontz(pc,2);
+        color:#2CB7A4;
+    }
+    p{
+        @include mix.pdn(pc,top,0.7);
+        @include mix.fontz(pc,1.6);
+        @include mix.lhz(pc,0.575);
+
+    }
+}
+
+
+@include mix.tab{
     .searchBtnWrap{
         display: block;
         margin-top: 30px;
-        width: 100%;
+        width: 80%;
         .searchBox{
             width: 100%;
             @include mix.heights(mob,1.2);
@@ -154,6 +273,146 @@
             }
         }
     }
+    .jobWrap{
+        width: 100%;
+        margin-top: 35px;
+        > li{
+            width: calc(50% - 8px);
+            border-radius: 15px;
+            padding:20px;
+            margin-left: 16px;
+
+        }
+    }
+    .jobInfo{
+        img{
+            width: 83px;
+            border-radius: 15px;
+        }
+        .jobInfoRight{
+            width: calc(100% - 83px);
+            margin-top: 5px;
+            margin-left: 10px;
+            h3{
+                font-size: 13px;
+                line-height: 145%;
+            }
+            h4{
+                margin-top: 8px;
+                font-size: 12px;
+                line-height: 145%;
+            }
+            .dateWrap{
+                font-size: 12px;
+                line-height: 145%;
+                .time::before{
+                    padding-right: 6px;
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+    .jobInfoSub{
+        margin-top: 12px;
+        font-size: 12px;
+        li{
+            line-height: 25px;
+            height:25px;
+            padding:0 10px;
+            border-radius: 15px;
+            margin-left:10px;
+        }
+    }
+    .pageNav{
+        margin-top:35px;
+        width:calc(100% / 6 * 2.5);
+    }
+
+/*///////////////////////////////////////////////*/
+/*jobPage.html style*/
+.jobContentWrap{
+    width: 80%;
+    display:block;
+    padding:0 30px;
+    margin: 30px auto 0 auto;
+    .jc{
+        width: 100%;
+        padding:25px 0;
+    }
+    .jc2{
+        border-top:1px solid #BCBCBC;
+        border-left:none;
+    }
+}
+.jc1{
+    h3{
+        margin-top: 15px;
+        font-size: 17px;
+    }
+    ul{
+        flex-wrap: wrap;
+        li{
+            margin-top: 7px;
+            font-size: 12px;
+            &::after{
+                padding:0 15px;
+            }
+        }
+    }
+}
+.jc2Top,.jc2Bottom{
+    padding: 5px 0 25px 0;
+    h5{
+        font-size: 15px
+    }
+    dl{
+        font-size: 13px;
+        padding-top: 14px;
+        &:nth-of-type(1){
+            padding-top: 17px;
+        }
+        dt{
+            padding-right: 20px;
+            width: 25%;
+            max-width: 80px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.jc2Bottom{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    
+}
+.jc3{
+    h5{
+        font-size: 15px;
+    }
+    p{
+        padding-top: 17px;
+        line-height: 180%;
+        font-size: 13px;
+    }
+}
+
+
+
+}
+@media (min-width:0px) and (max-width:654px){
+    .jobWrap{
+        display: block;
+        >li{
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 17px;
+        }
+        
+    }
+    
+}
+@media (min-width:0px) and (max-width:500px){
+
     .jobWrap{
         width: 100%;
         margin-top: 35px;
@@ -217,4 +476,69 @@
         margin-top:35px;
         width:calc(100% / 6 * 4);
     }
+/*///////////////////////////////////////////////*/
+/*jobPage.html style*/
+.jobContentWrap{
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+    display:block;
+    padding:0 20px;
+    .jc{
+        width: 100%;
+        padding:20px 0;
+    }
+    .jc2{
+        border-top:1px solid #BCBCBC;
+        border-left:none;
+    }
+}
+.jc1{
+    h3{
+        margin-top: 15px;
+        font-size: 17px;
+    }
+    ul{
+        li{
+            margin-top: 7px;
+            font-size: 12px;
+            &::after{
+                padding:0 15px;
+            }
+        }
+    }
+}
+.jc2Top,.jc2Bottom{
+    padding: 5px 0 25px 0;
+    h5{
+        font-size: 15px
+    }
+    dl{
+        font-size: 13px;
+        padding-top: 14px;
+        &:nth-of-type(1){
+            padding-top: 17px;
+        }
+    }
+    dt{
+        width: 25%;
+        flex-shrink: 0;
+        min-width: 70px;
+    }
+}
+.jc2Bottom{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.jc3{
+    h5{
+        font-size: 15px;
+    }
+    p{
+        padding-top: 17px;
+        line-height: 180%;
+        font-size: 13px;
+    }
+}
+
 }
