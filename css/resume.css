@@ -108,6 +108,7 @@ form {
   width: 100%;
   border-radius: calc(min(1rem, 40px) * 0.25);
   font-weight: 500;
+  font-family: "NanumSquareRound";
 }
 .inputSection textarea::-moz-placeholder {
   color: #A3A8A8;
@@ -200,6 +201,7 @@ form {
   transform: translate(-50%, -50%);
 }
 .radioWrap label span {
+  font-weight: 500;
   vertical-align: middle;
   padding-left: calc(min(1rem, 40px) * 0.1);
 }
@@ -310,6 +312,22 @@ li.haveCr {
   font-size: calc(min(1em, 10px) * 1.4);
   padding-top: calc(min(1rem, 40px) * 0.25);
   margin-left: calc(min(1rem, 40px) * 0.6);
+}
+
+.btnWrap {
+  text-align: right;
+  margin-top: calc(min(1rem, 40px) * 1.25);
+}
+.btnWrap .btnRegister {
+  border-radius: calc(min(1rem, 40px) * 0.75);
+  border: none;
+  font-weight: 500;
+  height: calc(min(1rem, 40px) * 1.25);
+  line-height: calc(min(1rem, 40px) * 1.25);
+  padding-left: calc(min(1rem, 40px) * 0.75);
+  padding-right: calc(min(1rem, 40px) * 0.75);
+  background: #2CB7A4;
+  color: white;
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {
@@ -441,8 +459,19 @@ li.haveCr {
   }
   .centerCheckWrap label p {
     font-size: 12px;
-    margin: 7px 0 0 20px;
+    margin: 7px 0 0 24px;
     line-height: 140%;
+    padding-top: 0;
+  }
+  .btnWrap {
+    margin-top: 50px;
+  }
+  .btnWrap .btnRegister {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    border-radius: 30px;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {
