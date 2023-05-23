@@ -95,29 +95,25 @@ form {
   padding-right: calc(min(1rem, 40px) * 0.25);
   margin-top: calc(min(1rem, 40px) * 0.6);
 }
-.inputSection p > input[type=text], .inputSection p textarea {
+.inputSection p > input, .inputSection p textarea {
   width: 100%;
+  font-size: calc(min(1em, 10px) * 1.4);
 }
-.inputSection input[type=text], .inputSection textarea {
+.inputSection input, .inputSection textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
   height: calc(min(1rem, 40px) * 1);
   line-height: calc(min(1rem, 40px) * 1);
-  padding-left: calc(min(1rem, 40px) * 0.25);
+  padding-left: calc(min(1rem, 40px) * 0.375);
+  font-size: calc(min(1em, 10px) * 1.4);
   background: #F5F5F5;
   color: #000;
   border-radius: calc(min(1rem, 40px) * 0.25);
   font-weight: 500;
   font-family: "NanumSquareRound";
   width: calc(82% - 10px);
-}
-.inputSection textarea::-moz-placeholder {
-  color: #A3A8A8;
-}
-.inputSection textarea::placeholder {
-  color: #A3A8A8;
 }
 .inputSection input[type=text]::-moz-placeholder {
   color: #A3A8A8;
@@ -141,11 +137,11 @@ form {
 
 .inputList li {
   margin-top: calc(min(1rem, 40px) * 0.75);
-  font-size: calc(min(1em, 10px) * 1.4);
   display: flex;
   flex-wrap: wrap;
 }
 .inputList li > label {
+  font-size: calc(min(1em, 10px) * 1.45);
   text-indent: calc(min(1rem, 40px) * 0.25);
   display: inline-block;
   font-weight: 500;
@@ -173,7 +169,6 @@ form {
   display: inline-block;
 }
 .radioWrap label input[type=radio] {
-  font-size: calc(min(1em, 10px) * 1.4);
   vertical-align: middle;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -200,6 +195,7 @@ form {
   transform: translate(-50%, -50%);
 }
 .radioWrap label span {
+  font-size: calc(min(1em, 10px) * 1.4);
   font-weight: 500;
   vertical-align: middle;
   padding-left: calc(min(1rem, 40px) * 0.1);
@@ -236,9 +232,11 @@ form {
 .checkBoxWrap label span {
   vertical-align: middle;
   padding-left: calc(min(1rem, 40px) * 0.1);
+  font-size: calc(min(1em, 10px) * 1.4);
 }
 
 .radioTabWrap label {
+  font-size: calc(min(1em, 10px) * 1.4);
   margin-right: 0;
   border: 1px solid #E3E3E3;
   height: calc(min(1rem, 40px) * 1);
@@ -380,6 +378,9 @@ li.haveCr {
   .inputSection p {
     padding: 0;
     margin-top: 20px;
+  }
+  .inputSection p input[type=text], .inputSection p textarea {
+    font-size: 14px;
   }
   .inputSection input[type=text] {
     height: 40px;

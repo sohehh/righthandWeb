@@ -92,26 +92,25 @@ form{
         @include mix.pdn(pc,left,0.25);
         @include mix.pdn(pc,right,0.25);
         @include mix.mzn(pc,top,0.6);
-        > input[type=text],textarea{
+        > input,textarea{
             width: 100%;
+            @include mix.fontz(pc,1.4);
         }
     }
-    input[type=text],textarea{
+    input,textarea{
         $txtI : calc(min(1rem, 40px)* 0.25);
         appearance: none;
         border:none;
         @include mix.heights(pc,1);
         @include mix.lhz(pc,1);
-        @include mix.pdn(pc,left,0.25);
+        @include mix.pdn(pc,left,0.375);
+        @include mix.fontz(pc,1.4);
         background: #F5F5F5;
         color:#000;
         border-radius: $txtI;
         font-weight: 500;
         font-family: 'NanumSquareRound';
         width: calc(82% - 10px);
-    }
-    textarea::placeholder{
-        color:#A3A8A8;
     }
     input[type=text]::placeholder{
         color:#A3A8A8;
@@ -133,10 +132,10 @@ form{
 .inputList{
     li{
         @include mix.mzn(pc,top,0.75);
-        @include mix.fontz(pc,1.4);
         display: flex;
         flex-wrap: wrap;
         >label{
+            @include mix.fontz(pc,1.45);
             $txtI : calc(min(1rem,40px)*0.25);
             text-indent:$txtI;
             display: inline-block;
@@ -165,7 +164,6 @@ form{
 
         display: inline-block;
         input[type=radio]{
-            @include mix.fontz(pc,1.4);
             vertical-align: middle;
             appearance: none;
             border:1px solid #E3E3E3;
@@ -191,6 +189,7 @@ form{
             }
         }
         span{
+            @include mix.fontz(pc,1.4);
             font-weight: 500;
             vertical-align: middle;
             @include mix.pdn(pc,left,0.1);
@@ -224,6 +223,7 @@ form{
         span{
             vertical-align: middle;
             @include mix.pdn(pc,left,0.1);
+            @include mix.fontz(pc,1.4);
         }
     }
 }
@@ -231,6 +231,7 @@ form{
 .radioTabWrap{
     $borderR : calc(min(1rem, 40px)* 0.25);
     label{
+        @include mix.fontz(pc,1.4);
         margin-right: 0;
         border:1px solid #E3E3E3;
         @include mix.heights(pc,1);
@@ -376,6 +377,9 @@ form{
     p{
         padding:0;
         margin-top: 20px;
+        input[type=text],textarea{
+            font-size: 14px;
+        }
     }
     input[type=text]{
         height:40px;
