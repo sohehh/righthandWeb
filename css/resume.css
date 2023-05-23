@@ -182,6 +182,7 @@ form {
 }
 .radioWrap label input[type=radio]:checked {
   border: 1px solid #2CB7A4;
+  background: white;
 }
 .radioWrap label input[type=radio]:checked::after {
   content: "";

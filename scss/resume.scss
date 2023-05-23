@@ -175,6 +175,7 @@ form{
             
             &:checked{
                 border:1px solid #2CB7A4;
+                background: white;
             }
             &:checked::after{
                 content:"";
