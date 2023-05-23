@@ -73,7 +73,7 @@ form{
             color:white;
             background: #60C7B8;
             display: inline-block;
-            border-radius:  $borderR $borderR 0 $borderR;
+            border-radius:  $borderR $borderR 0 0;
             
             &::after{
                 $abs : calc(min(1rem,40px)*1.14);
@@ -532,7 +532,7 @@ form{
         line-height: 40px;
         padding:0 13px;
         font-size: 15px;
-        border-radius: 10px 10px 0 10px;
+        border-radius: 10px 10px 0 0;
         &::after{
             top:37px;
             height:3px;
