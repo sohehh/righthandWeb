@@ -71,7 +71,7 @@ form{
             @include mix.pdn(pc,right,0.5);
             @include mix.fontz(pc,1.8);
             color:white;
-            background: #2CB7A4;
+            background: #60C7B8;
             display: inline-block;
             border-radius:  $borderR $borderR 0 $borderR;
             
@@ -82,7 +82,7 @@ form{
                 content: "";
                 width: calc(100% - 15px);
                 @include mix.heights(pc,0.1);
-                background: #2CB7A4;
+                background: #60C7B8;
                 top:$abs;
                 left:15px;
             }
@@ -161,7 +161,6 @@ form{
     align-items: center;
     label{
         @include mix.mzn(pc,right,0.5);
-
         display: inline-block;
         input[type=radio]{
             vertical-align: middle;
@@ -172,6 +171,7 @@ form{
             border-radius: 50%;
             position:relative;
             margin:0;
+            cursor: pointer;
             
             &:checked{
                 border:1px solid #2CB7A4;
@@ -190,6 +190,7 @@ form{
             }
         }
         span{
+            cursor: pointer;
             @include mix.fontz(pc,1.4);
             font-weight: 500;
             vertical-align: middle;
@@ -205,6 +206,7 @@ form{
         @include mix.mzn(pc,right,0.5);
         display: inline-block;
         font-weight: 500;
+        cursor: pointer;
         input[type=checkbox]{
             @include mix.fontz(pc,1.4);
             vertical-align: middle;
@@ -216,9 +218,10 @@ form{
             margin:0;
             background: url('../img/check.svg')no-repeat center center;
             &:checked{
-                background: #2CB7A4 url('../img/check-white.svg')no-repeat center center;
+                background: #fff url('../img/checkFill.svg')no-repeat center center;
                 border: none;
                 transition: all 0.2s;
+                border:1px solid #60C7B8;
             }
         }
         span{
@@ -320,9 +323,11 @@ li.haveCr{
         @include mix.lhz(pc,1.25);
         @include mix.pdn(pc,left,0.75);
         @include mix.pdn(pc,right,0.75);
+        @include mix.fontz(pc,1.7);
         background: #2CB7A4;
         color:white;
         font-family: 'NanumSquareRound';
+        cursor: pointer;
     }
 }
 
@@ -366,9 +371,9 @@ form{
     h3{
         height: 40px;
         line-height: 40px;
-        padding:0 11.5px;
+        padding:0 13px;
         font-size: 15px;
-        border-radius: 10px 10px 0 10px;
+        border-radius: 10px 10px 0 0;
         &::after{
             top:37px;
             height:3px;
@@ -382,7 +387,7 @@ form{
             font-size: 14px;
         }
     }
-    input[type=text]{
+    input[type=text]{ 
         height:40px;
         line-height: 40px;
         padding-left: 18px;
@@ -525,7 +530,7 @@ form{
     h3{
         height: 40px;
         line-height: 40px;
-        padding:0 11.5px;
+        padding:0 13px;
         font-size: 15px;
         border-radius: 10px 10px 0 10px;
         &::after{
