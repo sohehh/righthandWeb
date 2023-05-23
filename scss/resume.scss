@@ -92,6 +92,9 @@ form{
         @include mix.pdn(pc,left,0.25);
         @include mix.pdn(pc,right,0.25);
         @include mix.mzn(pc,top,0.6);
+        > input[type=text],textarea{
+            width: 100%;
+        }
     }
     input[type=text],textarea{
         $txtI : calc(min(1rem, 40px)* 0.25);
@@ -102,10 +105,10 @@ form{
         @include mix.pdn(pc,left,0.25);
         background: #F5F5F5;
         color:#000;
-        width: 100%;
         border-radius: $txtI;
         font-weight: 500;
         font-family: 'NanumSquareRound';
+        width: calc(82% - 10px);
     }
     textarea::placeholder{
         color:#A3A8A8;
@@ -150,10 +153,6 @@ form{
             content:" (선택)";
             color:#A5A5A5;
             @include mix.fontz(pc,1.3);
-        }
-        input[type=text]{
-            width: calc(82% - 10px);
-            @include mix.fontz(pc,1.4);
         }
     }
 }
@@ -238,6 +237,7 @@ form{
         @include mix.pdn(pc,left,0.9);
         @include mix.pdn(pc,right,0.9);
         cursor: pointer;
+        font-weight: 500;
     }
     label:nth-of-type(1){
         border-radius: $borderR 0 0 $borderR;
