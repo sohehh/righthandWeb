@@ -140,7 +140,7 @@ form {
 }
 
 .inputList li {
-  margin-top: calc(min(1rem, 40px) * 0.7);
+  margin-top: calc(min(1rem, 40px) * 0.75);
   font-size: calc(min(1em, 10px) * 1.4);
   display: flex;
   flex-wrap: wrap;
@@ -213,6 +213,7 @@ form {
 .checkBoxWrap label {
   margin-right: calc(min(1rem, 40px) * 0.5);
   display: inline-block;
+  font-weight: 500;
 }
 .checkBoxWrap label input[type=checkbox] {
   font-size: calc(min(1em, 10px) * 1.4);
@@ -399,7 +400,7 @@ li.haveCr {
   }
   .inputList li {
     display: block;
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 13px;
   }
   .inputList li > label {
@@ -539,11 +540,11 @@ li.haveCr {
   .inputSection:nth-child(3) ul li:nth-child(2),
   .inputSection:nth-child(3) ul li:nth-child(4),
   .inputSection:nth-child(4) ul li:nth-child(3) {
-    margin-top: 30px;
+    margin-top: 35px;
   }
   .inputList li {
     display: block;
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 13px;
   }
   .inputList li > label {

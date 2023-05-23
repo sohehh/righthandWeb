@@ -132,7 +132,7 @@ form{
 }
 .inputList{
     li{
-        @include mix.mzn(pc,top,0.7);
+        @include mix.mzn(pc,top,0.75);
         @include mix.fontz(pc,1.4);
         display: flex;
         flex-wrap: wrap;
@@ -204,6 +204,7 @@ form{
     label{
         @include mix.mzn(pc,right,0.5);
         display: inline-block;
+        font-weight: 500;
         input[type=checkbox]{
             @include mix.fontz(pc,1.4);
             vertical-align: middle;
@@ -396,7 +397,7 @@ form{
 .inputList{
     li{
         display: block;
-        margin-top: 25px;
+        margin-top: 30px;
         font-size: 13px;
         >label{
             display: block;
@@ -546,12 +547,12 @@ form{
 .inputSection:nth-child(3) ul li:nth-child(2),
 .inputSection:nth-child(3) ul li:nth-child(4),
 .inputSection:nth-child(4) ul li:nth-child(3),{
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .inputList{
     li{
         display: block;
-        margin-top: 25px;
+        margin-top: 30px;
         font-size: 13px;
         >label{
             display: block;
