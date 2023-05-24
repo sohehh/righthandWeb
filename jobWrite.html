@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구인글쓰기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/jobWrite.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <!-- 피씨 버전 헤더 네비 -->
+                <nav class="pcNav">
+                    <h4><a href="#">요양보호사 목록</a></h4>
+                    <h4><a href="#">센터 홍보하기</a></h4>
+                    <h4><a href="#">구직 게시판</a></h4>
+                    <h4><a href="#">시니어 라이프</a></h4>
+                    <h4><a href="#">센터 회원 홈</a>
+                        <ul class="pcSubmenu">
+                            <li><a href="#">매칭 요청</a></li>
+                            <li><a href="#">매칭 완료</a></li>
+                            <li><a href="#">센터 정보 수정</a></li>
+                            <li><a href="#">구매 내역</a></li>
+                        </ul>
+                    </h4>
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                </nav>
+                <!-- 모바일 버전 헤더 네비 -->
+                <nav class="mobNav">
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <!-- 모바일버전 사이드메뉴 -->
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4><a href="#">센터 회원 홈</a></h4>
+                            <ul class="subMenu">
+                                <li><a href="#">- 매칭 요청</a></li>
+                                <li><a href="#">- 매칭 완료</a></li>
+                                <li><a href="#">- 센터 정보 수정</a></li>
+                                <li><a href="#">- 구매 내역</a></li>
+                            </ul>
+                            <h4><a href="#">구직 게시판</a></h4>
+                            <h4><a href="#">시니어 라이프</a></h4>
+                            <h4><a href="#">센터 홍보하기</a></h4>
+                            <h4><a href="#">요양보호사 목록</a></h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">구직 게시판</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">구인 글쓰기</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">구인 글쓰기</h2>
+            <form action="">
+                <div class="inputSection">
+                    <h3>구인글 제목</h3>
+                    <p>
+                        <input type="text" placeholder="제목을 입력해 주세요">
+                    </p>
+                </div>
+                <div class="inputSection">
+                    <h3>채용 현황</h3>
+                    <ul class="inputList">
+                        <li>
+                            <label for="jobField">채용분야</label>
+                            <input type="text" id="jobField" placeholder="예) 요양보호사">
+                        </li>
+                        <li>
+                            <label>근무형태</label>
+                            <div class="checkBoxWrap">
+                                <label>
+                                    <input type="checkbox" name="workType" value="입주형" checked>
+                                    <span>입주형</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="workType" value="출-퇴근형">
+                                    <span>출-퇴근형</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <label>채용구분</label>
+                            <div class="radioWrap">
+                                <label>
+                                    <input type="radio" name="
+                                    division" value="재가" checked>
+                                    <span>재가</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="
+                                    division" value="시설">
+                                    <span>시설</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="area">근무지역</label>
+                            <input type="text" id="area" placeholder='근무지역을 입력해 주세요'>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inputSection">
+                    <h3>채용 조건</h3>
+                    <ul class="inputList">
+                        <li>
+                            <label for="salary">시급</label>
+                            <input type="text" id="salary" placeholder='급여를 입력해 주세요'>
+                            <span>원</span>
+                        </li>
+                        <li>
+                            <label for="jobStart">근무시작일</label>
+                            <input type="text" id="jobStart" placeholder='근무 시작일을 적어주세요 ex)2023.01.02'>
+                        </li>
+                        <li>
+                            <label for="workingDay">근무요일</label>
+                            <input type="text" id="workingDay" placeholder='근무 요일을 입력해 주세요'>
+                        </li>
+                        <li>
+                            <label for="time">근무시간</label>
+                            <input type="text" id="time" placeholder='근무 시간을 적어주세요 ex)09시부터 18시까지'>
+                        </li>
+                        <li>
+                            <label for="age">희망나이</label>
+                            <input type="text" id="age" placeholder='예) 30-60대'>
+                        </li>
+                        <li>
+                            <label>희망국적</label>
+                            <div class="checkBoxWrap">
+                                <label>
+                                    <input type="checkbox" name="nationality" value="무관" checked>
+                                    <span>무관</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="nationality" value="한국인">
+                                    <span>한국인</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="career">희망경력</label>
+                            <input type="text" id="career" placeholder='희망 경력을 입력해 주세요'>
+                        </li>
+                        <li>
+                            <label for="preConditions">우대조건</label>
+                            <input type="text" id="preConditions" placeholder='우대 조건을 입력해 주세요 ex)여성, 보험가입자'>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inputSection">
+                    <h3>상세요강 </h3>
+                    <p>
+                        <textarea>등급:&#10;특징:&#10;나이:&#10;성별:&#10;주소:</textarea>
+                    </p>
+                </div>
+                <div class="inputSection">
+                    <h3>연락정보</h3>
+                    <ul class="inputList">
+                        <li>
+                            <label for="callNumber1">전화번호</label>
+                            <input type="text" id="callNumber1" placeholder='"-"없이 번호만 입력해 주세요'>
+                        </li>
+                        <li>
+                            <label for="callNumber2">휴대폰번호</label>
+                            <input type="text" id="callNumber2" placeholder='"-"없이 번호만 입력해 주세요'>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnWrap">
+                    <button class="btnRegister" type="button">
+                        구인글 등록하기
+                    </button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    
+    <script src="./js/master.js"></script>
+    
+</body>
+</html>

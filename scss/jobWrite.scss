@@ -1,0 +1,384 @@
+@use './mixins.scss' as mix;
+/*////////////////////////////////////////////////*/
+/*jobWrite.html style*/
+form{
+    width: calc(100% / 12 * 10);
+    margin:auto auto;
+    @include mix.mzn(pc,top,1.625);
+}
+.inputSection{
+    position:relative;
+    @include mix.mzn(pc,top,1.375);
+    h3{
+            $borderR : calc(min(1rem, 40px)* 0.25);
+            @include mix.heights(pc,1.25);
+            @include mix.lhz(pc,1.25);
+            @include mix.pdn(pc,left,0.5);
+            @include mix.pdn(pc,right,0.5);
+            @include mix.fontz(pc,1.8);
+            color:white;
+            background: #60C7B8;
+            display: inline-block;
+            border-radius:  $borderR $borderR 0 0;
+            
+            &::after{
+                $abs : calc(min(1rem,40px)*1.14);
+                position: absolute;
+                display: block;
+                content: "";
+                width: calc(100% - 15px);
+                @include mix.heights(pc,0.1);
+                background: #60C7B8;
+                top:$abs;
+                left:15px;
+            }
+    }
+    p{
+        margin:0 auto;
+        @include mix.pdn(pc,left,0.25);
+        @include mix.pdn(pc,right,0.25);
+        @include mix.mzn(pc,top,0.6);
+        > input,textarea{
+            width: 100%;
+            @include mix.fontz(pc,1.4);
+        }
+    }
+    input,textarea{
+        $txtI : calc(min(1rem, 40px)* 0.25);
+        appearance: none;
+        border:none;
+        @include mix.heights(pc,1);
+        @include mix.lhz(pc,1);
+        @include mix.pdn(pc,left,0.375);
+        @include mix.fontz(pc,1.4);
+        background: #F5F5F5;
+        color:#000;
+        border-radius: $txtI;
+        font-weight: 500;
+        font-family: 'NanumSquareRound';
+        width: calc(82% - 10px);
+    }
+    input[type=text]::placeholder{
+        color:#A3A8A8;
+    }
+    textarea{
+        font-family: 'NanumSquareRound';
+        @include mix.heights(pc,3.9);
+        line-height: 145%;
+        @include mix.pdn(pc,top,0.25);
+        @include mix.pdn(pc,left,0.5);
+        @include mix.pdn(pc,right,0.5);
+        @include mix.pdn(pc,bottom,0.25);
+        resize: none;
+
+    }
+    &:nth-child(1){
+        margin-top: 0;
+    }
+}
+.inputList{
+    li{
+        @include mix.mzn(pc,top,0.75);
+        display: flex;
+        flex-wrap: wrap;
+        >label{
+            @include mix.fontz(pc,1.45);
+            $txtI : calc(min(1rem,40px)*0.25);
+            text-indent:$txtI;
+            display: inline-block;
+            font-weight: 500;
+            width: 18%;
+            @include mix.lhz(pc,1);
+        }
+        >label::after{
+            content:" (필수)";
+            color:#F68282;
+        }
+        >label.option::after{
+            content:" (선택)";
+            color:#A5A5A5;
+        }
+    }
+}
+.radioWrap{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    label{
+        @include mix.mzn(pc,right,0.5);
+        display: inline-block;
+        input[type=radio]{
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position:relative;
+            margin:0;
+            cursor: pointer;
+            
+            &:checked{
+                border:1px solid #2CB7A4;
+                background: white;
+            }
+            &:checked::after{
+                content:"";
+                width: 10px;
+                height:10px;
+                background: #2CB7A4;
+                border-radius: 50%;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        span{
+            cursor: pointer;
+            @include mix.fontz(pc,1.4);
+            font-weight: 500;
+            vertical-align: middle;
+            @include mix.pdn(pc,left,0.1);
+        }
+    }
+}
+.checkBoxWrap{
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    label{
+        @include mix.mzn(pc,right,0.5);
+        display: inline-block;
+        font-weight: 500;
+        cursor: pointer;
+        input[type=checkbox]{
+            @include mix.fontz(pc,1.4);
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 8px;
+            margin:0;
+            background: url('../img/check.svg')no-repeat center center;
+            &:checked{
+                background: #fff url('../img/checkFill.svg')no-repeat center center;
+                border: none;
+                transition: all 0.2s;
+                border:1px solid #60C7B8;
+            }
+        }
+        span{
+            vertical-align: middle;
+            @include mix.pdn(pc,left,0.1);
+            @include mix.fontz(pc,1.4);
+        }
+    }
+}
+.btnWrap{
+    text-align:right;
+    @include mix.mzn(pc,top,1.25);
+    .btnRegister{
+        $borderR : calc(min(1rem, 40px)*0.75);
+        border-radius: $borderR;
+        border:none;
+        font-weight: 500;
+        @include mix.heights(pc,1.25);
+        @include mix.lhz(pc,1.25);
+        @include mix.pdn(pc,left,0.75);
+        @include mix.pdn(pc,right,0.75);
+        @include mix.fontz(pc,1.7);
+        background: #2CB7A4;
+        color:white;
+        font-family: 'NanumSquareRound';
+        cursor: pointer;
+    }
+}
+.inputSection:nth-child(3) ul li:nth-child(1){
+    input{
+        width: 30%;
+    }
+    span{
+        @include mix.fontz(pc,1.4);
+        align-self: center;
+        @include mix.mzn(pc,left,0.125);
+    }
+}
+
+
+@include mix.tab{
+/*////////////////////////////////////////////////*/
+/*resumeWrite.html style*/
+form{
+    margin-top: 30px;
+    width: 85%;
+}
+.inputSection{
+    margin-top: 40px;
+    h3{
+        height: 40px;
+        line-height: 40px;
+        padding:0 13px;
+        font-size: 15px;
+        border-radius: 10px 10px 0 0;
+        &::after{
+            top:37px;
+            height:3px;
+            
+        }
+    }
+    p{
+        padding:0;
+        margin-top: 20px;
+        input[type=text],textarea{
+            font-size: 14px;
+        }
+    }
+    input[type=text]{ 
+        height:40px;
+        line-height: 40px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    textarea{
+        padding: 11px 18px;
+        height:190px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+}
+.inputSection:nth-child(2) ul li:nth-child(2),
+.inputSection:nth-child(2) ul li:nth-child(3){
+    margin-top: 35px;
+}
+.inputList{
+    li{
+        display: block;
+        margin-top: 30px;
+        font-size: 13px;
+        >label{
+            display: block;
+            width: 100%;
+            line-height: 130%;
+            text-indent: 0;
+        }
+        input[type=text]{
+            margin-top:10px;
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+    li.haveCr{
+        display: none;
+    }
+}
+.radioWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin-top: 14px;
+        margin-right: 15px;
+    }
+}
+.checkBoxWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin:14px 15px 0 0;
+    }
+} 
+.btnWrap{
+    margin-top: 50px;
+    .btnRegister{
+        width: 100%;
+        height:50px;
+        line-height: 50px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+}
+}
+
+
+
+@include mix.mob{
+/*////////////////////////////////////////////////*/
+/*jobWrite.html style*/
+form{
+    margin-top: 30px;
+    width: 100%;
+}
+.inputSection{
+    margin-top: 40px;
+    h3{
+        height: 40px;
+        line-height: 40px;
+        padding:0 13px;
+        font-size: 15px;
+        border-radius: 10px 10px 0 0;
+        &::after{
+            top:37px;
+            height:3px;
+            
+        }
+    }
+    p{
+        padding:0;
+        margin-top: 20px;
+    }
+    input[type=text]{
+        height:40px;
+        line-height: 40px;
+        padding-left: 18px;
+        border-radius: 10px;
+    }
+    textarea{
+        padding: 11px 18px;
+        height:190px;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+}
+.inputSection:nth-child(2) ul li:nth-child(4),
+.inputSection:nth-child(3) ul li:nth-child(2),
+.inputSection:nth-child(3) ul li:nth-child(4),
+.inputSection:nth-child(4) ul li:nth-child(3),{
+    margin-top: 35px;
+}
+.inputList{
+    li{
+        display: block;
+        margin-top: 30px;
+        font-size: 13px;
+        >label{
+            display: block;
+            width: 100%;
+            line-height: 130%;
+        }
+        input[type=text]{
+            margin-top:10px;
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+    li.haveCr{
+        display: none;
+    }
+}
+.radioWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin-top: 14px;
+        margin-right: 15px;
+    }
+}
+.checkBoxWrap{
+    margin-top: 2px;
+    flex-wrap: wrap;
+    label{
+        margin:14px 15px 0 0;
+    }
+}
+}
