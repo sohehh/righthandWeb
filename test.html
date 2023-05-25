@@ -7,6 +7,48 @@
     <title>Document</title>
 </head>
 <body>
-    <label></label>
+    <ul class="inputList">
+        <li>
+            <label for="name">센터명</label>
+            <input type="text" id="name" placeholder="센터명을 입력해 주세요">
+        </li>
+        <li>
+            <label for="birth">센터주소</label>
+            <input type="text" id="birth" placeholder="센터주소를 입력해 주세요">
+        </li>
+        <li>
+            <label for="callNumber" class="option">센터 연락처</label>
+            <input type="text" id="callNumber" placeholder='"-" 없이 번호만 입력해 주세요'>
+        </li>
+        <li>
+            <label>센터 사진</label>
+            <div class="fileContainer">
+                <div class="fileBtnWrap">
+                    <label for="file">사진 등록</label>
+                    <span class="fileSubText">사진 (최대 1개까지 업로드 가능)</span>
+                    <input id="file" type="file">
+                </div>
+                <div class="fileContentWrap">
+                    <div class="prvImgWrap">
+                        <div class="imgCover"></div>
+                        <img class="prvImg" src="" onerror="this.style.display='none'" alt="미리보기이미지">
+                        <div class="deleteBtn"></div>
+                    </div>
+                    <input type="text" class="uploadFile" value="" readonly>
+                </div>
+            </div>
+        </li>
+        <li>
+            <label class="option">프로그램</label>
+            <ul class="programContainer">
+                <li class="programWrap">
+                    <input type="text" class="program1" title="프로그램명" placeholder='프로그램명을 입력해 주세요'>
+                    <input type="text" class="program2" title="프로그램 상세" placeholder='프로그램상세를 입력해 주세요'>
+                    <div class="addBtn adlBtn"></div>
+                </li>
+            </ul>
+            
+        </li>
+    </ul>
 </body>
 </html>

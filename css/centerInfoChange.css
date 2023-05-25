@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 2.6666666667vw;
 }
@@ -17,7 +18,7 @@ body {
   height: calc(min(1rem, 40px) * 1);
   line-height: calc(min(1rem, 40px) * 1);
   border: 1px solid #2CB7A4;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #2CB7A4;
   cursor: pointer;
   font-size: calc(min(1em, 10px) * 1.4);
@@ -99,66 +100,11 @@ body {
   padding-left: 0;
 }
 
-.svTypeList {
-  margin-top: calc(min(1rem, 40px) * 0.3);
-}
-.svTypeList > li {
-  width: 100%;
-  background: #F4F4F4;
-  height: auto;
-  line-height: calc(min(1rem, 40px) * 1.25);
-  margin-bottom: calc(min(1rem, 40px) * 0.5);
-  border: 1px solid #E9E9E9;
-  border-radius: 0 calc(min(1rem, 40px) * 0.25) 0 0;
-}
-.svTypeList > li label {
-  margin-right: calc(min(1rem, 40px) * 0.5);
-  padding-left: calc(min(1rem, 40px) * 0.4);
-  display: inline-block;
-  font-weight: 500;
-  cursor: pointer;
-}
-.svTypeList > li label input[type=checkbox] {
-  font-size: calc(min(1em, 10px) * 1.4);
-  vertical-align: middle;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 1px solid #E3E3E3;
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  margin: 0;
-  background: #E1E1E1 url("../img/check-gray2.svg") no-repeat center center;
-}
-.svTypeList > li label input[type=checkbox]:checked {
-  background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
-  border: none;
-  transition: all 0.2s;
-  border: 1px solid #60C7B8;
-}
-.svTypeList > li label span {
-  font-weight: 500;
-  color: #808080;
-  vertical-align: middle;
-  padding-left: calc(min(1rem, 40px) * 0.1);
-  font-size: calc(min(1em, 10px) * 1.6);
-}
-.svTypeList > li.subChecked {
-  border-radius: 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
-}
-
-.subWrap {
-  border-radius: 0 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
-  display: none;
-  background-color: white;
-}
-
 .programContainer {
   width: 82%;
 }
-
-.programWrap {
+.programContainer .programWrap {
+  margin-top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -210,7 +156,7 @@ input.program2 {
   transform: translate(-50%, -50%);
 }
 
-.deleteBtn::after {
+.delete2Btn::after {
   content: "";
   position: absolute;
   width: 56%;
@@ -220,6 +166,134 @@ input.program2 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.svTypeList {
+  margin-top: calc(min(1rem, 40px) * 0.3);
+}
+.svTypeList > li {
+  width: 100%;
+  background: #F4F4F4;
+  height: auto;
+  line-height: calc(min(1rem, 40px) * 1.25);
+  margin-bottom: calc(min(1rem, 40px) * 0.5);
+  border: 1px solid #E9E9E9;
+  border-radius: 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
+}
+.svTypeList > li > label {
+  margin-right: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.4);
+  display: inline-block;
+  font-weight: 500;
+  cursor: pointer;
+}
+.svTypeList > li > label input[type=checkbox] {
+  font-size: calc(min(1em, 10px) * 1.4);
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #E3E3E3;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background: #E1E1E1 url("../img/check-gray2.svg") no-repeat center center;
+}
+.svTypeList > li > label input[type=checkbox]:checked {
+  background: #2CB7A4 url("../img/check-white.svg") no-repeat center center/11px;
+  border: none;
+  transition: all 0.2s;
+  border: 1px solid #60C7B8;
+}
+.svTypeList > li > label span {
+  font-weight: 500;
+  color: #808080;
+  vertical-align: middle;
+  padding-left: calc(min(1rem, 40px) * 0.1);
+  font-size: calc(min(1em, 10px) * 1.6);
+}
+.svTypeList > li.subChecked {
+  border-radius: 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
+}
+
+.subWrap {
+  padding-top: calc(min(1rem, 40px) * 0.675);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  padding-bottom: calc(min(1rem, 40px) * 0.675);
+  border-radius: 0 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
+  display: none;
+  background-color: white;
+}
+.subWrap > li {
+  padding-bottom: calc(min(1rem, 40px) * 0.675);
+  display: flex;
+}
+
+.subWrap > li > .subLabel {
+  font-size: calc(min(1em, 10px) * 1.6);
+  text-indent: calc(min(1rem, 40px) * 0.25);
+  display: flex;
+  align-self: center;
+  font-weight: 500;
+  width: 15%;
+  line-height: calc(min(1rem, 40px) * 1);
+}
+
+.subLabel::after {
+  content: "(필수)";
+  color: #F68282;
+  font-size: calc(min(1em, 10px) * 1.3);
+}
+
+.option::after {
+  content: " (선택)";
+  color: #A5A5A5;
+  font-size: calc(min(1em, 10px) * 1.3);
+}
+
+.subInputContainer {
+  width: 85%;
+}
+
+.subInputWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subInputWrap > label {
+  display: inline-block;
+  width: calc(50% - min(1rem, 40px) * 0.5);
+  margin-left: calc(min(1rem, 40px) * 0.5);
+  margin-bottom: calc(min(1rem, 40px) * 0.25);
+}
+.subInputWrap > label > span {
+  font-size: calc(min(1em, 10px) * 1.5);
+  display: inline-block;
+  text-align: right;
+  width: 42%;
+  line-height: normal;
+  word-break: keep-all;
+  vertical-align: middle;
+  line-height: 145%;
+}
+.subInputWrap > label > input {
+  width: calc(58.3333333333% - min(1rem, 40px) * 0.3);
+  margin-left: calc(min(1rem, 40px) * 0.125);
+}
+
+label[for=count] {
+  font-size: calc(min(1em, 10px) * 1.6);
+  text-indent: calc(min(1rem, 40px) * 0.25);
+  display: flex;
+  align-self: center;
+  font-weight: 500;
+  width: 15%;
+  line-height: calc(min(1rem, 40px) * 1);
+}
+
+label[for=count] + input {
+  width: 42%;
 }
 
 /*page nav style*/
@@ -254,4 +328,160 @@ input.program2 {
 }
 .pageNav .pgActive {
   color: #2CB7A4;
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  .fileContentWrap {
+    height: 130px;
+  }
+}
+@media (min-width: 0px) and (max-width: 420px) {
+  .inputSection:nth-child(2) ul li:nth-child(4) {
+    margin-top: 0;
+  }
+  .fileContainer {
+    width: 100%;
+  }
+  .fileBtnWrap {
+    margin-top: 10px;
+  }
+  .fileBtnWrap label {
+    padding: 0 18px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .fileBtnWrap .fileSubText {
+    font-size: 13px;
+    margin-left: 8px;
+  }
+  .fileContentWrap {
+    margin-top: 11px;
+    padding: 15px;
+    min-height: 90px;
+  }
+  .fileContentWrap .prvImgWrap {
+    width: 25%;
+    min-height: 77px;
+  }
+  .fileContentWrap .prvImgWrap .imgCover {
+    min-height: 77px;
+  }
+  .fileContentWrap .prvImgWrap .prvImg {
+    min-height: 77px;
+  }
+  .fileContentWrap input[type=text].uploadFile {
+    margin-top: 0;
+    height: 20px;
+    padding-left: 0;
+  }
+  .programContainer {
+    width: 100%;
+  }
+  .adlBtn {
+    position: absolute;
+    top: -37PX;
+    right: 0;
+    width: 8%;
+    height: 30px;
+  }
+  .addBtn::before {
+    width: 13px;
+    height: 3px;
+  }
+  .addBtn::after {
+    width: 3px;
+    height: 13px;
+  }
+  .delete2Btn::after {
+    width: 13px;
+    height: 3px;
+  }
+  .programContainer {
+    margin-top: 10px;
+  }
+  .programContainer .programWrap {
+    position: relative;
+  }
+  .programContainer .programWrap + .programWrap {
+    margin-top: 20px;
+  }
+  .programContainer .programWrap + .programWrap input[type=text].program1 {
+    width: 90%;
+  }
+  .programContainer .programWrap + .programWrap .adlBtn {
+    top: 13px;
+  }
+  .svTypeList {
+    margin-top: 10px;
+  }
+  .svTypeList > li {
+    height: auto;
+    line-height: 40px;
+    border-radius: 0 10px 10px 10px;
+    margin-bottom: 15px;
+  }
+  .svTypeList > li > label {
+    padding-left: 15px;
+  }
+  .svTypeList > li > label span {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  .svTypeList > li.subChecked {
+    border-radius: 0 10px 10px 10px;
+  }
+  .subWrap {
+    padding: 27px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  .subWrap > li {
+    display: block;
+    margin-top: 30px;
+  }
+  .subWrap > li > .subLabel {
+    width: 100%;
+    font-size: 15px;
+    line-height: 135%;
+  }
+  .subWrap > li:nth-child(1) {
+    margin-top: 0;
+  }
+  .subInputContainer {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .subInputWrap {
+    display: block;
+    width: 100%;
+  }
+  .subInputWrap > label {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .subInputWrap > label > span {
+    width: 30%;
+    font-size: 14px;
+    text-align: left;
+    line-height: 145%;
+  }
+  .subInputWrap > label > input[type=text] {
+    width: 50%;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .subInputWrap > label + label {
+    margin-top: 15px;
+  }
+  label[for=count] {
+    width: 100%;
+    font-size: 15px;
+  }
+  label[for=count] + input {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 15px;
+  }
 }

@@ -90,7 +90,7 @@
                             <input type="text" id="birth" placeholder="센터주소를 입력해 주세요">
                         </li>
                         <li>
-                            <label for="callNumber" class="option">센터 연락처</label>
+                            <label for="callNumber">센터 연락처</label>
                             <input type="text" id="callNumber" placeholder='"-" 없이 번호만 입력해 주세요'>
                         </li>
                         <li>
@@ -104,7 +104,7 @@
                                 <div class="fileContentWrap">
                                     <div class="prvImgWrap">
                                         <div class="imgCover"></div>
-                                        <img class="prvImg" onerror="this.style.display='none'">
+                                        <img class="prvImg" onerror="this.style.display='none'" alt="미리보기 이미지">
                                         <div class="deleteBtn"></div>
                                     </div>
                                     <input type="text" class="uploadFile" value="" readonly>
@@ -113,13 +113,13 @@
                         </li>
                         <li>
                             <label class="option">프로그램</label>
-                            <div class="programContainer">
-                                <div class="programWrap">
+                            <ul class="programContainer">
+                                <li class="programWrap">
                                     <input type="text" class="program1" title="프로그램명" placeholder='프로그램명을 입력해 주세요'>
                                     <input type="text" class="program2" title="프로그램 상세" placeholder='프로그램상세를 입력해 주세요'>
                                     <div class="addBtn adlBtn"></div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                             
                         </li>
                     </ul>
@@ -127,31 +127,964 @@
                 <div class="inputSection">
                     <h3>센터의 서비스 타입을 선택해 주세요</h3>
                     <ul class="svTypeList">
+                        <!--방문요양 체크박스-->
                         <li>
                             <label>
                                 <input type="checkbox" name="workType" value="방문요양">
                                 <span>방문요양</span>
                             </label>
+                            <!--방문요양 체크시 보여지는 박스-->
                             <ul class="subWrap">
-                                <li>서브</li>
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
                             </ul>
                         </li>
+                        <!--방문목욕 체크박스-->
                         <li>
                             <label>
                                 <input type="checkbox" name="workType" value="방문목욕">
                                 <span>방문목욕</span>
                             </label>
+                            <!--방문목욕 체크시 보여지는 박스-->
                             <ul class="subWrap">
-                                <li>서브</li>
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
                             </ul>
                         </li>
+                        <!--주야간보호 체크박스-->
                         <li>
                             <label>
                                 <input type="checkbox" name="workType" value="주야간보호">
                                 <span>주야간보호</span>
                             </label>
+                            <!--주야간보호 체크시 보여지는 박스-->
                             <ul class="subWrap">
-                                <li>서브</li>
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
+                            </ul>
+                        </li>
+                        <!--단기보호 체크박스-->
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="단기보호">
+                                <span>단기보호</span>
+                            </label>
+                            <!--단기보호 체크시 보여지는 박스-->
+                            <ul class="subWrap">
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
+                            </ul>
+                        </li>
+                        <!--방문간호 체크박스-->
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="방문간호">
+                                <span>방문간호</span>
+                            </label>
+                            <!--방문간호 체크시 보여지는 박스-->
+                            <ul class="subWrap">
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
+                            </ul>
+                        </li>
+                        <!--복지용구 체크박스-->
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="복지용구">
+                                <span>복지용구</span>
+                            </label>
+                            <!--복지용구 체크시 보여지는 박스-->
+                            <ul class="subWrap">
+                                <li>
+                                    <label class="subLabel" >인력현황</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>시설장</span>
+                                                <input type="text" title="시설장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무국장</span>
+                                                <input type="text" title="사무국장" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사회복지사</span>
+                                                <input type="text" title="사회복지사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_전임</span>
+                                                <input type="text" title="의사_전임" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>의사_촉탁</span>
+                                                <input type="text" title="의사_촉탁" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호사</span>
+                                                <input type="text" title="간호사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>간호조무사</span>
+                                                <input type="text" title="간호조무사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>치위생사</span>
+                                                <input type="text" title="치위생사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>물리치료사</span>
+                                                <input type="text" title="물리치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>작업치료사</span>
+                                                <input type="text" title="작업치료사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사1급</span>
+                                                <input type="text" title="요양보호사1급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사2급</span>
+                                                <input type="text" title="요양보호사2급" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>요양보호사유예인원</span>
+                                                <input type="text" title="요양보호사유예인원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>사무원</span>
+                                                <input type="text" title="사무원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>영양사</span>
+                                                <input type="text" title="영양사" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>조리원</span>
+                                                <input type="text" title="조리원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>위생원</span>
+                                                <input type="text" title="위생원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>관리인</span>
+                                                <input type="text" title="관리인" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>보조원</span>
+                                                <input type="text" title="보조원" placeholder='인원 수'>
+                                            </label>
+                                            <label>
+                                                <span>기타인원</span>
+                                                <input type="text" title="기타인원" placeholder='인원 수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="subLabel" >시설 상세</label>
+                                    <ul class="subInputContainer">
+                                        <li class="subInputWrap">
+                                            <label>
+                                                <span>1인실</span>
+                                                <input type="text" title="1인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>2인실</span>
+                                                <input type="text" title="2인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>3인실</span>
+                                                <input type="text" title="3인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>4인실</span>
+                                                <input type="text" title="4인실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>특수침실</span>
+                                                <input type="text" title="특수침실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>사무실</span>
+                                                <input type="text" title="사무실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>의료 및 간호사실</span>
+                                                <input type="text" title="의료 및 간호사실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>작업 및 일상동작훈련실</span>
+                                                <input type="text" title="작업 및 일상동작훈련실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>프로그램실</span>
+                                                <input type="text" title="프로그램실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>식당 및 조리실</span>
+                                                <input type="text" title="식당 및 조리실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>화장실</span>
+                                                <input type="text" title="화장실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세면장 및 목욕실</span>
+                                                <input type="text" title="세면장 및 목욕실" placeholder='시설 갯수'>
+                                            </label>
+                                            <label>
+                                                <span>세탁장 및 건조장</span>
+                                                <input type="text" title="요양보호사유세탁장 및 건조장예인원" placeholder='시설 갯수'>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label for="count" class="option">정원</label>
+                                    <input type="text" id="count" placeholder="정원 수를 입력해 주세요">
+                                </li>
                             </ul>
                         </li>
                         
@@ -163,19 +1096,6 @@
                     </button>
                 </div>
             </form>
-
-            <!-- 페이지 넘버 네비 -->
-            <nav class="pageNav">
-                <h4 class="prev"><a href="#"></a></h4>
-                <h4 class="pgActive pgN"><a href="#">1</a></h4>
-                <h4 class="pgN"><a href="#">2</a></h4>
-                <h4 class="pgN"><a href="#">3</a></h4>
-                <h4 class="pgN"><a href="#">4</a></h4>
-                <h4 class="pgN"><a href="#">5</a></h4>
-                <h4 class="next"><a href="#"></a></h4>
-            </nav>
-            
-            
         </div>
     </div>
     <div class="footerWrap">
@@ -212,14 +1132,14 @@
         });
 
         $('.addBtn').click(function(){
-            $(".programContainer").append('<div class="programWrap"><input type="text" class="program1" title="프로그램명" placeholder="프로그램을 입력해 주세요"><input type="text" class="program2" title="프로그램 상세" placeholder="프로그램을 입력해 주세요"><div class="deleteBtn adlBtn"></div></div>');
+            $(".programContainer").append('<li class="programWrap"><input type="text" class="program1" title="프로그램명" placeholder="프로그램을 입력해 주세요"><input type="text" class="program2" title="프로그램 상세" placeholder="프로그램을 입력해 주세요"><div class="delete2Btn adlBtn"></div></li>');
         });
 
         // $('.deleteBtn').click(function(){
         //     $(this).parent().remove();
         // });
         
-        $(document).on("click",".deleteBtn",function(event){
+        $(document).on("click",".delete2Btn",function(event){
             // 동적으로 여러 태그가 생성된 경우라면 이런식으로 클릭된 객체를 this 키워드를 이용해서 잡아올 수 있다.
             $(this).parent().remove();
         });
