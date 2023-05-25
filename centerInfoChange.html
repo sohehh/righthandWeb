@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/resume.css">
+    <link rel="stylesheet" href="./css/centerInfoChange.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <!-- 피씨 버전 헤더 네비 -->
+                <nav class="pcNav">
+                    <h4><a href="#">요양보호사 목록</a></h4>
+                    <h4><a href="#">센터 홍보하기</a></h4>
+                    <h4><a href="#">구직 게시판</a></h4>
+                    <h4><a href="#">시니어 라이프</a></h4>
+                    <h4><a href="#">센터 회원 홈</a>
+                        <ul class="pcSubmenu">
+                            <li><a href="#">매칭 요청</a></li>
+                            <li><a href="#">매칭 완료</a></li>
+                            <li><a href="#">센터 정보 수정</a></li>
+                            <li><a href="#">구매 내역</a></li>
+                        </ul>
+                    </h4>
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                </nav>
+                <!-- 모바일 버전 헤더 네비 -->
+                <nav class="mobNav">
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <!-- 모바일버전 사이드메뉴 -->
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4><a href="#">센터 회원 홈</a></h4>
+                            <ul class="subMenu">
+                                <li><a href="#">- 매칭 요청</a></li>
+                                <li><a href="#">- 매칭 완료</a></li>
+                                <li><a href="#">- 센터 정보 수정</a></li>
+                                <li><a href="#">- 구매 내역</a></li>
+                            </ul>
+                            <h4><a href="#">구직 게시판</a></h4>
+                            <h4><a href="#">시니어 라이프</a></h4>
+                            <h4><a href="#">센터 홍보하기</a></h4>
+                            <h4><a href="#">요양보호사 목록</a></h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 회원 홈</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 정보 수정</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">센터 정보 수정</h2>
+            <form action="">
+                <div class="inputSection">
+                    <h3>센터 정보</h3>
+                    <ul class="inputList">
+                        <li>
+                            <label for="name">센터명</label>
+                            <input type="text" id="name" placeholder="센터명을 입력해 주세요">
+                        </li>
+                        <li>
+                            <label for="birth">센터주소</label>
+                            <input type="text" id="birth" placeholder="센터주소를 입력해 주세요">
+                        </li>
+                        <li>
+                            <label for="callNumber" class="option">센터 연락처</label>
+                            <input type="text" id="callNumber" placeholder='"-" 없이 번호만 입력해 주세요'>
+                        </li>
+                        <li>
+                            <label>센터 사진</label>
+                            <div class="fileContainer">
+                                <div class="fileBtnWrap">
+                                    <label for="file">사진 등록</label>
+                                    <span class="fileSubText">사진 (최대 1개까지 업로드 가능)</span>
+                                    <input id="file" type="file">
+                                </div>
+                                <div class="fileContentWrap">
+                                    <div class="prvImgWrap">
+                                        <div class="imgCover"></div>
+                                        <img class="prvImg" onerror="this.style.display='none'">
+                                        <div class="deleteBtn"></div>
+                                    </div>
+                                    <input type="text" class="uploadFile" value="" readonly>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="option">프로그램</label>
+                            <div class="programContainer">
+                                <div class="programWrap">
+                                    <input type="text" class="program1" title="프로그램명" placeholder='프로그램명을 입력해 주세요'>
+                                    <input type="text" class="program2" title="프로그램 상세" placeholder='프로그램상세를 입력해 주세요'>
+                                    <div class="addBtn adlBtn"></div>
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="inputSection">
+                    <h3>센터의 서비스 타입을 선택해 주세요</h3>
+                    <ul class="svTypeList">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="방문요양">
+                                <span>방문요양</span>
+                            </label>
+                            <ul class="subWrap">
+                                <li>서브</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="방문목욕">
+                                <span>방문목욕</span>
+                            </label>
+                            <ul class="subWrap">
+                                <li>서브</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="workType" value="주야간보호">
+                                <span>주야간보호</span>
+                            </label>
+                            <ul class="subWrap">
+                                <li>서브</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="btnWrap">
+                    <button class="btn" type="button">
+                        수정하기
+                    </button>
+                </div>
+            </form>
+
+            <!-- 페이지 넘버 네비 -->
+            <nav class="pageNav">
+                <h4 class="prev"><a href="#"></a></h4>
+                <h4 class="pgActive pgN"><a href="#">1</a></h4>
+                <h4 class="pgN"><a href="#">2</a></h4>
+                <h4 class="pgN"><a href="#">3</a></h4>
+                <h4 class="pgN"><a href="#">4</a></h4>
+                <h4 class="pgN"><a href="#">5</a></h4>
+                <h4 class="next"><a href="#"></a></h4>
+            </nav>
+            
+            
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    <script>
+
+        //사진 파일명 할당 코드
+        $("#file").on('change',function(){
+            var fileName = $(this).val().split('/').pop().split('\\').pop();
+            $(".uploadFile").val(fileName);
+            $('.prvImgWrap').css('display','block');
+        });
+        //업로드 사진 삭제 코드
+        $('.deleteBtn').click(function(){
+            $("#file").val("");
+            $(".uploadFile").val("");
+            $(".prvImg").attr('src',null);
+            $('.prvImgWrap').css('display','none');
+        });
+
+        $('input[type=checkbox]').change(function(){
+            if($(this).is(":checked")){
+                $(this).parent().next().css('display','block');
+                $(this).parent().parent().addClass('subChecked');
+                $(this).parent().children('span').css('color','#2CB7A4');
+            }else{
+                $(this).parent().next().css('display','none');
+                $(this).parent().parent().removeClass('subChecked');
+                $(this).parent().children('span').css('color','#808080');
+            }
+        });
+
+        $('.addBtn').click(function(){
+            $(".programContainer").append('<div class="programWrap"><input type="text" class="program1" title="프로그램명" placeholder="프로그램을 입력해 주세요"><input type="text" class="program2" title="프로그램 상세" placeholder="프로그램을 입력해 주세요"><div class="deleteBtn adlBtn"></div></div>');
+        });
+
+        // $('.deleteBtn').click(function(){
+        //     $(this).parent().remove();
+        // });
+        
+        $(document).on("click",".deleteBtn",function(event){
+            // 동적으로 여러 태그가 생성된 경우라면 이런식으로 클릭된 객체를 this 키워드를 이용해서 잡아올 수 있다.
+            $(this).parent().remove();
+        });
+    </script>
+    <script src="./js/master.js"></script>
+    <script type="text/javascript">
+        //사진 미리보기 코드
+        let fileTag = document.getElementById('file');
+
+        fileTag.onchange = function(){
+            let imgTag = document.querySelector('.prvImg');
+
+            if(fileTag.files.length > 0){
+                let reader = new FileReader();
+
+                reader.onload = function(data){
+                    console.log(data);
+                    imgTag.src = data.target.result;
+                }
+                reader.readAsDataURL(fileTag.files[0]);
+            }else{
+                imgTag.src ="";
+            }
+        }
+    </script>
+</body>
+</html>

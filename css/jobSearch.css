@@ -7,9 +7,10 @@ body {
 }
 
 .searchBtnWrap {
-  width: 45.8333333333%;
+  width: 58.3333333333%;
   margin: 0 auto;
   margin-top: calc(min(1rem, 40px) * 0.875);
+  display: flex;
 }
 .searchBtnWrap .searchBox {
   font-size: calc(min(1em, 10px) * 1.4);
@@ -21,7 +22,7 @@ body {
   display: flex;
 }
 .searchBtnWrap .searchBox input {
-  width: 93.75%;
+  width: calc(100% - 50px);
   height: calc(min(1rem, 40px) * 1.15);
   -webkit-appearance: none;
   border: none;
@@ -30,11 +31,25 @@ body {
   border-radius: 30px;
 }
 .searchBtnWrap .searchBox .searchBtn {
-  width: 9.375%;
+  width: 50px;
   height: inherit;
   display: inline-block;
-  background: url("../img/search.svg") no-repeat center right calc(min(1rem, 40px) * 0.55);
+  background: url("../img/search.svg") no-repeat center right 15px;
   cursor: pointer;
+}
+.searchBtnWrap .searchBox2 {
+  width: 80%;
+}
+.searchBtnWrap .writingBtn {
+  width: 18%;
+  background-color: #2CB7A4;
+  font-size: calc(min(1em, 10px) * 1.5);
+  line-height: calc(min(1rem, 40px) * 1.25);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  margin-left: calc(min(1rem, 40px) * 0.5);
 }
 
 .jobWrap {
@@ -60,10 +75,6 @@ body {
 }
 .jobWrap > li:nth-child(2n+1) {
   margin-left: 0;
-}
-.jobWrap > li:hover {
-  box-shadow: 1px 1px 20px #d7d7d7;
-  border: none;
 }
 
 .jobInfo {
@@ -273,9 +284,18 @@ body {
     height: calc(max(1rem, 40px) * 1.2);
   }
   .searchBtnWrap .searchBox input {
-    width: 85%;
     height: calc(max(1rem, 40px) * 1.15);
     padding-left: calc(max(1rem, 40px) * 0.45);
+  }
+  .searchBtnWrap .writingBtn {
+    width: 85px;
+    margin-top: 20px;
+    margin-left: auto;
+    font-size: 13px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .jobWrap {
     width: 100%;
@@ -391,6 +411,9 @@ body {
   }
 }
 @media (min-width: 0px) and (max-width: 654px) {
+  .searchBtnWrap {
+    width: 100%;
+  }
   .jobWrap {
     display: block;
   }

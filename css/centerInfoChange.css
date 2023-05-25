@@ -1,0 +1,257 @@
+html {
+  font-size: 2.6666666667vw;
+}
+
+body {
+  font-size: 0.6666666667vw;
+}
+
+.fileContainer {
+  width: 82%;
+}
+
+.fileBtnWrap label {
+  display: inline-block;
+  padding-left: calc(min(1rem, 40px) * 0.45);
+  padding-right: calc(min(1rem, 40px) * 0.45);
+  height: calc(min(1rem, 40px) * 1);
+  line-height: calc(min(1rem, 40px) * 1);
+  border: 1px solid #2CB7A4;
+  border-radius: 20px;
+  color: #2CB7A4;
+  cursor: pointer;
+  font-size: calc(min(1em, 10px) * 1.4);
+}
+.fileBtnWrap label:hover {
+  background: #2CB7A4;
+  color: white;
+}
+.fileBtnWrap .fileSubText {
+  display: inline;
+  margin-left: calc(min(1rem, 40px) * 0.225);
+  color: #9F9F9F;
+  font-size: calc(min(1em, 10px) * 1.4);
+}
+.fileBtnWrap #file {
+  display: none;
+}
+
+.fileContentWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: calc(min(1rem, 40px) * 0.3);
+  padding-top: calc(min(1rem, 40px) * 0.5);
+  padding-bottom: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  height: calc(min(1rem, 40px) * 4);
+  font-size: calc(min(1em, 10px) * 1.3);
+  width: 100%;
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+.fileContentWrap input {
+  height: calc(min(1rem, 40px) * 0.7);
+  background: transparent;
+  border: none;
+  font-family: "NanumSquareRound";
+  font-weight: 500;
+}
+.fileContentWrap .prvImgWrap {
+  width: 15%;
+  display: none;
+  position: relative;
+  height: calc(min(1rem, 40px) * 2.3);
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .imgCover {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3607843137);
+  z-index: 50;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(min(1rem, 40px) * 2.3);
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .prvImg {
+  width: 100%;
+  height: calc(min(1rem, 40px) * 2.3);
+  position: relative;
+  border-radius: 10px;
+}
+.fileContentWrap .prvImgWrap .deleteBtn {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  width: 25px;
+  top: 0;
+  right: 0;
+  background-color: white;
+  padding: 16px 18px;
+  border-radius: 0 10px 0 8px;
+  background: url("../img/delete.svg") no-repeat center center/16px;
+  cursor: pointer;
+}
+.fileContentWrap .uploadFile {
+  padding-left: 0;
+}
+
+.svTypeList {
+  margin-top: calc(min(1rem, 40px) * 0.3);
+}
+.svTypeList > li {
+  width: 100%;
+  background: #F4F4F4;
+  height: auto;
+  line-height: calc(min(1rem, 40px) * 1.25);
+  margin-bottom: calc(min(1rem, 40px) * 0.5);
+  border: 1px solid #E9E9E9;
+  border-radius: 0 calc(min(1rem, 40px) * 0.25) 0 0;
+}
+.svTypeList > li label {
+  margin-right: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.4);
+  display: inline-block;
+  font-weight: 500;
+  cursor: pointer;
+}
+.svTypeList > li label input[type=checkbox] {
+  font-size: calc(min(1em, 10px) * 1.4);
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #E3E3E3;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin: 0;
+  background: #E1E1E1 url("../img/check-gray2.svg") no-repeat center center;
+}
+.svTypeList > li label input[type=checkbox]:checked {
+  background: #2CB7A4 url("../img/check-white.svg") no-repeat center center;
+  border: none;
+  transition: all 0.2s;
+  border: 1px solid #60C7B8;
+}
+.svTypeList > li label span {
+  font-weight: 500;
+  color: #808080;
+  vertical-align: middle;
+  padding-left: calc(min(1rem, 40px) * 0.1);
+  font-size: calc(min(1em, 10px) * 1.6);
+}
+.svTypeList > li.subChecked {
+  border-radius: 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
+}
+
+.subWrap {
+  border-radius: 0 0 calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25);
+  display: none;
+  background-color: white;
+}
+
+.programContainer {
+  width: 82%;
+}
+
+.programWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(min(1rem, 40px) * 0.375);
+}
+
+input.program1 {
+  width: 30%;
+  padding: 0 0 0 auto;
+}
+
+input.program2 {
+  width: calc(61% - min(1rem, 40px) * 0.25);
+}
+
+.adlBtn {
+  display: flex;
+  align-self: center;
+  width: 5%;
+  height: calc(min(1rem, 40px) * 0.85);
+  margin-left: 1%;
+  background: #F2F2F2;
+  border-radius: 30%;
+  position: relative;
+  cursor: pointer;
+}
+
+.addBtn::after {
+  content: "";
+  position: absolute;
+  width: 56%;
+  height: calc(min(1rem, 40px) * 0.11);
+  border-radius: 10px;
+  background: #A3A8A8;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.addBtn::before {
+  content: "";
+  position: absolute;
+  width: 12.5%;
+  height: calc(min(1rem, 40px) * 0.48);
+  border-radius: 10px;
+  background: #A3A8A8;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.deleteBtn::after {
+  content: "";
+  position: absolute;
+  width: 56%;
+  height: calc(min(1rem, 40px) * 0.11);
+  border-radius: 10px;
+  background: #A3A8A8;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*page nav style*/
+.pageNav {
+  width: 25%;
+  margin: 0 auto;
+  margin-top: calc(min(1rem, 40px) * 1.25);
+  display: flex;
+  justify-content: space-between;
+}
+.pageNav h4 {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+.pageNav h4 a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.pageNav .prev {
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  background: url("../img/pgArrowPrev.svg") no-repeat center center;
+}
+.pageNav .next {
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  background: url("../img/pgArrowNext.svg") no-repeat center center;
+}
+.pageNav .pgActive {
+  color: #2CB7A4;
+}

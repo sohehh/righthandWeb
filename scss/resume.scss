@@ -314,7 +314,7 @@ li.haveCr{
 .btnWrap{
     text-align:right;
     @include mix.mzn(pc,top,1.25);
-    .btnRegister{
+    .btn{
         $borderR : calc(min(1rem, 40px)*0.75);
         border-radius: $borderR;
         border:none;

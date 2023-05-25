@@ -322,7 +322,7 @@ li.haveCr {
   text-align: right;
   margin-top: calc(min(1rem, 40px) * 1.25);
 }
-.btnWrap .btnRegister {
+.btnWrap .btn {
   border-radius: calc(min(1rem, 40px) * 0.75);
   border: none;
   font-weight: 500;

@@ -1,9 +1,10 @@
 @use './mixins.scss' as mix;
 
 .searchBtnWrap{
-    width: calc(100% / 12 * 5.5);
+    width: calc(100% / 12 * 7);
     margin:0 auto;
     @include mix.mzn(pc,top,0.875);
+    display: flex;
     .searchBox{
         @include mix.fontz(pc,1.4);
         width:100%;
@@ -13,7 +14,7 @@
         border-radius: 30px;
         display: flex;
         input{
-            width:calc(100% / 8 * 7.5);
+            width:calc(100% - 50px);
             @include mix.heights(pc,1.15);
             -webkit-appearance: none;
             //text-indent: 13px;
@@ -23,13 +24,27 @@
             border-radius: 30px;
         }
         .searchBtn{
-            width:calc(100% / 8 * 0.75);
+            width:50px;
             height: inherit;
             display: inline-block;
             //display: none;
-            background: url('../img/search.svg')no-repeat center right calc(min(1rem, 40px) * 0.55);
+            background: url('../img/search.svg')no-repeat center right 15px;
             cursor: pointer;
         }
+    }
+    .searchBox2{
+        width:80%;
+    }
+    .writingBtn{
+        width: calc(100% / 10 * 1.8);
+        background-color: #2CB7A4;
+        font-size: calc(min(1em, 10px) * 1.5);
+        line-height: calc(min(1rem, 40px) * 1.25);
+        font-weight: 500;
+        text-align: center;
+        border-radius: 30px;
+        color:white;
+        @include mix.mzn(pc,left,.5);
     }
 }
 .jobWrap{
@@ -54,10 +69,6 @@
     }
     > li:nth-child(2n+1){
         margin-left: 0;
-    }
-    > li:hover{
-        box-shadow: 1px 1px 20px #d7d7d7;
-        border:none;
     }
 }
 .jobInfo{
@@ -267,10 +278,19 @@
             width: 100%;
             @include mix.heights(mob,1.2);
             input{
-                width: 85%;
                 @include mix.heights(mob,1.15);
                 @include mix.pdn(mob,left,0.45);
             }
+        }
+        .writingBtn{
+            width: 85px;
+            margin-top: 20px;
+            margin-left: auto;
+            font-size: 13px;
+            height:35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     .jobWrap{
@@ -400,6 +420,9 @@
 
 }
 @media (min-width:0px) and (max-width:654px){
+    .searchBtnWrap{
+        width: 100%;
+    }
     .jobWrap{
         display: block;
         >li{

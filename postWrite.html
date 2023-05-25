@@ -173,10 +173,8 @@
     <script type="text/javascript">
         //사진 미리보기 코드
         let fileTag = document.getElementById('file');
-
         fileTag.onchange = function(){
             let imgTag = document.querySelector('.prvImg');
-
             if(fileTag.files.length > 0){
                 let reader = new FileReader();
 
