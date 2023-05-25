@@ -326,9 +326,164 @@ label[for=count] + input{
     }
 }
 @include mix.tab{
-.fileContentWrap{
-    height: 130px;
+.inputSection:nth-child(2){
+    ul{
+        li:nth-child(4){
+            margin-top: 0;
+        }
+    }
 }
+
+.fileContainer{
+    width: 100%;
+}
+
+.fileBtnWrap{
+    margin-top: 10px;
+    label{
+        padding:0 18px;
+        height:40px;
+        line-height: 40px;
+    }
+    .fileSubText{
+        font-size: 13px;
+        margin-left: 8px;
+    }
+}
+.fileContentWrap{
+    margin-top: 11px;
+    padding:15px;
+    height:130px;
+    .prvImgWrap{
+        width: 90px;
+        min-height: 82px;
+        .imgCover{
+            min-height: 82px;
+        }
+        .prvImg{
+            min-height: 82px;
+        }
+    }
+    input[type=text].uploadFile{
+        margin-top:0;
+        height:20px;
+        padding-left: 0;
+    }
+}
+.programContainer{
+    width: 100%;
+}
+.adlBtn{
+    position:absolute;
+    top:-37PX;
+    right:0;
+    width: 35px;
+    height: 35px;
+}
+.addBtn::before{
+    width: 13px;
+    height: 3px;
+}
+.addBtn::after{
+    width: 3px;
+    height: 13px;
+}
+.delete2Btn::after{
+    width: 13px;
+    height: 3px;
+}
+.programContainer{
+    margin-top: 10px;
+    .programWrap{
+        position:relative;
+    }
+    .programWrap + .programWrap{
+        margin-top: 20px;
+        input[type=text].program1{
+            width: 92%;
+        }
+        .adlBtn{
+            top:13px;
+        }
+
+    }
+}
+.svTypeList{
+    margin-top: 10px;
+    >li{
+        height:auto;
+        line-height: 40px;
+        border-radius: 0 10px 10px 10px;
+        margin-bottom: 15px;
+        >label{
+            padding-left: 15px;
+            span{
+                margin-left:5px;
+                font-size:14px;
+            }
+        }
+    }
+}
+
+.svTypeList > li.subChecked{
+    border-radius: 0 10px 10px 10px;
+}
+.subWrap{
+    padding:27px 20px;
+    border-radius: 0 0 10px 10px;
+    >li{
+        display: block;
+        margin-top: 30px;
+        >.subLabel{
+            width: 100%;
+            font-size: 15px;
+            line-height: 135%;
+        }
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+}
+.subInputContainer{
+    margin-top: 25px;
+    width: 100%;
+}
+.subInputWrap{
+    display: block;
+    width: 100%;
+    >label{
+        width: 100%;
+        margin:0;
+        display:flex;
+        justify-content: space-between;
+        >span{
+            width: 30%;
+            font-size: 14px;
+            text-align: left;
+            line-height: 145%;
+        }
+        >input[type=text]{
+            width: 50%;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right:0;
+        }
+    }
+    >label + label{
+        margin-top: 15px;
+    }
+}
+
+label[for=count]{
+    width:100%;
+    font-size: 15px;
+}
+label[for=count] + input{
+    width: 100%;
+    font-size: 14px;
+    margin-top:15px;
+}
+
 }
 @include mix.mob{
 
@@ -489,8 +644,4 @@ label[for=count] + input{
     font-size: 14px;
     margin-top:15px;
 }
-
-
-
-
 }

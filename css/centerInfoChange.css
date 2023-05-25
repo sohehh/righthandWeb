@@ -331,8 +331,153 @@ label[for=count] + input {
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {
+  .inputSection:nth-child(2) ul li:nth-child(4) {
+    margin-top: 0;
+  }
+  .fileContainer {
+    width: 100%;
+  }
+  .fileBtnWrap {
+    margin-top: 10px;
+  }
+  .fileBtnWrap label {
+    padding: 0 18px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .fileBtnWrap .fileSubText {
+    font-size: 13px;
+    margin-left: 8px;
+  }
   .fileContentWrap {
+    margin-top: 11px;
+    padding: 15px;
     height: 130px;
+  }
+  .fileContentWrap .prvImgWrap {
+    width: 90px;
+    min-height: 82px;
+  }
+  .fileContentWrap .prvImgWrap .imgCover {
+    min-height: 82px;
+  }
+  .fileContentWrap .prvImgWrap .prvImg {
+    min-height: 82px;
+  }
+  .fileContentWrap input[type=text].uploadFile {
+    margin-top: 0;
+    height: 20px;
+    padding-left: 0;
+  }
+  .programContainer {
+    width: 100%;
+  }
+  .adlBtn {
+    position: absolute;
+    top: -37PX;
+    right: 0;
+    width: 35px;
+    height: 35px;
+  }
+  .addBtn::before {
+    width: 13px;
+    height: 3px;
+  }
+  .addBtn::after {
+    width: 3px;
+    height: 13px;
+  }
+  .delete2Btn::after {
+    width: 13px;
+    height: 3px;
+  }
+  .programContainer {
+    margin-top: 10px;
+  }
+  .programContainer .programWrap {
+    position: relative;
+  }
+  .programContainer .programWrap + .programWrap {
+    margin-top: 20px;
+  }
+  .programContainer .programWrap + .programWrap input[type=text].program1 {
+    width: 92%;
+  }
+  .programContainer .programWrap + .programWrap .adlBtn {
+    top: 13px;
+  }
+  .svTypeList {
+    margin-top: 10px;
+  }
+  .svTypeList > li {
+    height: auto;
+    line-height: 40px;
+    border-radius: 0 10px 10px 10px;
+    margin-bottom: 15px;
+  }
+  .svTypeList > li > label {
+    padding-left: 15px;
+  }
+  .svTypeList > li > label span {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  .svTypeList > li.subChecked {
+    border-radius: 0 10px 10px 10px;
+  }
+  .subWrap {
+    padding: 27px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  .subWrap > li {
+    display: block;
+    margin-top: 30px;
+  }
+  .subWrap > li > .subLabel {
+    width: 100%;
+    font-size: 15px;
+    line-height: 135%;
+  }
+  .subWrap > li:nth-child(1) {
+    margin-top: 0;
+  }
+  .subInputContainer {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .subInputWrap {
+    display: block;
+    width: 100%;
+  }
+  .subInputWrap > label {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .subInputWrap > label > span {
+    width: 30%;
+    font-size: 14px;
+    text-align: left;
+    line-height: 145%;
+  }
+  .subInputWrap > label > input[type=text] {
+    width: 50%;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .subInputWrap > label + label {
+    margin-top: 15px;
+  }
+  label[for=count] {
+    width: 100%;
+    font-size: 15px;
+  }
+  label[for=count] + input {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 15px;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {

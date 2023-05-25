@@ -328,8 +328,8 @@ li.haveCr {
   font-weight: 500;
   height: calc(min(1rem, 40px) * 1.25);
   line-height: calc(min(1rem, 40px) * 1.25);
-  padding-left: calc(min(1rem, 40px) * 0.75);
-  padding-right: calc(min(1rem, 40px) * 0.75);
+  padding-left: calc(min(1rem, 40px) * 1.25);
+  padding-right: calc(min(1rem, 40px) * 1.25);
   font-size: calc(min(1em, 10px) * 1.7);
   background: #2CB7A4;
   color: white;
@@ -374,8 +374,8 @@ li.haveCr {
   .inputSection h3 {
     height: 40px;
     line-height: 40px;
-    padding: 0 13px;
-    font-size: 15px;
+    padding: 0 17px;
+    font-size: 16px;
     border-radius: 10px 10px 0 0;
   }
   .inputSection h3::after {
@@ -416,6 +416,7 @@ li.haveCr {
     display: block;
     width: 100%;
     line-height: 130%;
+    font-size: 15px;
     text-indent: 0;
   }
   .inputList li input[type=text] {
@@ -477,12 +478,11 @@ li.haveCr {
   .btnWrap {
     margin-top: 50px;
   }
-  .btnWrap .btnRegister {
+  .btnWrap .btn {
     width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 15px;
-    border-radius: 30px;
+    height: 52px;
+    border-radius: 20px;
+    font-size: 16px;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {
@@ -522,8 +522,8 @@ li.haveCr {
   .inputSection h3 {
     height: 40px;
     line-height: 40px;
-    padding: 0 13px;
-    font-size: 15px;
+    padding: 0 17px;
+    font-size: 16px;
     border-radius: 10px 10px 0 0;
   }
   .inputSection h3::after {
