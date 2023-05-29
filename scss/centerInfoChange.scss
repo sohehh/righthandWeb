@@ -129,7 +129,7 @@ input.program2{
 .addBtn::after{
     content:'';
     position: absolute;
-    width: 56%;
+    width: 45%;
     height: calc(min(1rem, 40px) * 0.11);
     border-radius: 10px;
     background: #A3A8A8;
@@ -141,7 +141,7 @@ input.program2{
     content:"";
     position: absolute;
     width: 12.5%;
-    height: calc(min(1rem, 40px) * 0.48);
+    height: calc(min(1rem, 40px) * 0.4);
     border-radius: 10px;
     background: #A3A8A8;
     left:50%;
@@ -152,7 +152,7 @@ input.program2{
 .delete2Btn::after{
     content:'';
     position: absolute;
-    width: 56%;
+    width: 45%;
     height: calc(min(1rem, 40px) * 0.11);
     border-radius: 10px;
     background: #A3A8A8;
@@ -400,7 +400,7 @@ label[for=count] + input{
     .programWrap + .programWrap{
         margin-top: 20px;
         input[type=text].program1{
-            width: 92%;
+            width:calc(100% - 50px);
         }
         .adlBtn{
             top:13px;
@@ -461,6 +461,8 @@ label[for=count] + input{
             font-size: 14px;
             text-align: left;
             line-height: 145%;
+            display: flex;
+            align-self: center;
         }
         >input[type=text]{
             width: 50%;
