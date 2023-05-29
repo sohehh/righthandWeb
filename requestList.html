@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>센터 회원 홈</title>
+    <title>수급자 매칭 요청 목록</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/centerHome.css">
@@ -71,26 +71,11 @@
         </div>
         <ul class="breadcrumbsWrap">
             <li><a href="#">HOME</a></li>
-            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 회원 홈</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 회원 홈</a></li><li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">매칭 요청 목록</a></li>
         </ul>
         <div class="content">
-            <h2 class="title">센터 회원 홈</h2>
-            <div class="centerInfoWrap">
-                <div class="profileWrap">
-                    <figure>
-                        <img src="./img/profile.svg" alt="프로필">
-                    </figure>
-                    <span>센터님</span>
-                    <span><a href="./centerInfoChange.html">정보 수정</a></span>
-                </div>
-                <p>현재 이용중인 멤버십이 없습니다.</p>
-                <div class="btnWrap">
-                    <button class="btn">상품 구매</button>
-                    <button class="btn">구인 글쓰기</button>
-                </div>
-            </div>
+            <h2 class="title">수급자 매칭 요청 목록</h2>
             <div class="matchingWrap">
-                <h3><a href="#">수급자 매칭 요청 목록</a></h3>
                 <ul class="matchList">
                     <li>
                         <div class="rpInfoWrap">
@@ -144,14 +129,35 @@
                         </div>
                         <button class="btn" type="button">상세정보 보기</button>
                     </li>
-                </ul>
-            </div>
-            <div class="matchingWrap">
-                <h3><a href="#">수급자 매칭 완료 목록</a></h3>
-                <ul class="matchList">
                     <li>
                         <div class="rpInfoWrap">
-                            <p class="date">매칭 완료 날짜 : 2023.03.15</p>
+                            <p class="date">매칭 요청 날짜 : 2023.03.15</p>
+                            <img src="./img/manProfile.svg" alt="사진">
+                            <div class="rpProfile">
+                                <h4>김OO (남, 75세)</h4>
+                                <h5>서울 특별시 강서구 개화동로</h5>
+                                <span class="grade">인정서 등급 : 1</span>
+                            </div>
+                        </div>
+                        <div class="rightHand">
+                            <div class="titleWrap">
+                                <p class="listTitle">오른손 신청내역</p>
+                                <p class="line"></p>
+                            </div>
+                        
+                            <ul>
+                                <li>등급 신청 설명</li>
+                                <li>방문 실사 동행</li>
+                                <li>의사소견서 발급</li>
+                                <li>재가요양 서비스 안내</li>
+                                <li>복지용구안내</li>
+                            </ul>
+                        </div>
+                        <button class="btn" type="button">상세정보 보기</button>
+                    </li>
+                    <li>
+                        <div class="rpInfoWrap">
+                            <p class="date">매칭 요청 날짜 : 2023.03.15</p>
                             <img src="./img/womanProfile.svg" alt="사진">
                             <div class="rpProfile">
                                 <h4>김OO (여, 75세)</h4>
@@ -173,12 +179,11 @@
                                 <li>복지용구안내</li>
                             </ul>
                         </div>
-                        <span class="new">N</span>
                         <button class="btn" type="button">상세정보 보기</button>
                     </li>
                     <li>
                         <div class="rpInfoWrap">
-                            <p class="date">매칭 완료 날짜 : 2023.03.15</p>
+                            <p class="date">매칭 요청 날짜 : 2023.03.15</p>
                             <img src="./img/womanProfile.svg" alt="사진">
                             <div class="rpProfile">
                                 <h4>김OO (여, 75세)</h4>
@@ -200,11 +205,46 @@
                                 <li>복지용구안내</li>
                             </ul>
                         </div>
-                        <span class="new">N</span>
+                        <button class="btn" type="button">상세정보 보기</button>
+                    </li>
+                    <li>
+                        <div class="rpInfoWrap">
+                            <p class="date">매칭 요청 날짜 : 2023.03.15</p>
+                            <img src="./img/womanProfile.svg" alt="사진">
+                            <div class="rpProfile">
+                                <h4>김OO (여, 75세)</h4>
+                                <h5>서울 특별시 강서구 개화동로</h5>
+                                <span class="grade">인정서 등급 : 1</span>
+                            </div>
+                        </div>
+                        <div class="rightHand">
+                            <div class="titleWrap">
+                                <p class="listTitle">오른손 신청내역</p>
+                                <p class="line"></p>
+                            </div>
+                        
+                            <ul>
+                                <li>등급 신청 설명</li>
+                                <li>방문 실사 동행</li>
+                                <li>의사소견서 발급</li>
+                                <li>재가요양 서비스 안내</li>
+                                <li>복지용구안내</li>
+                            </ul>
+                        </div>
                         <button class="btn" type="button">상세정보 보기</button>
                     </li>
                 </ul>
             </div>
+            <!-- 페이지 넘버 네비 -->
+            <nav class="pageNav">
+                <h4 class="prev"><a href="#"></a></h4>
+                <h4 class="pgActive pgN"><a href="#">1</a></h4>
+                <h4 class="pgN"><a href="#">2</a></h4>
+                <h4 class="pgN"><a href="#">3</a></h4>
+                <h4 class="pgN"><a href="#">4</a></h4>
+                <h4 class="pgN"><a href="#">5</a></h4>
+                <h4 class="next"><a href="#"></a></h4>
+            </nav>
         </div>
     </div>
     <div class="footerWrap">
