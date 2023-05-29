@@ -586,7 +586,7 @@ body {
   }
   .bottomBtnWrap {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 30px;
   }
   .bottomBtnWrap .botBtn {
     height: 50px;
@@ -735,16 +735,16 @@ body {
     width: 700px;
   }
   .rpTableWrap table tr th {
-    width: 15%;
+    width: 17%;
     padding: 15px 20px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .rpTableWrap table tr th:nth-child(1) {
     position: sticky;
     left: 0;
   }
   .rpTableWrap table tr td {
-    width: 77%;
+    width: 73%;
     font-size: 13px;
     padding: 15px 0;
     padding-left: 15px;
