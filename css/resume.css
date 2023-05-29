@@ -330,7 +330,7 @@ li.haveCr {
   line-height: calc(min(1rem, 40px) * 1.25);
   padding-left: calc(min(1rem, 40px) * 1.25);
   padding-right: calc(min(1rem, 40px) * 1.25);
-  font-size: calc(min(1em, 10px) * 1.7);
+  font-size: calc(min(1em, 10px) * 1.8);
   background: #2CB7A4;
   color: white;
   font-family: "NanumSquareRound";

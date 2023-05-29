@@ -194,7 +194,6 @@ input.program2{
                     background: #2CB7A4 url('../img/check-white.svg')no-repeat center center / 11px;
                     border: none;
                     transition: all 0.2s;
-                    border:1px solid #60C7B8;
                 }
             }
             span{
@@ -232,7 +231,6 @@ input.program2{
 
 .subWrap>li>.subLabel{
     font-size: calc(min(1em, 10px) * 1.6);
-    text-indent: calc(min(1rem, 40px) * 0.25);
     display: flex;
     align-self: center;
     font-weight: 500;
