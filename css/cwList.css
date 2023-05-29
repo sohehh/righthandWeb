@@ -112,6 +112,7 @@ body {
   padding-left: calc(min(1rem, 40px) * 0.575);
   padding-right: calc(min(1rem, 40px) * 0.575);
   cursor: pointer;
+  font-family: "NanumSquareRound";
 }
 
 /*page nav style*/
