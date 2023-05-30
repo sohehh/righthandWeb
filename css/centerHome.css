@@ -557,7 +557,7 @@ body {
   .matchList > li {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    border-radius: 15px;
+    border-radius: 0;
     padding: 20px;
     margin-bottom: 0;
   }
