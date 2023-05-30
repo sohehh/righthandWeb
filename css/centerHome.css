@@ -377,7 +377,7 @@ body {
     margin: 0 0 8px 0;
   }
   .matchingWrap {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
   }
   .matchingWrap h3 {
@@ -462,10 +462,10 @@ body {
   .rpTableWrap {
     width: 100%;
     overflow-x: scroll;
-    margin-top: 37px;
     padding-bottom: 10px;
   }
   .rpTableWrap table {
+    margin-top: 30px;
     width: 700px;
   }
   .rpTableWrap table tr th {
@@ -556,7 +556,6 @@ body {
     margin: 0 0 8px 0;
   }
   .matchingWrap {
-    margin-top: 50px;
     width: 100%;
   }
   .matchingWrap h3 {
@@ -650,7 +649,6 @@ body {
   .rpTableWrap {
     width: 100%;
     overflow-x: scroll;
-    margin-top: 37px;
   }
   .rpTableWrap table {
     width: 700px;
