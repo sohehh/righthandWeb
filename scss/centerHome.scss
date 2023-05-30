@@ -269,7 +269,7 @@ body{
 .rpTableWrap{
     width: calc(100% / 12 * 10);
     margin:0 auto;
-    overflow: scroll;
+    overflow-x: auto;
     table{
         $borderR : calc(min(1rem,40px)*.75);
         width: 100%;
@@ -474,7 +474,7 @@ body{
     
     .rpTableWrap{
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: auto;
         padding-bottom: 10px;
         table{
             margin-top: 30px;
@@ -677,7 +677,7 @@ body{
 
 .rpTableWrap{
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     table{
         width: 700px;
         tr{
