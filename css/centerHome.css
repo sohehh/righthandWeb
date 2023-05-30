@@ -564,6 +564,13 @@ body {
   .matchList > li + li {
     border-top: none;
   }
+  .centerHome .matchList > li {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border-top: 1px solid #EAEAEA;
+  }
   .rpInfoWrap .date {
     margin-bottom: 14px;
     font-size: 12px;
