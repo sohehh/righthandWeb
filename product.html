@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 구매 페이지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                </h1>
+                <!-- 피씨 버전 헤더 네비 -->
+                <nav class="pcNav">
+                    <h4><a href="#">요양보호사 목록</a></h4>
+                    <h4><a href="#">센터 홍보하기</a></h4>
+                    <h4><a href="#">구직 게시판</a></h4>
+                    <h4><a href="#">시니어 라이프</a></h4>
+                    <h4><a href="#">센터 회원 홈</a>
+                        <ul class="pcSubmenu">
+                            <li><a href="#">매칭 요청</a></li>
+                            <li><a href="#">매칭 완료</a></li>
+                            <li><a href="#">센터 정보 수정</a></li>
+                            <li><a href="#">구매 내역</a></li>
+                        </ul>
+                    </h4>
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                </nav>
+                <!-- 모바일 버전 헤더 네비 -->
+                <nav class="mobNav">
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <!-- 모바일버전 사이드메뉴 -->
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4><a href="#">센터 회원 홈</a></h4>
+                            <ul class="subMenu">
+                                <li><a href="#">- 매칭 요청</a></li>
+                                <li><a href="#">- 매칭 완료</a></li>
+                                <li><a href="#">- 센터 정보 수정</a></li>
+                                <li><a href="#">- 구매 내역</a></li>
+                            </ul>
+                            <h4><a href="#">구직 게시판</a></h4>
+                            <h4><a href="#">시니어 라이프</a></h4>
+                            <h4><a href="#">센터 홍보하기</a></h4>
+                            <h4><a href="#">요양보호사 목록</a></h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <div class="content">
+            <h2 class="title hide">상품 구매</h2>
+            <h3 class="titleSub"><span>원하는 상품을 선택하세요</span></h3>
+            <div class="productWrap">
+                <ul class="pNameSelector">
+                    <li>일반 광고</li>
+                    <li>프리미엄 광고</li>
+                </ul>
+                <table class="productTable">
+                    <caption class="hide">상품별 혜택</caption>
+                    <tbody>
+                        <tr>
+                            <th>월 요금</th>
+                            <td>무료</td>
+                            <td>15만원</td>
+                        </tr>
+                        <tr>
+                            <th>신규 등급 신청자 매칭 요청하기</th>
+                            <td>무제한</td>
+                            <td>무제한</td>
+                        </tr>
+                        <tr>
+                            <th>등급 인정서 보유자 매칭 요청하기</th>
+                            <td>X</td>
+                            <td>무제한</td>
+                        </tr>
+                        <tr>
+                            <th>센터 검색 광고</th>
+                            <td>일반 노출</td>
+                            <td>상위 노출</td>
+                        </tr>
+                        <tr>
+                            <th>수급자 매칭 리스트 노출</th>
+                            <td>일반 노출</td>
+                            <td>상위 노출</td>
+                        </tr>
+                        <tr>
+                            <th>프리미엄 센터 등급 부여</th>
+                            <td>X</td>
+                            <td>라벨 제공</td>
+                        </tr>
+                        <tr>
+                            <th>요양보호사 매칭</th>
+                            <td>면접 제안하기 무제한</td>
+                            <td>면접 제안하기 무제한</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btnWrap">
+                    <button type="button" class="btnPch">결제하기</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLoto.svg"></p>
+        </footer>
+    </div>
+    
+    <script src="./js/master.js"></script>
+</body>
+</html>

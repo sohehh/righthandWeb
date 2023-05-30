@@ -2,7 +2,7 @@
 /*////////////////////////////////////////////////*/
 /*jobWrite.html style*/
 form{
-    width: calc(100% / 12 * 10);
+    width: calc(100% / 12 * 9);
     margin:auto auto;
     @include mix.mzn(pc,top,1.625);
 }
@@ -198,6 +198,7 @@ form{
 .inputSection:nth-child(3) ul li:nth-child(1){
     input{
         width: 30%;
+        min-width: 148px;
     }
     span{
         @include mix.fontz(pc,1.4);

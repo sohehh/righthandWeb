@@ -1,0 +1,98 @@
+@use './mixins.scss' as mix;
+
+.hide{
+    position:absolute;
+    top:-100000%;
+}
+.titleSub{
+    width: calc(100% / 12 * 8);
+    margin:auto auto;
+    span{
+        @include mix.pdn(pc,left,1);
+        @include mix.pdn(pc,right,.5);
+        @include mix.heights(pc,1.3);
+        @include mix.fontz(pc,2);
+        $borderR : calc(min(1rem,40px)*.25);
+        border-radius: $borderR $borderR $borderR 0;
+        border:2px solid #2CB7A4;
+        color:#707070;
+        background: url('../img/check-green.svg')no-repeat center left calc(min(1rem,40px)*.35);
+        display:inline-block;
+        @include mix.pdn(pc,top,0.325);
+    }
+    
+}
+
+.productWrap{
+    margin:auto auto;
+    @include mix.mzn(pc,top,1.75);
+    width: calc(100% / 12 * 8);
+}
+.pNameSelector{
+    @include mix.fontz(pc,1.7);
+    display: flex;
+    justify-content: end;
+    @include mix.pdn(pc,bottom,0.35);
+    li{
+        @include mix.pdn(pc,left,0.725);
+        @include mix.pdn(pc,right,0.725);
+        @include mix.pdn(pc,top,.275);
+        @include mix.pdn(pc,bottom,.275);
+        background:#B6B6B6;
+        color:white;
+        font-weight: 700;
+        $borderR : calc(min(1rem,40px)*0.25);
+        border-radius: $borderR $borderR $borderR 0;
+        @include mix.mzn(pc,right,.75);
+        @include mix.mzn(pc,left,.75);
+    
+        &:nth-child(2){
+            background: #2CB7A4;
+        }
+    }
+}
+.productTable{
+    width: 100%;
+    tr{
+        text-align: center;
+        border-bottom:3px solid #F2F2F2;
+        th{
+            @include mix.pdn(pc,top,.575);
+            @include mix.pdn(pc,bottom,.575);
+            @include mix.fontz(pc,1.7);
+            font-weight: 500;
+            text-align: left;
+            @include mix.pdn(pc,left,.75);
+        }
+        td{
+            @include mix.fontz(pc,1.6);
+            font-weight: 500;
+            color:#3C3C3C;
+            &:nth-of-type(2){
+                color:#2CB7A4;
+            }
+        }
+
+        &:nth-child(1){
+            border-top:3px solid #F2F2F2;
+        }
+    }
+}
+.btnWrap{
+    text-align: right;
+    margin-top: calc(min(1rem, 40px) * 1.25);
+    .btnPch{
+        border-radius: calc(min(1rem, 40px) * 0.75);
+        border: none;
+        font-weight: 500;
+        height: calc(min(1rem, 40px) * 1.25);
+        line-height: calc(min(1rem, 40px) * 1.25);
+        padding-left: calc(min(1rem, 40px) * 1.65);
+        padding-right: calc(min(1rem, 40px) * 1.65);
+        font-size: calc(min(1em, 10px) * 1.7);
+        background: #2CB7A4;
+        color: white;
+        font-family: "NanumSquareRound";
+        cursor: pointer;
+    }
+}

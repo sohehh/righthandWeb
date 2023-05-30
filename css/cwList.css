@@ -152,7 +152,7 @@ body {
 @media (min-width: 0px) and (max-width: 1200px) {
   .cwListWrap {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 37px;
   }
   .cwListWrap > li {
     width: calc(50% - 10px);
@@ -227,7 +227,7 @@ body {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     display: block;
-    margin-top: 30px;
+    margin-top: 37px;
   }
   .cwListWrap > li {
     border-radius: 0;
