@@ -269,6 +269,7 @@ body{
 .rpTableWrap{
     width: calc(100% / 12 * 10);
     margin:0 auto;
+    overflow: scroll;
     table{
         $borderR : calc(min(1rem,40px)*.75);
         width: 100%;
