@@ -285,6 +285,7 @@ body{
                 background-color: #F8F8F8;
                 border:1px solid #EAEAEA;
                 text-align: left;
+                font-weight: 500;
                 @include mix.pdn(pc,left,1.8);
             }
             td{

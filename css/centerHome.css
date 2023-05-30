@@ -284,6 +284,7 @@ body {
   background-color: #F8F8F8;
   border: 1px solid #EAEAEA;
   text-align: left;
+  font-weight: 500;
   padding-left: calc(min(1rem, 40px) * 1.8);
 }
 .rpTableWrap table tr td {
