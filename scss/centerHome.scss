@@ -120,7 +120,7 @@
         align-self: flex-start;
     }
     .rpProfile{
-        @include mix.pdn(pc,top,0.125);
+        @include mix.pdn(pc,top,0.25);
         width: calc(100% - calc(100% / 5 * 0.8) - 10px);
         @include mix.mzn(pc,left,0.25);
         position:relative;
@@ -129,8 +129,9 @@
             @include mix.mzn(pc,bottom,0.225);
         }
         h5{
-            @include mix.fontz(pc,1.3);
+            @include mix.fontz(pc,1.4);
             @include mix.mzn(pc,bottom,0.2);
+            line-height: 140%;
         }
     }
     .grade{
@@ -146,7 +147,7 @@
         border-radius: $borderR;
         font-weight: 500;
         position: absolute;
-        top:-4px;
+        top:0;
         right:-2px;
     }
 
@@ -196,9 +197,9 @@
     display: inline-block;
     background: #FC4646;
     color:white;
-    width: 24px;
-    height:24px;
-    line-height: 26px;
+    width: 5.3%;
+    height: calc(min(1rem, 40px) * 0.62);
+    line-height: calc(min(1rem,40px)*.64);
     text-align: center;
     border-radius: 50%;
     font-weight: 700;
@@ -436,10 +437,10 @@
     .new{
         width: 20px;
         height:20px;
-        line-height: 20px;
+        line-height: 22px;
         margin-top: 10px;
         margin-right: 16px;
-        font-size: 11px;
+        font-size: 12px;
     }
     .matchList .btn{
         font-size: 12px;
@@ -593,7 +594,7 @@
         margin-left: 7px;
         h4{
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
         h5{
             font-size: 12px;
@@ -630,8 +631,8 @@
     width: 20px;
     height:20px;
     line-height: 20px;
-    margin-top: 10px;
-    margin-right: 16px;
+    margin-top: 18px;
+    margin-right: 20px;
     font-size: 11px;
 }
 .matchList .btn{
