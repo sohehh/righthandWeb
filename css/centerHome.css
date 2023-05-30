@@ -7,6 +7,10 @@ body {
   font-size: 0.6666666667vw;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .centerInfoWrap {
   width: 79.1666666667%;
   border: 1px solid #BCBCBC;
