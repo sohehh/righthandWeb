@@ -303,6 +303,7 @@ body {
   border-radius: 0 0 calc(min(1rem, 40px) * 0.75) 0;
 }
 .rpTableWrap::-webkit-scrollbar {
+  -webkit-appearance: none;
   width: 10px;
 }
 .rpTableWrap::-webkit-scrollbar-thumb {
