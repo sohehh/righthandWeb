@@ -300,6 +300,19 @@ body {
 .rpTableWrap table tr:nth-child(9) td {
   border-radius: 0 0 calc(min(1rem, 40px) * 0.75) 0;
 }
+.rpTableWrap::-webkit-scrollbar {
+  width: 10px;
+}
+.rpTableWrap::-webkit-scrollbar-thumb {
+  background-color: #DDDDDD;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.rpTableWrap::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
 
 .bottomBtnWrap {
   width: 83.3333333333%;
@@ -449,6 +462,7 @@ body {
     width: 100%;
     overflow-x: scroll;
     margin-top: 37px;
+    padding-bottom: 10px;
   }
   .rpTableWrap table {
     width: 700px;

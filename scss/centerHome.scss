@@ -304,7 +304,21 @@ body{
             }
         }
     }
+    &::-webkit-scrollbar {
+    width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    }
+    &::-webkit-scrollbar-track {
+    background-color:transparent;
+    border-radius: 10px;
+    }
 }
+
 .bottomBtnWrap{
     width: calc(100% / 12 * 10);
     margin:auto auto;
@@ -459,6 +473,7 @@ body{
         width: 100%;
         overflow-x: scroll;
         margin-top: 37px;
+        padding-bottom: 10px;
         table{
             width: 700px;
             tr{
