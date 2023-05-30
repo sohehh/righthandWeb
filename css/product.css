@@ -37,20 +37,22 @@ body {
 .pNameSelector {
   font-size: calc(min(1em, 10px) * 1.7);
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-bottom: calc(min(1rem, 40px) * 0.35);
+  width: 55%;
+  margin-left: auto;
 }
 .pNameSelector li {
-  padding-left: calc(min(1rem, 40px) * 0.725);
-  padding-right: calc(min(1rem, 40px) * 0.725);
-  padding-top: calc(min(1rem, 40px) * 0.275);
-  padding-bottom: calc(min(1rem, 40px) * 0.275);
+  width: 50%;
+  text-align: center;
+  padding-top: calc(min(1rem, 40px) * 0.375);
+  padding-bottom: calc(min(1rem, 40px) * 0.375);
   background: #B6B6B6;
   color: white;
   font-weight: 700;
   border-radius: calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) calc(min(1rem, 40px) * 0.25) 0;
-  margin-right: calc(min(1rem, 40px) * 0.75);
-  margin-left: calc(min(1rem, 40px) * 0.75);
+  margin-right: calc(min(1rem, 40px) * 0.625);
+  margin-left: calc(min(1rem, 40px) * 0.625);
 }
 .pNameSelector li:nth-child(2) {
   background: #2CB7A4;
@@ -64,6 +66,7 @@ body {
   border-bottom: 3px solid #F2F2F2;
 }
 .productTable tr th {
+  width: 45%;
   padding-top: calc(min(1rem, 40px) * 0.575);
   padding-bottom: calc(min(1rem, 40px) * 0.575);
   font-size: calc(min(1em, 10px) * 1.7);
@@ -72,6 +75,7 @@ body {
   padding-left: calc(min(1rem, 40px) * 0.75);
 }
 .productTable tr td {
+  width: 27.5%;
   font-size: calc(min(1em, 10px) * 1.6);
   font-weight: 500;
   color: #3C3C3C;
@@ -100,4 +104,119 @@ body {
   color: white;
   font-family: "NanumSquareRound";
   cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  .titleSub {
+    width: 100%;
+  }
+  .titleSub span {
+    padding-left: 27px;
+    padding-right: 17px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px 10px 10px 0;
+    border: 1px solid #2CB7A4;
+    color: #707070;
+    background: url(../img/check-green.svg) no-repeat center left 8px/12px;
+    display: inline-block;
+    padding-top: 11px;
+  }
+  .productWrap {
+    width: 100%;
+    margin-top: 38px;
+  }
+  .pNameSelector {
+    width: 55%;
+    padding-bottom: 10px;
+  }
+  .pNameSelector li {
+    padding: 12px 5px;
+    margin: 0 25px;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 0;
+  }
+  .productTable tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .productTable tr th {
+    width: 45%;
+    text-align: center;
+    font-size: 13px;
+    padding: 15px 5px;
+    color: #8B8B8B;
+  }
+  .productTable tr td {
+    width: 27.5%;
+    font-size: 15px;
+    padding: 15px 5px;
+  }
+  .btnWrap {
+    margin-top: 50px;
+  }
+  .btnWrap .btnPch {
+    padding: 0 50px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .titleSub {
+    width: 100%;
+  }
+  .titleSub span {
+    padding-left: 27px;
+    padding-right: 17px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px 10px 10px 0;
+    border: 1px solid #2CB7A4;
+    color: #707070;
+    background: url(../img/check-green.svg) no-repeat center left 8px/12px;
+    display: inline-block;
+    padding-top: 11px;
+  }
+  .productWrap {
+    width: 100%;
+    margin-top: 38px;
+  }
+  .pNameSelector {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .pNameSelector li {
+    padding: 12px 0;
+    margin: 0 25px;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 0;
+  }
+  .productTable tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .productTable tr th {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 0;
+    color: #8B8B8B;
+  }
+  .productTable tr td {
+    width: 50%;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .btnWrap {
+    margin-top: 50px;
+  }
+  .btnWrap .btnPch {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
 }
