@@ -35,6 +35,7 @@ body {
   font-weight: 500;
   font-family: "NanumSquareRound";
   margin-left: calc(min(1rem, 40px) * 0.375);
+  cursor: pointer;
 }
 .centerInfoWrap .btn:nth-child(2) {
   background-color: white;
@@ -120,6 +121,7 @@ body {
   width: 16%;
   height: auto;
   border-radius: calc(min(1rem, 40px) * 0.375);
+  align-self: flex-start;
 }
 .rpInfoWrap .rpProfile {
   padding-top: calc(min(1rem, 40px) * 0.125);
@@ -129,7 +131,7 @@ body {
 }
 .rpInfoWrap .rpProfile h4 {
   font-size: calc(min(1em, 10px) * 1.6);
-  margin-bottom: calc(min(1rem, 40px) * 0.125);
+  margin-bottom: calc(min(1rem, 40px) * 0.225);
 }
 .rpInfoWrap .rpProfile h5 {
   font-size: calc(min(1em, 10px) * 1.3);
@@ -147,8 +149,8 @@ body {
   border-radius: calc(min(1rem, 40px) * 0.375);
   font-weight: 500;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -4px;
+  right: -2px;
 }
 
 /*오른손신청내역 style*/
@@ -208,7 +210,7 @@ body {
 }
 
 /*버튼 style*/
-.btn {
+.matchList .btn {
   font-size: calc(min(1em, 10px) * 1.5);
   margin-top: calc(min(1rem, 40px) * 0.5);
   display: block;
@@ -326,120 +328,6 @@ body {
     margin-top: 38px;
     width: 100%;
     border-radius: 20px;
-    padding: 20px 15px;
-  }
-  .centerInfoWrap p {
-    font-size: 12px;
-    margin-top: 10px;
-    line-height: 145%;
-  }
-  .profileWrap figure {
-    width: 42px;
-  }
-  .profileWrap span {
-    font-size: 14px;
-    margin-left: 5px;
-  }
-  .profileWrap span:nth-of-type(2) {
-    margin-left: 10px;
-  }
-  .btnWrap {
-    top: 20px;
-    right: 15px;
-  }
-  .btnWrap .btn {
-    height: 35px;
-    border-radius: 30px;
-    font-size: 13px;
-    padding: 0 10px;
-    margin: 0 0 0 8px;
-  }
-  .matchingWrap {
-    margin-top: 50px;
-    width: 100%;
-  }
-  .matchingWrap h3 {
-    font-size: 16px;
-    padding-right: 16px;
-    background-position: center right 2px;
-    background-size: 6px auto;
-  }
-  .matchList {
-    margin-top: 14px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .matchList > li {
-    width: calc(50% - 10px);
-    border-radius: 15px;
-    padding: 16px;
-    margin-bottom: 20px;
-  }
-  .rpInfoWrap .date {
-    margin-bottom: 14px;
-    font-size: 12px;
-  }
-  .rpInfoWrap img {
-    border-radius: 15px;
-  }
-  .rpInfoWrap .rpProfile {
-    padding-top: 5px;
-    margin-left: 7px;
-  }
-  .rpInfoWrap .rpProfile h4 {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-  .rpInfoWrap .rpProfile h5 {
-    font-size: 12px;
-  }
-  .rpInfoWrap .grade {
-    font-size: 11px;
-    padding: 0 10px;
-    height: 23px;
-    line-height: 25px;
-    border-radius: 15px;
-  }
-  .rightHand {
-    margin-top: 18px;
-  }
-  .rightHand .titleWrap {
-    font-size: 13px;
-    line-height: 145%;
-  }
-  .rightHand .titleWrap .listTitle {
-    padding-right: 6px;
-  }
-  .rightHand ul {
-    margin-top: 10px;
-  }
-  .rightHand ul li {
-    font-size: 12px;
-    padding-right: 7px;
-    margin-bottom: 6px;
-  }
-  .new {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    margin-top: 10px;
-    margin-right: 16px;
-    font-size: 11px;
-  }
-  .btn {
-    font-size: 12px;
-    height: 20px;
-    padding-right: 13px;
-    vertical-align: bottom;
-  }
-  .pageNav {
-    margin-top: 35px;
-    width: 43.75%;
-  }
-  .centerInfoWrap {
-    margin-top: 38px;
-    width: 100%;
-    border-radius: 20px;
     padding: 23px 15px;
   }
   .centerInfoWrap p {
@@ -495,8 +383,10 @@ body {
   }
   .rpInfoWrap img {
     border-radius: 15px;
+    width: 48px;
   }
   .rpInfoWrap .rpProfile {
+    width: calc(100% - 58px);
     padding-top: 5px;
     margin-left: 7px;
   }
@@ -540,7 +430,7 @@ body {
     margin-right: 16px;
     font-size: 11px;
   }
-  .btn {
+  .matchList .btn {
     font-size: 12px;
     height: 20px;
     padding-right: 13px;
@@ -660,10 +550,14 @@ body {
     display: block;
   }
   .matchList > li {
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     border-radius: 15px;
-    padding: 16px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  .matchList > li + li {
+    border-top: none;
   }
   .rpInfoWrap .date {
     margin-bottom: 14px;
@@ -716,7 +610,7 @@ body {
     margin-right: 16px;
     font-size: 11px;
   }
-  .btn {
+  .matchList .btn {
     font-size: 12px;
     height: 20px;
     padding-right: 13px;

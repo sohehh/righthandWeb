@@ -256,5 +256,12 @@
         </footer>
     </div>
     <script src="./js/master.js"></script>
+    <script>
+        //페이지 버튼 클릭 코드
+        $('.pageNav .pgN').click(function(){
+            $('.pageNav .pgN').removeClass('pgActive');
+            $(this).addClass('pgActive');
+        });
+    </script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 /*pc서브메뉴 허버 메서드*/
 $('.pcNav h4:nth-child(5)').hover(function(){
-    $('.pcSubmenu').slideDown();
+    $('.pcSubmenu').stop().slideDown();
 },function(){
-    $('.pcSubmenu').slideUp();
+    $('.pcSubmenu').stop().slideUp();
 });
 
 //사이드메뉴 나오는 코드
