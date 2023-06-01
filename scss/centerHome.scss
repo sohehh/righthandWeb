@@ -304,6 +304,13 @@ body{
             &:nth-child(9) td{
                 border-radius: 0 0 $borderR 0;
             }
+            & th{
+                border-right: none;
+            }
+            &:nth-child(n+2) th,
+            &:nth-child(n+2) td{
+                border-top: none;
+            }
         }
     }
     &::-webkit-scrollbar {

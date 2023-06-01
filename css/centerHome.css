@@ -302,6 +302,12 @@ body {
 .rpTableWrap table tr:nth-child(9) td {
   border-radius: 0 0 calc(min(1rem, 40px) * 0.75) 0;
 }
+.rpTableWrap table tr th {
+  border-right: none;
+}
+.rpTableWrap table tr:nth-child(n+2) th, .rpTableWrap table tr:nth-child(n+2) td {
+  border-top: none;
+}
 .rpTableWrap::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;

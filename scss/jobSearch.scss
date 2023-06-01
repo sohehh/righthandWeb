@@ -93,6 +93,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        h4{
+            @include mix.mzn(pc,top,0.2);
+        }
         h4,.dateWrap{
             @include mix.fontz(pc,1.4);
             @include mix.lhz(pc,.5);
@@ -101,7 +104,6 @@
             text-overflow: ellipsis;
         }
         .dateWrap{
-            @include mix.mzn(pc,top,0.225);
             .time::before{
                 content: "|";
                 @include mix.pdn(pc,right,0.125);
@@ -325,6 +327,7 @@
             .dateWrap{
                 font-size: 12px;
                 line-height: 145%;
+                //margin-top: 3px;
                 .time::before{
                     padding-right: 6px;
                     padding-left: 4px;
@@ -488,9 +491,9 @@
         margin-top: 12px;
         font-size: 12px;
         li{
-            line-height: 25px;
-            height:25px;
-            padding:0 10px;
+            line-height: 140%;
+            height:auto;
+            padding:3.5px 10px;
             border-radius: 15px;
             margin-left:10px;
         }

@@ -100,15 +100,15 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.jobInfo .jobInfoRight h4 {
+  margin-top: calc(min(1rem, 40px) * 0.2);
+}
 .jobInfo .jobInfoRight h4, .jobInfo .jobInfoRight .dateWrap {
   font-size: calc(min(1em, 10px) * 1.4);
   line-height: calc(min(1rem, 40px) * 0.5);
   font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.jobInfo .jobInfoRight .dateWrap {
-  margin-top: calc(min(1rem, 40px) * 0.225);
 }
 .jobInfo .jobInfoRight .dateWrap .time::before {
   content: "|";
@@ -474,9 +474,9 @@ body {
     font-size: 12px;
   }
   .jobInfoSub li {
-    line-height: 25px;
-    height: 25px;
-    padding: 0 10px;
+    line-height: 140%;
+    height: auto;
+    padding: 3.5px 10px;
     border-radius: 15px;
     margin-left: 10px;
   }

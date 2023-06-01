@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수급자 상세 정보</title>
+    <title>구매 내역</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/master.css">
-    <link rel="stylesheet" href="./css/centerHome.css">
+    <link rel="stylesheet" href="./css/product.css">
     <script src="./js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
@@ -71,24 +71,45 @@
         </div>
         <ul class="breadcrumbsWrap">
             <li><a href="#">HOME</a></li>
-            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 회원 홈</a></li>
-            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">매칭 완료 목록</a></li>
-            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">수급자 상세 정보</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">센터 회원 홈</a></li><li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">구매 내역</a></li>
         </ul>
         <div class="content">
-            <h2 class="title">수급자 상세 정보</h2>
-            <div class="rpTableWrap">
-                <table>
+            <h2 class="title">구매 내역</h2>
+            <div class="historyWrap">
+                <table class="historyTable-pc">
                     <tbody>
-                        <tr><th>수급자 이름</th><td>홍길동</td></tr>
-                        <tr><th>성별</th><td>남자</td></tr>
-                        <tr><th>수급자 등급</th><td>인정서 등급 : 1등급</td></tr>
-                        <tr><th>주민등록번호</th><td>6401010-1******</td></tr>
-                        <tr><th>주민등록지</th><td>서울 특별시 관악구 125 (봉천동, 서울대 입구 삼성아파트) 서관 14층 1406호</td></tr>
-                        <tr><th>실제거주지</th><td>서울 특별시 관악구 125 (봉천동, 서울대 입구 삼성아파트) 서관 14층 1406호</td></tr>
-                        <tr><th>오른손 신청</th><td>등급신청 설명, 방문실사 동행, 의사소견서 발급, 재가요양 서비스 안내, 복지용구 안내 </td></tr>
-                        <tr><th>전화번호</th><td>010-1234-5678</td></tr>
-                        <tr><th>매칭요청날짜</th><td>2023-03-09</td></tr>
+                        <tr>
+                            <th>상품명</th>
+                            <th>상품 금액</th>
+                            <th>이용 기간</th>
+                            <th>사용 방법</th>
+                        </tr>
+                        <tr>
+                            <td>프리미엄</td>
+                            <td>월 20만원</td>
+                            <td>2023-05-04 ~ 2023-06-04</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="historyTable-mob">
+                    <tbody>
+                        <tr>
+                            <th>상품명</th>
+                            <td>프리미엄</td>
+                        </tr>
+                        <tr>
+                            <th>상품금액</th>
+                            <td>월 20만원</td>
+                        </tr>
+                        <tr>
+                            <th>이용기간</th>
+                            <td>2023-05-04 ~ 2023-06-04</td>
+                        </tr>
+                        <tr>
+                            <th>사용방법</th>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -100,5 +121,6 @@
         </footer>
     </div>
     <script src="./js/master.js"></script>
+    
 </body>
 </html>
