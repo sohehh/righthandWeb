@@ -347,6 +347,7 @@ body {
   .pageNav {
     margin-top: 35px;
     width: 41.6666666667%;
+    max-width: 300px;
   }
   /*///////////////////////////////////////////////*/
   /*jobPage.html style*/

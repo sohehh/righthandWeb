@@ -313,7 +313,8 @@ li.haveCr {
 .centerCheckWrap label span .centerRed {
   color: #E40000;
 }
-.centerCheckWrap label p {
+.centerCheckWrap p {
+  color: #6C6C6C;
   font-size: calc(min(1em, 10px) * 1.4);
   padding-top: calc(min(1rem, 40px) * 0.25);
   margin-left: calc(min(1rem, 40px) * 0.6);
@@ -470,7 +471,7 @@ li.haveCr {
   .centerCheckWrap label span {
     font-size: 12px;
   }
-  .centerCheckWrap label p {
+  .centerCheckWrap p {
     font-size: 12px;
     margin: 7px 0 0 24px;
     line-height: 140%;
@@ -613,7 +614,7 @@ li.haveCr {
   .centerCheckWrap label span {
     font-size: 12px;
   }
-  .centerCheckWrap label p {
+  .centerCheckWrap p {
     font-size: 12px;
     margin: 7px 0 0 20px;
     line-height: 140%;

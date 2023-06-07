@@ -62,10 +62,11 @@ header{
         display: flex;
         color:white;
         @include mix.fontz(pc,1.85);
-        h4 + h4{
+        font-weight: 700;
+        >li + li{
             @include mix.mzn(pc,left,1.125);
         }
-        h4{
+        >li{
             position: relative;
             .pcSubmenu{ 
                 display: none;
@@ -295,7 +296,7 @@ header{
         @include mix.mzn(mob,top,1.75);
         padding-bottom: 80px;
         .title{
-            @include mix.fontz(mob,1.8);
+            @include mix.fontz(mob,2.2);
         }
         .title-sub{
             @include mix.fontz(mob,1.4);

@@ -405,6 +405,7 @@ li.tabActive {
   }
   .pageNav {
     width: 43.75%;
+    max-width: 300px;
   }
 }
 @media (min-width: 0px) and (max-width: 550px) {
@@ -554,5 +555,6 @@ li.tabActive {
   .pageNav {
     margin-top: 35px;
     width: 66.6666666667%;
+    min-width: 240px;
   }
 }

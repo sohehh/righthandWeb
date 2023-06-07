@@ -1,5 +1,5 @@
 /*pc서브메뉴 허버 메서드*/
-$('.pcNav h4:nth-child(5)').hover(function(){
+$('.pcNav li:nth-child(5)').hover(function(){
     $('.pcSubmenu').stop().slideDown();
 },function(){
     $('.pcSubmenu').stop().slideUp();

@@ -67,14 +67,15 @@ header .pcNav {
   display: flex;
   color: white;
   font-size: calc(min(1em, 10px) * 1.85);
+  font-weight: 700;
 }
-header .pcNav h4 + h4 {
+header .pcNav > li + li {
   margin-left: calc(min(1rem, 40px) * 1.125);
 }
-header .pcNav h4 {
+header .pcNav > li {
   position: relative;
 }
-header .pcNav h4 .pcSubmenu {
+header .pcNav > li .pcSubmenu {
   display: none;
   position: absolute;
   top: calc(min(1rem, 40px) * 2.15);
@@ -92,7 +93,7 @@ header .pcNav h4 .pcSubmenu {
   font-size: calc(min(1em, 10px) * 1.4);
   font-weight: 700;
 }
-header .pcNav h4 .pcSubmenu::before {
+header .pcNav > li .pcSubmenu::before {
   content: "";
   position: absolute;
   right: 65%;
@@ -102,7 +103,7 @@ header .pcNav h4 .pcSubmenu::before {
   border-right: calc(min(1rem, 30px) * 0.5) solid transparent;
   border-bottom: calc(min(1rem, 35px) * 0.5) solid white;
 }
-header .pcNav h4 .pcSubmenu li:hover {
+header .pcNav > li .pcSubmenu li:hover {
   color: #2CB7A4;
 }
 header .mobNav {
@@ -303,7 +304,7 @@ header .sideMenuBox {
     padding-bottom: 80px;
   }
   .content .title {
-    font-size: calc(max(1em, 10px) * 1.8);
+    font-size: calc(max(1em, 10px) * 2.2);
   }
   .content .title-sub {
     font-size: calc(max(1em, 10px) * 1.4);

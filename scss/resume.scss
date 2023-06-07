@@ -304,11 +304,12 @@ li.haveCr{
                 color:#E40000;
             }
         }
-        p{
-            @include mix.fontz(pc,1.4);
-            @include mix.pdn(pc,top,0.25);
-            @include mix.mzn(pc,left,0.6);
-        }
+    }
+    p{
+        color:#6C6C6C;
+        @include mix.fontz(pc,1.4);
+        @include mix.pdn(pc,top,0.25);
+        @include mix.mzn(pc,left,0.6);
     }
     
 }
@@ -472,12 +473,12 @@ form{
         span{
             font-size: 12px;
         }
-        p{
-            font-size: 12px;
-            margin: 7px 0 0 24px;
-            line-height: 140%;
-            padding-top: 0;
-        }
+    }
+    p{
+        font-size: 12px;
+        margin: 7px 0 0 24px;
+        line-height: 140%;
+        padding-top: 0;
     }
 }    
 .btnWrap{
@@ -625,11 +626,11 @@ form{
         span{
             font-size: 12px;
         }
-        p{
-            font-size: 12px;
-            margin: 7px 0 0 20px;
-            line-height: 140%;
-        }
+    }
+    p{
+        font-size: 12px;
+        margin: 7px 0 0 20px;
+        line-height: 140%;
     }
 }
 .btnWrap{

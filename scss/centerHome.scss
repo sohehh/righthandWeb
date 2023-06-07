@@ -201,7 +201,7 @@ body{
     color:white;
     width: 5.3%;
     height: calc(min(1rem, 40px) * 0.62);
-    line-height: calc(min(1rem,40px)*.64);
+    line-height: calc(min(1rem,40px)*.69);
     text-align: center;
     border-radius: 50%;
     font-weight: 700;
@@ -477,6 +477,7 @@ body{
     .pageNav{
         margin-top:35px;
         width:calc(100% / 6 * 4);
+        max-width: 300px;
     }
     
     .rpTableWrap{
@@ -680,6 +681,7 @@ body{
 .pageNav{
     margin-top:35px;
     width:calc(100% / 6 * 4);
+    min-width: 240px;
 }
 
 .rpTableWrap{
