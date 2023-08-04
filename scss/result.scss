@@ -149,7 +149,7 @@
         
         .tt {
             border-radius: 16px;
-            padding: 10px 0 10px 10px;
+            padding: 10px 0 10px 12px;
             font-size: 16px;
         }
     }
@@ -169,6 +169,12 @@
                         font-size: 13px;
                     }
                 }
+            }
+            .th {
+                padding-left: 6px;
+            }
+            .td {
+                padding-right: 6px;
             }
         }
     }
