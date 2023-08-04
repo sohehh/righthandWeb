@@ -32,15 +32,15 @@
     color: #2CB7A4;
     font-weight: 500;
     @include mix.mzn(pc,top,1.95);
-
-
     width: 41.6666666667%;
-    height: calc(min(1rem, 40px) * 1.5);
-    line-height: calc(min(1rem, 40px) * 1.5);
-    border-radius: 30px;
     text-align: center;
     font-size: calc(min(1em, 10px) * 2);
-    font-weight: 500;
+    a {
+        width: 100%;
+        display: block;
+        height: calc(min(1rem, 40px) * 1.5);
+        line-height: calc(min(1rem, 40px) * 1.5);
+    }
 }
 
 @include mix.tab{
@@ -66,10 +66,12 @@
     .btnCheck02 {
         @include mix.mzn(mob,top,1);
         width: 230px;
-        height: 50px;
-        line-height: 50px;
         font-size: 16px;
         margin-top: 50px;
+        a {
+            height: 50px;
+            line-height: 50px;
+        }
     }
 }
 @include mix.mob{
@@ -79,7 +81,9 @@
     }
     .btnCheck02 {
         width: 220px;
-        height: 40px;
-        line-height: 40px;
+        a {
+            height: 40px;
+            line-height: 40px;
+        }
     }
 }
