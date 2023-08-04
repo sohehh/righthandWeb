@@ -1,7 +1,7 @@
 @use './mixins.scss' as mix;
 
 //id_inquiry_result CSS
-.suc-wrap {
+.state-wrap {
     width: calc(100% / 8 * 4.5);
     margin: 0 auto;
     display: flex;
@@ -9,21 +9,27 @@
     align-items: center;
     justify-content: center;
 }
-.suc_img {
+.state__img {
     display: inline-block;
     width: 15%;
 }
-.suc_text {
+.state__text {
     @include mix.mzn(pc,top,0.825);
     font-family: 'NanumSquareRound';
     font-weight: 500;
     @include mix.fontz(pc,2.5);
     @include mix.lhz(pc,0.875);
     text-align: center;
-    .user_id {
+    .user-id {
         color: #2CB7A4;
         margin-right: 8px;
     }
+}
+.state__text02 {
+    @include mix.fontz(pc,2);
+    color: #F68282;
+    font-weight: 500;
+    @include mix.mzn(pc,top,0.325);
 }
 .btnCheck02 {
     @include mix.fontz(pc,2);
@@ -42,15 +48,71 @@
         line-height: calc(min(1rem, 40px) * 1.5);
     }
 }
-
+.purchase-wrap {
+    $borderR : calc(min(1rem, 40px) * 0.4);
+    width: 70%;
+    border: 1px solid #EDEDED;
+    border-radius: $borderR;
+    @include mix.mzn(pc,top,1);
+    @include mix.pdn(pc,top,0.5);
+    @include mix.pdn(pc,right,0.5);
+    @include mix.pdn(pc,left,0.5);
+    @include mix.pdn(pc,bottom,0.275);
+    
+    .tt {
+        border-radius: $borderR;
+        @include mix.pdn(pc,top,0.35);
+        @include mix.pdn(pc,bottom,0.35);
+        @include mix.pdn(pc,left,0.3);
+        background: #F6FAF9;
+        color: #2CB7A4;
+        @include mix.fontz(pc,1.7);
+        font-weight: 500;
+    }
+}
+.purchase-list {
+    @include mix.mzn(pc,top,0.5);
+    li {
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: #6D6D6D;
+            font-weight: 500;
+            @include mix.pdn(pc,top,0.45);
+            @include mix.pdn(pc,bottom,0.45);
+            @include mix.fontz(pc or mob,1.6);
+            line-height: 130%;
+        }
+        &:nth-child(1) {
+            border-bottom: 1px solid #EDEDED;
+        }
+        &:nth-child(2) {
+            .td {
+                @include mix.fontz(pc,1.7);
+                color: #F68282;
+                span {
+                    margin-left: 4px;
+                    @include mix.fontz(pc,1.3);
+                    color: #6D6D6D;
+                }
+            }
+        }
+    }
+    .th {
+        @include mix.pdn(pc,left,0.175);
+    }
+    .td {
+        @include mix.pdn(pc,right,0.175);
+    }
+}
 @include mix.tab{
-    .suc-wrap {
+    .state-wrap {
         width: 90%;
     }
-    .suc_img {
+    .state__img {
         min-width: 80px;
     }
-    .suc_text {
+    .state__text {
         word-break: keep-all;
         @include mix.mzn(mob,top,0.5);
         font-family: 'NanumSquareRound';
@@ -58,10 +120,14 @@
         @include mix.fontz(mob,2);
         @include mix.lhz(mob,0.875);
         text-align: center;
-        .user_id {
+        .user-id {
             color: #2CB7A4;
             margin-right: 8px;
         }
+    }
+    .state__text02 {
+        @include mix.fontz(mob,1.6);
+        @include mix.mzn(mob,top,0.15);
     }
     .btnCheck02 {
         @include mix.mzn(mob,top,1);
@@ -73,17 +139,63 @@
             line-height: 50px;
         }
     }
+    .purchase-wrap {
+        width: 60%;
+        min-width: 350px;
+        border: 1px solid #EDEDED;
+        border-radius: 16px;
+        margin-top: 20px;
+        padding: 15px 15px 10px 15px;
+        
+        .tt {
+            border-radius: 16px;
+            padding: 10px 0 10px 10px;
+            font-size: 16px;
+        }
+    }
+    .purchase-list {
+        margin-top: 15px;
+        li {
+            p {
+                font-size: 14px;
+                padding: 10px 0;
+                line-height: 130%;
+            }
+            &:nth-child(2) {
+                .td {
+                    font-size: 17px;
+                    color: #F68282;
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
 }
 @include mix.mob{
-    .suc_text {
+    .state-wrap {
+        width: 100%;
+    }
+    .state__text {
         @include mix.fontz(mob,1.8);
         @include mix.lhz(mob,0.7);
     }
+    .state__text02 {
+        @include mix.fontz(mob,1.5);
+        @include mix.mzn(mob,top,0.15);
+    }
     .btnCheck02 {
-        width: 220px;
+        max-width: 220px;
+        width: 100%;
         a {
             height: 40px;
             line-height: 40px;
         }
+    }
+    .purchase-wrap {
+        width: 100%;
+        min-width: auto;
     }
 }
