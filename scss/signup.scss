@@ -38,7 +38,7 @@
             display: flex;
             position:relative;
             flex-wrap: wrap;
-            span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+            >span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
                 width: calc(100% / 6 * 1);
                 @include mix.fontz(pc,1.4);
                 @include mix.pdn(pc,top,0.275);
@@ -85,10 +85,13 @@ li.callList{
                 @include mix.mzn(pc,right,0.2);
                 @include mix.mzn(pc,left,0.2);
             }
+            
         }
         
     }
 }
+
+
 li.fileList{
     label{
             .fileWrap{
@@ -243,6 +246,7 @@ li.addressList{
         transition: all 0.2s;
     }
 }
+
 .signUpBtn{
     margin:0 auto;
     width: calc(100% / 6 * 2.5);
@@ -255,6 +259,121 @@ li.addressList{
     @include mix.fontz(pc,2);
     font-weight: 500;
 }
+
+.inputList li label .selectBox:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+    width: 19%;
+    font-size: 13px;
+    padding:0;
+    display: block;
+}
+.selectTxt{
+    width: 100%;
+    position:relative;
+    display: inline-block;
+    border: 1px solid #D0D0D0;
+    border-radius: 10px;
+    .grade{
+        border:none;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+}
+.iconArrow{
+    position:absolute;
+    top:50%;
+    right:5px;
+    transform:translateY(-50%);
+    pointer-events: none;
+    img{
+        transition:all 0.2s;
+    }
+}
+.optionList{
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    //display: none;
+    border: 0px solid #2CB7A4;
+    height: 0;
+    overflow:hidden;
+    // transition: all 2s;
+    border-radius: 10px;
+    .optionS{
+        display: block;
+        color:#2CB7A4;
+        text-indent: 10px;
+        line-height: 250%;
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+            background-color: #2CB7A4;
+            color:white;
+        }
+        &:nth-child(1){
+            border-radius: 10px 10px 0 0;
+        }
+        &:nth-child(5){
+            border-radius: 0 0 10px 10px;
+
+        }
+    }
+}
+// id_inquiry, pw_change CSS
+.btnCheck{
+    margin:0 auto;
+    width: calc(100% / 6 * 2.5);
+    @include mix.heights(pc,1.5);
+    @include mix.lhz(pc,1.5);
+    background-color: #2CB7A4;
+    border-radius: 30px;
+    text-align: center;
+    color:white;
+    @include mix.fontz(pc,2);
+    font-weight: 500;
+}
+// pw_change CSS
+li.callList label .callWrap-flex {
+    display: block;
+    justify-content: flex-start;
+    .callInner {
+        display: inline;
+        input {
+            float: left;
+        }
+        span {
+            float: left;
+        }
+    }
+    .ctfBtn {
+        vertical-align: middle;
+        padding-top: calc(min(1rem, 40px) * 0.275);
+        padding-bottom: calc(min(1rem, 40px) * 0.275);
+        float: left;
+        display: inline-block;
+        border:1px solid #2CB7A4;
+        color: #2CB7A4;
+        border-radius: 10px;
+        font-weight: 500;
+        width: calc(100% / 5 * 1.2);
+        @include mix.fontz(pc,1.3);
+        margin-left: 12px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+    
 @include mix.tab{
     
     .content{
@@ -278,7 +397,7 @@ li.addressList{
             @include mix.mzn(mob,top,.5);
             label{
                 display: block;
-                span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+                >span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
                     display: block;
                     width: 100%;
                     font-size: 13px;
@@ -371,6 +490,47 @@ li.addressList{
         line-height: 50px;
         font-size: 16px;
     }
+    
+
+    .inputList li label .selectBox:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+        width: 100%;
+    }
+    .iconArrow{
+        right:10px;
+    }
+    // id_inquiry, pw_change CSS
+    .btnCheck {
+        width: 100%;
+        height:50px;
+        line-height: 50px;
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    // pw_change CSS
+    li.callList label .callWrap-flex {
+        display: block;
+        justify-content: flex-start;
+        .callInner {
+            display: flex;
+            input {
+                float: left;
+                width: 35%;
+                &:nth-of-type(3) {
+                    margin-right: 0;
+                }
+            }
+            span {
+                float: left;
+            }
+        }
+        .ctfBtn {
+            padding: 11px 0 11px 0;
+            font-size: 13px;
+            width: 100%;
+            margin-top: 15px;
+            margin-left: 0;
+        }
+    }
 }
 @include mix.mob{
     
@@ -395,7 +555,7 @@ li.addressList{
             @include mix.mzn(mob,top,.5);
             label{
                 display: block;
-                span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
+                >span:not(.callText):not(.callWrap):not(.fileWrap):not(.addressWrap){
                     display: block;
                     width: 100%;
                     font-size: 13px;
@@ -488,6 +648,14 @@ li.addressList{
         height:50px;
         line-height: 50px;
         font-size: 16px;
+    }
+    // id_inquiry, pw_change CSS
+    .btnCheck {
+        width: 100%;
+        height:50px;
+        line-height: 50px;
+        font-size: 16px;
+        margin-top: 50px;
     }
 
 }

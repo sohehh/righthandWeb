@@ -18,22 +18,22 @@
                     <img src="./img/webLogo.svg" alt="오른손 로고">
                 </h1>
                 <!-- 피씨 버전 헤더 네비 -->
-                <nav class="pcNav">
-                    <h4><a href="#">요양보호사 목록</a></h4>
-                    <h4><a href="#">센터 홍보하기</a></h4>
-                    <h4><a href="#">구직 게시판</a></h4>
-                    <h4><a href="#">시니어 라이프</a></h4>
-                    <h4><a href="#">센터 회원 홈</a>
+                <ul class="pcNav">
+                    <li><a href="#">요양보호사 목록</a></li>
+                    <li><a href="#">센터 홍보하기</a></li>
+                    <li><a href="#">구직 게시판</a></li>
+                    <li><a href="#">시니어 라이프</a></li>
+                    <li><a href="#">센터 회원 홈</a>
                         <ul class="pcSubmenu">
                             <li><a href="#">매칭 요청</a></li>
                             <li><a href="#">매칭 완료</a></li>
                             <li><a href="#">센터 정보 수정</a></li>
                             <li><a href="#">구매 내역</a></li>
                         </ul>
-                    </h4>
-                    <h4><a href="#">로그인</a></h4>
-                    <h4><a href="#">회원가입</a></h4>
-                </nav>
+                    </li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
                 <!-- 모바일 버전 헤더 네비 -->
                 <nav class="mobNav">
                     <h4><a href="#">로그인</a></h4>
@@ -126,10 +126,25 @@
                             </span>
                         </label>
                     </li>
-                    <li>
+                    <li class="gradeList">
                         <label>
                             <span>등급</span>
-                            <input type="text" placeholder="등급을 입력해 주세요">
+                            <span class="selectBox">
+                                <span class="selectTxt">
+                                    <input type="text" class="grade" placeholder="등급 선택" readonly  onfocus="this.blur();">
+                                    <span class="iconArrow">
+                                        <img src="./img/arrow_select.svg" alt="화살표">
+                                    </span>
+                                </span>
+                                <span class="optionList">
+                                    <span class="optionS">A등급</span>
+                                    <span class="optionS">B등급</span>
+                                    <span class="optionS">C등급</span>
+                                    <span class="optionS">D등급</span>
+                                    <span class="optionS">E등급</span>
+                                </span>
+                                
+                            </span>
                         </label>
                     </li>
                     <li class="fileList">
@@ -282,6 +297,50 @@
                 $('input[type=checkbox]').prop( "checked", false );
             }
         });
+
+
+
+        //등급선택 버튼 클릭시 옵션 list가 나오는코드
+        $('.grade').click(function(){
+            var ac = $('.optionList').innerHeight();
+            var curHeight = $('.optionList').height();
+            //0 출력, 옵션리스트 가려져있는상태
+            var autoHeight = $('.optionList').css('height', 'auto').height();
+            //130 출력, 옵션리스트 height : auto로 했을때의 길이값?
+
+            function optionUp(){
+                $('.optionList').animate({height: 0}, 500,function(){
+                    $('.optionList').css('border','none');
+                });
+            }
+            function optionDown(){
+                $('.optionList').height(curHeight).animate({
+                    height: autoHeight
+                },500);
+            }
+            //option~ 함수선언은 함수호출보다 위에가야함
+            switch(ac){
+                case 0:
+                    optionDown();
+                    $('.optionList').css("border","1px solid #2CB7A4");
+                    $('.iconArrow img').css('transform','rotate(180deg)');
+                    break;
+                default:
+                    optionUp();
+                    $('.iconArrow img').css('transform','rotate(0deg)');
+                    //원래 각도를 기준으로 해야함
+            }
+        });
+        
+        //옵션 클릭시 클릭한 옵션을 넘기는 코드
+        $('.optionList .optionS').each(function(idx){
+            $(this).click(function(){
+                $('.grade').val($(this).text());
+                optionUp();
+
+            });
+        });
+        
         
     </script>
 </body>

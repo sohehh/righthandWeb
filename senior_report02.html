@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시니어 라이프 게시글 신고하기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/report.css">
+    <script src="./js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="headerWrap">
+            <header>
+                <h1>
+                    <img src="./img/webLogo-ver2.svg" alt="오른손 로고">
+                </h1>
+                <ul class="pcNav">
+                    <li><a href="#">구직 게시판</a></li>
+                    <li><a href="#">시니어 라이프</a></li>
+                    <li><a href="#">내 이력정보</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+                <nav class="mobNav">
+                    <h4><a href="#">로그인</a></h4>
+                    <h4><a href="#">회원가입</a></h4>
+                    <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
+                </nav>
+                <div class="sideMenuBox">
+                    <div class="sideMenuContent">
+                        <p><img src="./img/close.svg" alt="닫기" class="close"></p>
+                        <div class="profileWrap">
+                            <img src="./img/profile.svg" alt="프로필">
+                            <span>회원정보가 없습니다</span>
+                        </div>
+                        <nav>
+                            <h4><a href="#">구직 게시판</a></h4>
+                            <h4><a href="#">시니어 라이프</a></h4>
+                            <h4><a href="#">내 이력정보</a></h4>
+                        </nav>
+                        <div class="signUpWrap">
+                            <p><a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                    
+                </div> 
+            </header>
+        </div>
+        <ul class="breadcrumbsWrap">
+            <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">시니어 라이프</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">자유게시판</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">신고하기</a></li>
+        </ul>
+        <div class="content">
+            <h2 class="title">시니어 라이프 게시글 신고하기</h2>
+            <h3 class="sub-title">신고 사유를 선택해 주세요</h3>
+            <form action="">
+                <ul class="report-list radioWrap">
+                    <li class="report-cpnt">
+                        <label>
+                            <input type="radio"  name="report" checked>
+                            <span class="report-tt">음란성 / 선정성</span>
+                        </label>
+                    </li>
+                    <li class="report-cpnt">
+                        <label>
+                            <input type="radio"  name="report">
+                            <span class="report-tt">욕설 / 인신공격</span>
+                        </label>
+                    </li>
+                    <li class="report-cpnt">
+                        <label>
+                            <input type="radio"  name="report">
+                            <span class="report-tt">개인정보노출</span>
+                        </label>
+                    </li>
+                    <li class="report-cpnt">
+                        <label>
+                            <input type="radio"  name="report">
+                            <span class="report-tt">도배성 게시글</span>
+                        </label>
+                    </li>
+                    <li class="report-cpnt">
+                        <label>
+                            <input type="radio"  name="report">
+                            <span class="report-tt">기타</span>
+                        </label>
+                    </li>
+                </ul>
+            </form>
+            <textarea name="" id="" cols="30" rows="10" class="report-text" placeholder="신고 사유를 입력해 주세요"></textarea>
+            <div class="btnWrap">
+                <button class="btn" type="button">
+                    신고하기
+                </button>
+            </div>
+            <!--게시글 신고는 자유게시판의 게시글만 가능합니다-->
+            
+        </div>
+    </div>
+    <div class="footerWrap">
+        <footer>
+            <p><img src="./img/footerLogo-ver2.svg" alt="로고"></p>
+        </footer>
+    </div>
+    
+    <script src="./js/master.js"></script>
+    <script>
+        $('input[type=radio]').change(function(){
+            var checkTxt = $('input[type=radio]:checked').next().text();
+            if(checkTxt=="기타"){
+                $('textarea').slideDown();
+            }else{
+                $('textarea').slideUp();
+            }
+        });
+    </script>
+</body>
+</html>

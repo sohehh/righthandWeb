@@ -14,6 +14,7 @@ body {
 }
 
 .postSectionTop {
+  position: relative;
   border: 1px solid #A7A7A7;
   padding-left: calc(min(1rem, 40px) * 1);
   padding-right: calc(min(1rem, 40px) * 1);
@@ -372,6 +373,17 @@ body {
   font-size: calc(min(1em, 10px) * 1.7);
   font-weight: 500;
   cursor: pointer;
+  font-family: "NanumSquareRound";
+}
+
+.post-report {
+  cursor: pointer;
+  position: absolute;
+  font-weight: 500;
+  color: #767676;
+  font-size: calc(min(1em, 10px) * 1.5);
+  bottom: calc(min(1rem, 40px) * 1.2);
+  right: calc(min(1rem, 40px) * 1);
 }
 
 @media (min-width: 0px) and (max-width: 1200px) {
@@ -484,7 +496,7 @@ body {
   }
   .wtList li {
     display: block;
-    font-size: 14px;
+    font-size: 14.5px;
   }
   .wtList li span {
     width: auto;
@@ -526,6 +538,9 @@ body {
     height: 26px;
     padding: 0 15px;
   }
+  .fileSubText {
+    font-size: 13px;
+  }
   .fileContentWrap {
     padding: 15px;
     height: 130px;
@@ -552,6 +567,11 @@ body {
     line-height: 52px;
     height: 52px;
     font-size: 16px;
+  }
+  .post-report {
+    font-size: 13.5px;
+    right: 20px;
+    bottom: calc(min(1rem, 40px) * 1.2);
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {
@@ -736,5 +756,10 @@ body {
     line-height: 52px;
     height: 52px;
     font-size: 16px;
+  }
+  .post-report {
+    font-size: 13px;
+    right: 20px;
+    bottom: 15px;
   }
 }

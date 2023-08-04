@@ -1,0 +1,196 @@
+@use './mixins.scss' as mix;
+
+.content{
+    width: calc(100% / 12 * 6);
+    .title{
+        text-align: left;
+    }
+    .sub-title{
+        @include mix.mzn(pc,top,0.625);
+        @include mix.fontz(pc,1.6);
+        color:#6D6D6D;
+        font-weight: 400;
+        @include mix.pdn(pc,bottom,0.35);
+        @include mix.pdn(pc,left,0.2);
+        border-bottom: 1px solid #8D8D8D;
+    }
+
+}
+.report-cpnt:not(:nth-child(1)){
+    @include mix.mzn(pc,top,0.55);
+}
+.report-tt{
+    display: inline-block;
+}
+.radioWrap{
+    @include mix.mzn(pc,top,0.575);
+    @include mix.mzn(pc,left,0.15);
+    vertical-align: middle;
+    label{
+        display: inline-block;
+        input[type=radio]{
+            vertical-align: middle;
+            appearance: none;
+            border:1px solid #E3E3E3;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position:relative;
+            margin:0;
+            cursor: pointer;
+            
+            &:checked{
+                border:1px solid #2CB7A4;
+                background: white;
+            }
+            &:checked::after{
+                content:"";
+                width: 10px;
+                height:10px;
+                background: #2CB7A4;
+                border-radius: 50%;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+.report-tt{
+    cursor: pointer;
+    @include mix.fontz(pc,1.4);
+    color:#6D6D6D;
+    font-weight: 500;
+    vertical-align: middle;
+    @include mix.pdn(pc,left,0.1);
+}
+.report-text{
+    display: none;
+    @include mix.mzn(pc,top,0.475);
+    $borderR : calc(min(1rem,40px)*0.375);
+    width: 100%;
+    border:1px solid #EAEAEA;
+    resize: none;
+    border-radius: $borderR;
+    font-family: 'NanumSquareRound';
+    @include mix.pdn(pc,top,0.45);
+    @include mix.pdn(pc,bottom,0.45);
+    @include mix.pdn(pc,left,0.35);
+    @include mix.pdn(pc,right,0.35);
+    @include mix.heights(pc,2.5);
+    
+}
+.report-text::placeholder{
+    color:#AEAEAE;
+}
+.btnWrap{
+    text-align:right;
+    @include mix.mzn(pc,top,1.25);
+    .btn{
+        $borderR : calc(min(1rem, 40px)*0.75);
+        border-radius: $borderR;
+        border:none;
+        font-weight: 500;
+        @include mix.heights(pc,1.25);
+        @include mix.lhz(pc,1.25);
+        @include mix.pdn(pc,left,1.25);
+        @include mix.pdn(pc,right,1.25);
+        @include mix.fontz(pc,1.8);
+        background: #2CB7A4;
+        color:white;
+        font-family: 'NanumSquareRound';
+        cursor: pointer;
+    }
+}
+
+@include mix.tab{
+    .content{
+        width: 90%;
+
+        .sub-title{
+            margin-top: 25px;
+            font-size: 15px;
+            padding-bottom: 14px;
+            padding-left: 8px;
+        }
+    
+    }
+    .report-cpnt:not(:nth-child(1)){
+        margin-top: 22px;
+    }
+    .report-tt{
+        display: inline-block;
+    }
+    .radioWrap{
+        margin-top: 23px;
+        margin-left: 6px;
+        label{
+            display: inline-block;
+            input[type=radio]{
+                vertical-align: middle;
+                appearance: none;
+                border:1px solid #E3E3E3;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position:relative;
+                margin:0;
+                cursor: pointer;
+                
+                &:checked{
+                    border:1px solid #2CB7A4;
+                    background: white;
+                }
+                &:checked::after{
+                    content:"";
+                    width: 10px;
+                    height:10px;
+                    background: #2CB7A4;
+                    border-radius: 50%;
+                    position:absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    .report-tt{
+        font-size: 14px;
+        padding-left: 4px;
+    }
+    .report-text{
+        display: none;
+        margin-top: 19px;
+        width: 100%;
+        border:1px solid #EAEAEA;
+        resize: none;
+        border-radius: 15px;
+        font-family: 'NanumSquareRound';
+        height: 90px;
+        padding: 18px 15px;
+        
+    }
+    .report-text::placeholder{
+        color:#AEAEAE;
+    }
+    .btnWrap{
+        margin-top: 50px;
+        .btn{
+            width: 150px;
+            height:45px;
+            padding:0 20px;
+            line-height: 45px;
+            border-radius:30px;
+            font-size: 16px;
+        }
+    }
+}
+@include mix.mob{
+    .btnWrap{
+        .btn{
+            width: 100%;
+        }
+    }
+}

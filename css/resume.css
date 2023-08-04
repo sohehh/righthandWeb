@@ -17,7 +17,7 @@ body {
   padding-top: calc(min(1rem, 40px) * 0.625);
   padding-left: calc(min(1rem, 40px) * 0.625);
   padding-right: calc(min(1rem, 40px) * 0.625);
-  padding-bottom: calc(min(1rem, 40px) * 1);
+  padding-bottom: calc(min(1rem, 40px) * 0.625);
 }
 .myResumeWrap p {
   font-size: calc(min(1em, 10px) * 1.5);
@@ -339,6 +339,57 @@ li.haveCr {
   cursor: pointer;
 }
 
+.regis-wrap {
+  margin-top: calc(min(1rem, 40px) * 0.75);
+  border: 1px solid #EAEAEA;
+  background: #F3F3F3;
+  padding-top: calc(min(1rem, 40px) * 0.5);
+  padding-bottom: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.575);
+  padding-right: calc(min(1rem, 40px) * 0.575);
+  border-radius: calc(min(1rem, 40px) * 0.375);
+}
+
+.regis-cont {
+  width: 99%;
+  overflow: hidden;
+  font-size: calc(min(1em, 10px) * 1.55);
+  font-weight: 500;
+}
+.regis-cont .regis-comple {
+  float: left;
+  border-radius: calc(min(1rem, 40px) * 4);
+  border: 1px solid #2CB7A4;
+  color: #2CB7A4;
+  background: white;
+  padding-top: calc(min(1rem, 40px) * 0.15);
+  padding-bottom: calc(min(1rem, 40px) * 0.125);
+  padding-right: calc(min(1rem, 40px) * 0.5);
+  padding-left: calc(min(1rem, 40px) * 0.5);
+}
+.regis-cont .regis-tt {
+  width: 82%;
+  line-height: calc(min(1rem, 40px) * 0.75);
+  float: left;
+  color: #606060;
+  margin-left: calc(min(1rem, 40px) * 0.2);
+  word-break: keep-all;
+}
+
+.regis-cont::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.myResumeWrap .regis-date {
+  text-align: right;
+  margin-top: calc(min(1rem, 40px) * 0.25);
+  font-size: calc(min(1em, 10px) * 1.5);
+  margin-left: calc(min(1rem, 40px) * 0.175);
+  color: #9A9A9A;
+}
+
 @media (min-width: 0px) and (max-width: 1200px) {
   .myResumeWrap {
     margin-top: 30px;
@@ -485,6 +536,34 @@ li.haveCr {
     height: 52px;
     border-radius: 20px;
     font-size: 16px;
+  }
+  .regis-wrap {
+    margin-top: 30px;
+    border: 1px solid #EAEAEA;
+    background: #F3F3F3;
+    padding: 15px 15px;
+    border-radius: 15px;
+  }
+  .regis-cont {
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .regis-cont .regis-comple {
+    white-space: nowrap;
+    border-radius: 100px;
+    padding: 3px 16px;
+  }
+  .regis-cont .regis-tt {
+    width: 100%;
+    line-height: 24px;
+    margin-left: 5px;
+    margin-top: 7px;
+  }
+  .myResumeWrap .regis-date {
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 13px;
+    color: #9A9A9A;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {

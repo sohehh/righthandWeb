@@ -12,7 +12,7 @@
     @include mix.pdn(pc,top,0.625);
     @include mix.pdn(pc,left,0.625);
     @include mix.pdn(pc,right,0.625);
-    @include mix.pdn(pc,bottom,1);
+    @include mix.pdn(pc,bottom,0.625);
     p{
         @include mix.fontz(pc,1.5);
         color:#2CB7A4;
@@ -332,7 +332,58 @@ li.haveCr{
         cursor: pointer;
     }
 }
+.regis-wrap{
+    $borderR : calc(min(1rem, 40px) * 0.375);
+    @include mix.mzn(pc,top,0.75);
+    border:1px solid #EAEAEA;
+    background: #F3F3F3;
+    @include mix.pdn(pc,top,.5);
+    @include mix.pdn(pc,bottom,.5);
+    @include mix.pdn(pc,left,.575);
+    @include mix.pdn(pc,right,.575);
+    border-radius: $borderR; 
+}
+.regis-cont{
+    width: 99%;
+    overflow: hidden;
+    @include mix.fontz(pc,1.55);
+    font-weight: 500;
+    .regis-comple{
+        float:left;
+        $borderR : calc(min(1rem, 40px) * 4);
+        border-radius: $borderR;
+        border:1px solid #2CB7A4;
+        color:#2CB7A4;
+        background: white;
+        @include mix.pdn(pc,top,0.15);
+        @include mix.pdn(pc,bottom,0.125);
+        @include mix.pdn(pc,right,0.5);
+        @include mix.pdn(pc,left,0.5);
 
+    }
+    .regis-tt{
+        width: 82%;
+        @include mix.lhz(pc,0.75);
+        float:left;
+        color:#606060;
+        @include mix.mzn(pc,left,0.2);
+        word-break:keep-all;
+    }
+    
+}
+.regis-cont::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.myResumeWrap .regis-date{
+    text-align: right;
+    @include mix.mzn(pc,top,0.25);
+    @include mix.fontz(pc,1.5);
+    @include mix.mzn(pc, left ,0.175);
+    color:#9A9A9A;
+
+}
 
 @include mix.tab{
     .myResumeWrap{
@@ -489,6 +540,37 @@ form{
         border-radius: 20px;
         font-size: 16px;
     }
+}
+.regis-wrap{
+    margin-top: 30px;
+    border:1px solid #EAEAEA;
+    background: #F3F3F3;
+    padding: 15px 15px;
+    border-radius: 15px; 
+}
+.regis-cont{
+    overflow: hidden;
+    font-size: 14px;
+    .regis-comple{
+        white-space:nowrap;
+        border-radius: 100px;
+        padding: 3px 16px;
+
+    }
+    .regis-tt{
+        width: 100%;
+        line-height: 24px;
+        margin-left: 5px;
+        margin-top: 7px;
+    }
+    
+}
+.myResumeWrap .regis-date{
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 13px;
+    color:#9A9A9A;
+
 }
 
 }

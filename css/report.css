@@ -1,0 +1,209 @@
+html {
+  font-size: 2.6666666667vw;
+}
+
+body {
+  font-size: 0.6666666667vw;
+}
+
+.content {
+  width: 50%;
+}
+.content .title {
+  text-align: left;
+}
+.content .sub-title {
+  margin-top: calc(min(1rem, 40px) * 0.625);
+  font-size: calc(min(1em, 10px) * 1.6);
+  color: #6D6D6D;
+  font-weight: 400;
+  padding-bottom: calc(min(1rem, 40px) * 0.35);
+  padding-left: calc(min(1rem, 40px) * 0.2);
+  border-bottom: 1px solid #8D8D8D;
+}
+
+.report-cpnt:not(:nth-child(1)) {
+  margin-top: calc(min(1rem, 40px) * 0.55);
+}
+
+.report-tt {
+  display: inline-block;
+}
+
+.radioWrap {
+  margin-top: calc(min(1rem, 40px) * 0.575);
+  margin-left: calc(min(1rem, 40px) * 0.15);
+  vertical-align: middle;
+}
+.radioWrap label {
+  display: inline-block;
+}
+.radioWrap label input[type=radio] {
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #E3E3E3;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+.radioWrap label input[type=radio]:checked {
+  border: 1px solid #2CB7A4;
+  background: white;
+}
+.radioWrap label input[type=radio]:checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #2CB7A4;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.report-tt {
+  cursor: pointer;
+  font-size: calc(min(1em, 10px) * 1.4);
+  color: #6D6D6D;
+  font-weight: 500;
+  vertical-align: middle;
+  padding-left: calc(min(1rem, 40px) * 0.1);
+}
+
+.report-text {
+  display: none;
+  margin-top: calc(min(1rem, 40px) * 0.475);
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  resize: none;
+  border-radius: calc(min(1rem, 40px) * 0.375);
+  font-family: "NanumSquareRound";
+  padding-top: calc(min(1rem, 40px) * 0.45);
+  padding-bottom: calc(min(1rem, 40px) * 0.45);
+  padding-left: calc(min(1rem, 40px) * 0.35);
+  padding-right: calc(min(1rem, 40px) * 0.35);
+  height: calc(min(1rem, 40px) * 2.5);
+}
+
+.report-text::-moz-placeholder {
+  color: #AEAEAE;
+}
+
+.report-text::placeholder {
+  color: #AEAEAE;
+}
+
+.btnWrap {
+  text-align: right;
+  margin-top: calc(min(1rem, 40px) * 1.25);
+}
+.btnWrap .btn {
+  border-radius: calc(min(1rem, 40px) * 0.75);
+  border: none;
+  font-weight: 500;
+  height: calc(min(1rem, 40px) * 1.25);
+  line-height: calc(min(1rem, 40px) * 1.25);
+  padding-left: calc(min(1rem, 40px) * 1.25);
+  padding-right: calc(min(1rem, 40px) * 1.25);
+  font-size: calc(min(1em, 10px) * 1.8);
+  background: #2CB7A4;
+  color: white;
+  font-family: "NanumSquareRound";
+  cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+  .content {
+    width: 90%;
+  }
+  .content .sub-title {
+    margin-top: 25px;
+    font-size: 15px;
+    padding-bottom: 14px;
+    padding-left: 8px;
+  }
+  .report-cpnt:not(:nth-child(1)) {
+    margin-top: 22px;
+  }
+  .report-tt {
+    display: inline-block;
+  }
+  .radioWrap {
+    margin-top: 23px;
+    margin-left: 6px;
+  }
+  .radioWrap label {
+    display: inline-block;
+  }
+  .radioWrap label input[type=radio] {
+    vertical-align: middle;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 1px solid #E3E3E3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+  }
+  .radioWrap label input[type=radio]:checked {
+    border: 1px solid #2CB7A4;
+    background: white;
+  }
+  .radioWrap label input[type=radio]:checked::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #2CB7A4;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .report-tt {
+    font-size: 14px;
+    padding-left: 4px;
+  }
+  .report-text {
+    display: none;
+    margin-top: 19px;
+    width: 100%;
+    border: 1px solid #EAEAEA;
+    resize: none;
+    border-radius: 15px;
+    font-family: "NanumSquareRound";
+    height: 90px;
+    padding: 18px 15px;
+  }
+  .report-text::-moz-placeholder {
+    color: #AEAEAE;
+  }
+  .report-text::placeholder {
+    color: #AEAEAE;
+  }
+  .btnWrap {
+    margin-top: 50px;
+  }
+  .btnWrap .btn {
+    width: 150px;
+    height: 45px;
+    padding: 0 20px;
+    line-height: 45px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 0px) and (max-width: 420px) {
+  .btnWrap .btn {
+    width: 100%;
+  }
+}

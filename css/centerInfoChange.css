@@ -246,7 +246,7 @@ input.program2 {
 }
 
 .option::after {
-  content: " (선택)";
+  content: "(선택)";
   color: #A5A5A5;
   font-size: calc(min(1em, 10px) * 1.3);
 }
@@ -280,17 +280,20 @@ input.program2 {
   margin-left: calc(min(1rem, 40px) * 0.125);
 }
 
-label[for=count] {
+label[for=count1], label[for=count2], label[for=count3], label[for=count4], label[for=count5], label[for=count6] {
   font-size: calc(min(1em, 10px) * 1.6);
   text-indent: calc(min(1rem, 40px) * 0.25);
-  display: flex;
-  align-self: center;
   font-weight: 500;
   width: 15%;
   line-height: calc(min(1rem, 40px) * 1);
 }
 
-label[for=count] + input {
+label[for=count1] + input,
+label[for=count2] + input,
+label[for=count3] + input,
+label[for=count4] + input,
+label[for=count5] + input,
+label[for=count6] + input {
   width: 42%;
 }
 
@@ -470,11 +473,17 @@ label[for=count] + input {
   .subInputWrap > label + label {
     margin-top: 15px;
   }
-  label[for=count] {
+  label[for=count1], label[for=count2], label[for=count3], label[for=count4], label[for=count5], label[for=count6] {
     width: 100%;
     font-size: 15px;
+    display: flex;
   }
-  label[for=count] + input {
+  label[for=count1] + input,
+  label[for=count2] + input,
+  label[for=count3] + input,
+  label[for=count4] + input,
+  label[for=count5] + input,
+  label[for=count6] + input {
     width: 100%;
     font-size: 14px;
     margin-top: 15px;
@@ -618,15 +627,6 @@ label[for=count] + input {
     padding-right: 0;
   }
   .subInputWrap > label + label {
-    margin-top: 15px;
-  }
-  label[for=count] {
-    width: 100%;
-    font-size: 15px;
-  }
-  label[for=count] + input {
-    width: 100%;
-    font-size: 14px;
     margin-top: 15px;
   }
 }

@@ -4,42 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>내 이력정보</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/resume.css">
     <script src="./js/jquery-1.11.1.min.js"></script>
-</head> 
+</head>
 <body>
     <div class="wrap">
         <div class="headerWrap">
             <header>
                 <h1>
-                    <img src="./img/webLogo.svg" alt="오른손 로고">
+                    <img src="./img/webLogo-ver2.svg" alt="오른손 로고">
                 </h1>
-                <!-- 피씨 버전 헤더 네비 -->
                 <ul class="pcNav">
-                    <li><a href="#">요양보호사 목록</a></li>
-                    <li><a href="#">센터 홍보하기</a></li>
                     <li><a href="#">구직 게시판</a></li>
                     <li><a href="#">시니어 라이프</a></li>
-                    <li><a href="#">센터 회원 홈</a>
-                        <ul class="pcSubmenu">
-                            <li><a href="#">매칭 요청</a></li>
-                            <li><a href="#">매칭 완료</a></li>
-                            <li><a href="#">센터 정보 수정</a></li>
-                            <li><a href="#">구매 내역</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#">내 이력정보</a></li>
                     <li><a href="#">로그인</a></li>
                     <li><a href="#">회원가입</a></li>
                 </ul>
-                <!-- 모바일 버전 헤더 네비 -->
                 <nav class="mobNav">
                     <h4><a href="#">로그인</a></h4>
                     <h4><a href="#">회원가입</a></h4>
                     <h4 class="list"><img src="./img/list.svg" alt="목록"></h4>
                 </nav>
-                <!-- 모바일버전 사이드메뉴 -->
                 <div class="sideMenuBox">
                     <div class="sideMenuContent">
                         <p><img src="./img/close.svg" alt="닫기" class="close"></p>
@@ -48,17 +37,9 @@
                             <span>회원정보가 없습니다</span>
                         </div>
                         <nav>
-                            <h4><a href="#">센터 회원 홈</a></h4>
-                            <ul class="subMenu">
-                                <li><a href="#">- 매칭 요청</a></li>
-                                <li><a href="#">- 매칭 완료</a></li>
-                                <li><a href="#">- 센터 정보 수정</a></li>
-                                <li><a href="#">- 구매 내역</a></li>
-                            </ul>
                             <h4><a href="#">구직 게시판</a></h4>
                             <h4><a href="#">시니어 라이프</a></h4>
-                            <h4><a href="#">센터 홍보하기</a></h4>
-                            <h4><a href="#">요양보호사 목록</a></h4>
+                            <h4><a href="#">내 이력정보</a></h4>
                         </nav>
                         <div class="signUpWrap">
                             <p><a href="#">회원가입</a></p>
@@ -70,15 +51,36 @@
         </div>
         <ul class="breadcrumbsWrap">
             <li><a href="#">HOME</a></li>
+            <li><img src="./img/breadArrow.svg" alt="화살표" class="breadArrow"><a href="#">내 이력정보</a></li>
         </ul>
         <div class="content">
+            <h2 class="title">내 이력정보</h2>
+            <div class="myResumeWrap">
+                <div class="profileWrap">
+                    <figure>
+                        <img src="./img/profile.svg" alt="프로필">
+                    </figure>
+                    <span>홍연아님의 이력서</span>
+                </div>
+                <p>이력서가 등록 되었습니다</p>
+                <button class="btn">이력서 작성</button>
+                <div class="regis-wrap">
+                    <div class="regis-cont">
+                        <div class="regis-comple">작성완료</div>
+                        <div class="regis-tt">주야간보호 / 홍연아 / 40세 / 여자 / 서울특별시 관악구 125 (봉천동, 서울대 입구 삼성아파트) 서관 14층 1406호</div>
+                        <!--지원분야/이름/나이/성별/지역-->
+                    </div>
+                    <p class="regis-date">2023-06-21</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footerWrap">
         <footer>
-            <p><img src="./img/footerLoto.svg"></p>
+            <p><img src="./img/footerLogo-ver2.svg" alt="로고"></p>
         </footer>
     </div>
+    
     <script src="./js/master.js"></script>
 </body>
 </html>
