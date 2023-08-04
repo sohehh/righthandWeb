@@ -319,14 +319,18 @@ li.addressList label .addressWrap #addressBtn {
 .btnCheck {
   margin: 0 auto;
   width: 41.6666666667%;
-  height: calc(min(1rem, 40px) * 1.5);
-  line-height: calc(min(1rem, 40px) * 1.5);
   background-color: #2CB7A4;
   border-radius: 30px;
   text-align: center;
   color: white;
   font-size: calc(min(1em, 10px) * 2);
   font-weight: 500;
+}
+.btnCheck a {
+  width: 100%;
+  display: block;
+  height: calc(min(1rem, 40px) * 1.5);
+  line-height: calc(min(1rem, 40px) * 1.5);
 }
 
 li.callList label .callWrap-flex {
@@ -344,8 +348,6 @@ li.callList label .callWrap-flex .callInner span {
 }
 li.callList label .callWrap-flex .ctfBtn {
   vertical-align: middle;
-  padding-top: calc(min(1rem, 40px) * 0.275);
-  padding-bottom: calc(min(1rem, 40px) * 0.275);
   float: left;
   display: inline-block;
   border: 1px solid #2CB7A4;
@@ -360,6 +362,8 @@ li.callList label .callWrap-flex .ctfBtn a {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: calc(min(1rem, 40px) * 0.275);
+  padding-bottom: calc(min(1rem, 40px) * 0.275);
   height: 100%;
 }
 li.callList label .callWrap-flex::after {
@@ -474,10 +478,12 @@ li.callList label .callWrap-flex::after {
   }
   .btnCheck {
     width: 100%;
-    height: 50px;
-    line-height: 50px;
     font-size: 16px;
     margin-top: 50px;
+  }
+  .btnCheck a {
+    height: 50px;
+    line-height: 50px;
   }
   li.callList label .callWrap-flex {
     display: block;
@@ -497,11 +503,13 @@ li.callList label .callWrap-flex::after {
     float: left;
   }
   li.callList label .callWrap-flex .ctfBtn {
-    padding: 11px 0 11px 0;
     font-size: 13px;
     width: 100%;
     margin-top: 15px;
     margin-left: 0;
+  }
+  li.callList label .callWrap-flex .ctfBtn a {
+    padding: 11px 0 11px 0;
   }
 }
 @media (min-width: 0px) and (max-width: 420px) {
@@ -602,12 +610,5 @@ li.callList label .callWrap-flex::after {
     height: 50px;
     line-height: 50px;
     font-size: 16px;
-  }
-  .btnCheck {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
-    margin-top: 50px;
   }
 }

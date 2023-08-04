@@ -324,14 +324,18 @@ li.addressList{
 .btnCheck{
     margin:0 auto;
     width: calc(100% / 6 * 2.5);
-    @include mix.heights(pc,1.5);
-    @include mix.lhz(pc,1.5);
     background-color: #2CB7A4;
     border-radius: 30px;
     text-align: center;
     color:white;
     @include mix.fontz(pc,2);
     font-weight: 500;
+    a {
+        width: 100%;
+        display: block;
+        @include mix.heights(pc,1.5);
+        @include mix.lhz(pc,1.5);
+    }
 }
 // pw_change CSS
 li.callList label .callWrap-flex {
@@ -348,8 +352,6 @@ li.callList label .callWrap-flex {
     }
     .ctfBtn {
         vertical-align: middle;
-        padding-top: calc(min(1rem, 40px) * 0.275);
-        padding-bottom: calc(min(1rem, 40px) * 0.275);
         float: left;
         display: inline-block;
         border:1px solid #2CB7A4;
@@ -363,6 +365,8 @@ li.callList label .callWrap-flex {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-top: calc(min(1rem, 40px) * 0.275);
+            padding-bottom: calc(min(1rem, 40px) * 0.275);
             height: 100%;
         }
     }
@@ -501,10 +505,12 @@ li.callList label .callWrap-flex {
     // id_inquiry, pw_change CSS
     .btnCheck {
         width: 100%;
-        height:50px;
-        line-height: 50px;
         font-size: 16px;
         margin-top: 50px;
+        a {
+            height:50px;
+            line-height: 50px;
+        }
     }
     // pw_change CSS
     li.callList label .callWrap-flex {
@@ -524,11 +530,13 @@ li.callList label .callWrap-flex {
             }
         }
         .ctfBtn {
-            padding: 11px 0 11px 0;
             font-size: 13px;
             width: 100%;
             margin-top: 15px;
             margin-left: 0;
+            a {
+                padding: 11px 0 11px 0;
+            }
         }
     }
 }
@@ -649,13 +657,6 @@ li.callList label .callWrap-flex {
         line-height: 50px;
         font-size: 16px;
     }
-    // id_inquiry, pw_change CSS
-    .btnCheck {
-        width: 100%;
-        height:50px;
-        line-height: 50px;
-        font-size: 16px;
-        margin-top: 50px;
-    }
+
 
 }
