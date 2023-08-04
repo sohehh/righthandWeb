@@ -27,15 +27,20 @@
 }
 .btnCheck02 {
     @include mix.fontz(pc,2);
-    @include mix.pdn(pc,top,0.4);
-    @include mix.pdn(pc,bottom,0.4);
-    @include mix.pdn(pc,left,0.8);
-    @include mix.pdn(pc,right,0.8);
     border-radius: 999px;
     border: 1px solid #2CB7A4;
     color: #2CB7A4;
     font-weight: 500;
     @include mix.mzn(pc,top,1.95);
+
+
+    width: 41.6666666667%;
+    height: calc(min(1rem, 40px) * 1.5);
+    line-height: calc(min(1rem, 40px) * 1.5);
+    border-radius: 30px;
+    text-align: center;
+    font-size: calc(min(1em, 10px) * 2);
+    font-weight: 500;
 }
 
 @include mix.tab{
@@ -43,7 +48,7 @@
         width: 90%;
     }
     .suc_img {
-        min-width: 70px;
+        min-width: 80px;
     }
     .suc_text {
         word-break: keep-all;
@@ -59,12 +64,12 @@
         }
     }
     .btnCheck02 {
-        @include mix.fontz(mob,1.6);
-        @include mix.pdn(mob,top,0.2);
-        @include mix.pdn(mob,bottom,0.2);
-        @include mix.pdn(mob,left,0.6);
-        @include mix.pdn(mob,right,0.6);
         @include mix.mzn(mob,top,1);
+        width: 230px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        margin-top: 50px;
     }
 }
 @include mix.mob{
@@ -73,11 +78,8 @@
         @include mix.lhz(mob,0.7);
     }
     .btnCheck02 {
-        @include mix.fontz(mob,1.4);
-        @include mix.pdn(mob,top,0.2);
-        @include mix.pdn(mob,bottom,0.2);
-        @include mix.pdn(mob,left,0.6);
-        @include mix.pdn(mob,right,0.6);
-        @include mix.mzn(mob,top,0.8);
+        width: 220px;
+        height: 40px;
+        line-height: 40px;
     }
 }
