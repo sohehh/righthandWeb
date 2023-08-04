@@ -64,10 +64,20 @@
         @include mix.pdn(mob,bottom,0.2);
         @include mix.pdn(mob,left,0.6);
         @include mix.pdn(mob,right,0.6);
-        border-radius: 999px;
-        border: 1px solid #2CB7A4;
-        color: #2CB7A4;
-        font-weight: 500;
         @include mix.mzn(mob,top,1);
+    }
+}
+@include mix.mob{
+    .suc_text {
+        @include mix.fontz(mob,1.8);
+        @include mix.lhz(mob,0.7);
+    }
+    .btnCheck02 {
+        @include mix.fontz(mob,1.4);
+        @include mix.pdn(mob,top,0.2);
+        @include mix.pdn(mob,bottom,0.2);
+        @include mix.pdn(mob,left,0.6);
+        @include mix.pdn(mob,right,0.6);
+        @include mix.mzn(mob,top,0.8);
     }
 }
