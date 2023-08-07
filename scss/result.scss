@@ -18,7 +18,7 @@
     font-family: 'NanumSquareRound';
     font-weight: 500;
     @include mix.fontz(pc,2.5);
-    @include mix.lhz(pc,0.875);
+    @include mix.lhz(pc,1);
     text-align: center;
     .user-id {
         color: #2CB7A4;
@@ -118,7 +118,7 @@
         font-family: 'NanumSquareRound';
         font-weight: 500;
         @include mix.fontz(mob,2);
-        @include mix.lhz(mob,0.875);
+        @include mix.lhz(mob,0.83);
         text-align: center;
         .user-id {
             color: #2CB7A4;
