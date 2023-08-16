@@ -63,6 +63,8 @@ body{
         @include mix.mzn(pc,left,0.3);
         @include mix.fontz(pc,1.5);
         font-weight: 500;
+        max-width: 40%;
+        @include mix.lhz(pc,0.5);
         &:nth-of-type(2){
             color:#2444EE;
             text-decoration: underline;
@@ -365,6 +367,7 @@ body{
             font-size: 12px;
             margin-top: 10px;
             line-height: 145%;
+            width: calc(100% - 100px)
         }
     }
     .profileWrap{
@@ -374,6 +377,8 @@ body{
         span{
             font-size: 14px;
             margin-left: 5px;
+            
+            line-height: 135%;
             &:nth-of-type(2){
                 margin-left: 10px;
             }
@@ -558,17 +563,23 @@ body{
         font-size: 12px;
         margin-top: 10px;
         line-height: 145%;
+        width: 100%;
     }
 }
 .profileWrap{
+    flex-wrap: wrap;
     figure{
         width: 42px;
     }
     span{
         font-size: 14px;
         margin-left: 5px;
+        width: calc(100% - 140px);
+        max-width: 160px;
         &:nth-of-type(2){
-            margin-left: 10px;
+            margin-left: 0px;
+            margin-top: 10px;
+            width: 100%;
         }
     }
     

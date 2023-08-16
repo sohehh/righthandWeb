@@ -35,7 +35,10 @@ html,body{
 body{
     font-family: "NanumSquareRound";
 }
-
+input {
+    font-family: 'NanumSquareRound';
+    font-weight: 500; 
+}
 @mixin brandColor(){
     background-color: #2CB7A4;
 }

@@ -70,6 +70,8 @@ body {
   margin-left: calc(min(1rem, 40px) * 0.3);
   font-size: calc(min(1em, 10px) * 1.5);
   font-weight: 500;
+  max-width: 40%;
+  line-height: calc(min(1rem, 40px) * 0.5);
 }
 .profileWrap span:nth-of-type(2) {
   color: #2444EE;
@@ -361,6 +363,7 @@ body {
     font-size: 12px;
     margin-top: 10px;
     line-height: 145%;
+    width: calc(100% - 100px);
   }
   .profileWrap figure {
     width: 42px;
@@ -368,6 +371,7 @@ body {
   .profileWrap span {
     font-size: 14px;
     margin-left: 5px;
+    line-height: 135%;
   }
   .profileWrap span:nth-of-type(2) {
     margin-left: 10px;
@@ -541,6 +545,10 @@ body {
     font-size: 12px;
     margin-top: 10px;
     line-height: 145%;
+    width: 100%;
+  }
+  .profileWrap {
+    flex-wrap: wrap;
   }
   .profileWrap figure {
     width: 42px;
@@ -548,9 +556,13 @@ body {
   .profileWrap span {
     font-size: 14px;
     margin-left: 5px;
+    width: calc(100% - 140px);
+    max-width: 160px;
   }
   .profileWrap span:nth-of-type(2) {
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100%;
   }
   .btnWrap {
     flex-direction: column;

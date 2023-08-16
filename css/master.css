@@ -44,6 +44,11 @@ body {
   font-family: "NanumSquareRound";
 }
 
+input {
+  font-family: "NanumSquareRound";
+  font-weight: 500;
+}
+
 .headerWrap {
   width: 100%;
   background-color: #2CB7A4;
